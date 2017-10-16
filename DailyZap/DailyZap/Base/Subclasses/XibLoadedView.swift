@@ -14,5 +14,4 @@ class XibLoadedView: UIView {
         let nibName = String(describing: type(of: self))
         return Bundle.main.loadNibNamed(nibName, owner: owner, options: nil)?.first
     }
-
 }

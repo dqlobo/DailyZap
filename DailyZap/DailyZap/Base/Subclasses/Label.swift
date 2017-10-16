@@ -8,19 +8,20 @@
 
 import UIKit
 
-enum LabelType: Int {
+enum LabelType: Int {    
     case title
     case normal
     case detail
 }
 
 class Label: UILabel {
+    
     required init?(coder aDecoder: NSCoder) {
         self.type = LabelType.normal.rawValue
         super.init(coder: aDecoder)
     }
-    @IBInspectable
-    var type: Int {
+
+    @IBInspectable var type: Int {
         didSet {
             if let t = LabelType(rawValue: type) {
                 switch t {
@@ -33,6 +34,5 @@ class Label: UILabel {
                 }
             }
         }
-       
     }
 }

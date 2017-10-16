@@ -15,5 +15,4 @@ class SubtleButton: UIButton {
         self.titleLabel?.font = UIFont.zapDetailFont(sz: 10)
         self.tintColor = UIColor.white        
     }
-
 }

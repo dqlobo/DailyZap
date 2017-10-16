@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RootViewController: UINavigationController, ContactInjector {
+class RootViewController: UINavigationController, AppleContactsInjector {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -49,7 +49,7 @@ extension RootViewController {
 extension RootViewController {
     
     func queueTutorialIfNeeded() {
-        if !self.contactManager.isAuthorized() {
+        if !self.appleContactManager.isAuthorized() {
             self.pushViewController(AuthorizeNotificationsViewController(), animated: false)
             self.pushViewController(AuthorizeContactsViewController(), animated: false)
             self.pushViewController(LandingViewController(), animated: false)

@@ -8,8 +8,9 @@
 
 import UIKit
 
-class MainViewController: UIViewController, ContactInjector {
+class MainViewController: UIViewController, FeedInjector {
     @IBOutlet weak var tableView: UITableView!
+    let dataController = FeedDataController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,10 +19,12 @@ class MainViewController: UIViewController, ContactInjector {
     }
     
     func setupTableView() {
+        self.tableView.dataSource = self.dataController
+        self.tableView.delegate = self.dataController
     }
     
     func setupNavigationItems() {
-        self.navigationItem.title = "Test"
+        self.navigationItem.title = "DailyZap"
         
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "|||", style: .plain, target: nil, action: nil)
     }
@@ -29,9 +32,7 @@ class MainViewController: UIViewController, ContactInjector {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(false, animated: false)
-        self.contactManager.getRandomContact()
     }
-    
-    
-
 }
+
+

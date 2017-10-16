@@ -37,12 +37,16 @@
 		6370A8FF1F8099C3002641D3 /* LandingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6370A8FD1F8099C3002641D3 /* LandingViewController.xib */; };
 		6370A9011F809BC9002641D3 /* CTAButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6370A9001F809BC9002641D3 /* CTAButton.swift */; };
 		6370A9041F80B1FF002641D3 /* OnboardPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6370A9031F80B1FF002641D3 /* OnboardPageViewController.swift */; };
-		638086C51F81DE170096CEF5 /* ContactsInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638086C41F81DE170096CEF5 /* ContactsInjector.swift */; };
+		638086C51F81DE170096CEF5 /* AppleContactsInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638086C41F81DE170096CEF5 /* AppleContactsInjector.swift */; };
 		638086CA1F81EA6A0096CEF5 /* AuthorizeContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638086C81F81EA6A0096CEF5 /* AuthorizeContactsViewController.swift */; };
 		638086CB1F81EA6A0096CEF5 /* AuthorizeContactsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 638086C91F81EA6A0096CEF5 /* AuthorizeContactsViewController.xib */; };
 		63A312FF1F93142600BA5CE1 /* Int+ZAP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A312FE1F93142600BA5CE1 /* Int+ZAP.swift */; };
 		63A313011F93179300BA5CE1 /* UserDefaultsInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A313001F93179300BA5CE1 /* UserDefaultsInjector.swift */; };
-		63A313031F943EB500BA5CE1 /* DataSourceInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A313021F943EB500BA5CE1 /* DataSourceInjector.swift */; };
+		63A313031F943EB500BA5CE1 /* FeedInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A313021F943EB500BA5CE1 /* FeedInjector.swift */; };
+		63A313051F94494200BA5CE1 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A313041F94494200BA5CE1 /* Contact.swift */; };
+		63A3130B1F94519800BA5CE1 /* Date+ZAP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A3130A1F94519800BA5CE1 /* Date+ZAP.swift */; };
+		63A3130D1F94550000BA5CE1 /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A3130C1F94550000BA5CE1 /* Feed.swift */; };
+		63A313111F94693E00BA5CE1 /* FeedDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A313101F94693E00BA5CE1 /* FeedDataController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,12 +94,16 @@
 		6370A8FD1F8099C3002641D3 /* LandingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LandingViewController.xib; sourceTree = "<group>"; };
 		6370A9001F809BC9002641D3 /* CTAButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTAButton.swift; sourceTree = "<group>"; };
 		6370A9031F80B1FF002641D3 /* OnboardPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardPageViewController.swift; sourceTree = "<group>"; };
-		638086C41F81DE170096CEF5 /* ContactsInjector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsInjector.swift; sourceTree = "<group>"; };
+		638086C41F81DE170096CEF5 /* AppleContactsInjector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleContactsInjector.swift; sourceTree = "<group>"; };
 		638086C81F81EA6A0096CEF5 /* AuthorizeContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizeContactsViewController.swift; sourceTree = "<group>"; };
 		638086C91F81EA6A0096CEF5 /* AuthorizeContactsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthorizeContactsViewController.xib; sourceTree = "<group>"; };
 		63A312FE1F93142600BA5CE1 /* Int+ZAP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+ZAP.swift"; sourceTree = "<group>"; };
 		63A313001F93179300BA5CE1 /* UserDefaultsInjector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsInjector.swift; sourceTree = "<group>"; };
-		63A313021F943EB500BA5CE1 /* DataSourceInjector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSourceInjector.swift; sourceTree = "<group>"; };
+		63A313021F943EB500BA5CE1 /* FeedInjector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedInjector.swift; sourceTree = "<group>"; };
+		63A313041F94494200BA5CE1 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		63A3130A1F94519800BA5CE1 /* Date+ZAP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+ZAP.swift"; sourceTree = "<group>"; };
+		63A3130C1F94550000BA5CE1 /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
+		63A313101F94693E00BA5CE1 /* FeedDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDataController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +217,7 @@
 				6370A8EE1F80834C002641D3 /* UIColor+ZAP.swift */,
 				6370A8F01F80880F002641D3 /* UIFont+ZAP.swift */,
 				63A312FE1F93142600BA5CE1 /* Int+ZAP.swift */,
+				63A3130A1F94519800BA5CE1 /* Date+ZAP.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -216,6 +225,8 @@
 		6370A8F21F8089E3002641D3 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				63A3130F1F94692B00BA5CE1 /* DataManagers */,
+				63A3130E1F94550900BA5CE1 /* Models */,
 				638086C31F81DDCE0096CEF5 /* Injectors */,
 				6370A9021F809C42002641D3 /* Subclasses */,
 				6370A8ED1F808305002641D3 /* Extensions */,
@@ -260,13 +271,30 @@
 		638086C31F81DDCE0096CEF5 /* Injectors */ = {
 			isa = PBXGroup;
 			children = (
-				638086C41F81DE170096CEF5 /* ContactsInjector.swift */,
+				638086C41F81DE170096CEF5 /* AppleContactsInjector.swift */,
 				633C43D61F84757D00DAEA46 /* AlertInjector.swift */,
 				633C43EB1F85CB5A00DAEA46 /* TransitionInjector.swift */,
 				63A313001F93179300BA5CE1 /* UserDefaultsInjector.swift */,
-				63A313021F943EB500BA5CE1 /* DataSourceInjector.swift */,
+				63A313021F943EB500BA5CE1 /* FeedInjector.swift */,
 			);
 			path = Injectors;
+			sourceTree = "<group>";
+		};
+		63A3130E1F94550900BA5CE1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				63A313041F94494200BA5CE1 /* Contact.swift */,
+				63A3130C1F94550000BA5CE1 /* Feed.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		63A3130F1F94692B00BA5CE1 /* DataManagers */ = {
+			isa = PBXGroup;
+			children = (
+				63A313101F94693E00BA5CE1 /* FeedDataController.swift */,
+			);
+			path = DataManagers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -384,18 +412,22 @@
 				63A312FF1F93142600BA5CE1 /* Int+ZAP.swift in Sources */,
 				6370A8F81F808C9A002641D3 /* Label.swift in Sources */,
 				6370A8FE1F8099C3002641D3 /* LandingViewController.swift in Sources */,
-				638086C51F81DE170096CEF5 /* ContactsInjector.swift in Sources */,
+				63A313051F94494200BA5CE1 /* Contact.swift in Sources */,
+				638086C51F81DE170096CEF5 /* AppleContactsInjector.swift in Sources */,
+				63A3130D1F94550000BA5CE1 /* Feed.swift in Sources */,
 				6370A8F41F8089F1002641D3 /* BaseViewController.swift in Sources */,
 				633C43DF1F8482C900DAEA46 /* SubtleButton.swift in Sources */,
 				633C43EE1F85DCF300DAEA46 /* TwoLabelHeader.swift in Sources */,
 				6370A8C81F807DAC002641D3 /* RootViewController.swift in Sources */,
+				63A313111F94693E00BA5CE1 /* FeedDataController.swift in Sources */,
 				6370A8C61F807DAC002641D3 /* AppDelegate.swift in Sources */,
 				63A313011F93179300BA5CE1 /* UserDefaultsInjector.swift in Sources */,
 				633C43F01F85DD1200DAEA46 /* XibLoadedView.swift in Sources */,
-				63A313031F943EB500BA5CE1 /* DataSourceInjector.swift in Sources */,
+				63A313031F943EB500BA5CE1 /* FeedInjector.swift in Sources */,
 				633C43EC1F85CB5A00DAEA46 /* TransitionInjector.swift in Sources */,
 				6370A9011F809BC9002641D3 /* CTAButton.swift in Sources */,
 				6370A8F11F80880F002641D3 /* UIFont+ZAP.swift in Sources */,
+				63A3130B1F94519800BA5CE1 /* Date+ZAP.swift in Sources */,
 				633C43E31F85C63500DAEA46 /* MainViewController.swift in Sources */,
 				633C43D71F84757D00DAEA46 /* AlertInjector.swift in Sources */,
 				6370A9041F80B1FF002641D3 /* OnboardPageViewController.swift in Sources */,

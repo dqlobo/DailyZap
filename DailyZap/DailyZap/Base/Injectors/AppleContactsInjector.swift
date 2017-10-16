@@ -9,19 +9,19 @@
 import Foundation
 import Contacts
 
-fileprivate struct ContactInstance {
-    static let contactManager: ContactManager = ContactManager()
+fileprivate struct AppleContactsInstance {
+    static let contactManager: AppleContactsManager = AppleContactsManager()
 }
 
-protocol ContactInjector { }
-extension ContactInjector {
-    var contactManager: ContactManager { return ContactInstance.contactManager }
+protocol AppleContactsInjector { }
+extension AppleContactsInjector {
+    var appleContactManager: AppleContactsManager { return AppleContactsInstance.contactManager }
 }
 
-class ContactManager {
-    
+class AppleContactsManager {
+        // todo ability to actually mutate a contact
     let store: CNContactStore = CNContactStore()
-    let defaultContactKeys: [CNKeyDescriptor] = [CNContactGivenNameKey, CNContactFamilyNameKey,
+    var defaultContactKeys: [CNKeyDescriptor] = [CNContactGivenNameKey, CNContactFamilyNameKey,
                               CNContactPhoneNumbersKey, CNContactImageDataKey,
                               CNContactImageDataAvailableKey] as [CNKeyDescriptor]
     
@@ -63,6 +63,18 @@ class ContactManager {
         let contact: CNContact? = try? store.unifiedContact(withIdentifier: contactID, keysToFetch: self.defaultContactKeys)
         return contact
     }
+    
+    func getContactsWithIDs(contactIDs: [String]) -> [CNContact] {
+        let predicate = CNContact.predicateForContacts(withIdentifiers: contactIDs)
+       
+        let output = try? self.store.unifiedContacts(matching: predicate,
+                                                     keysToFetch: self.defaultContactKeys)
+        if output == nil {
+            return []
+        }
+        return output!
+    }
+    
     // TODO who manages contact modal view for choosing custom contact
     // TODO feed fetch injector - parse the following into ui displayable objects (Extends contacts AND UserDefaultsInjector)
         // - fetch due (if empty -> generate with getRandomContact)

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AuthorizeContactsViewController: BaseViewController, ContactInjector, AlertInjector {
+class AuthorizeContactsViewController: BaseViewController, AppleContactsInjector, AlertInjector {
     @IBOutlet weak var verticalLogoPosition: NSLayoutConstraint!
     @IBOutlet weak var importBtn: CTAButton!
     @IBOutlet weak var infoSection: UIView!
@@ -62,7 +62,7 @@ class AuthorizeContactsViewController: BaseViewController, ContactInjector, Aler
     }
     
     @IBAction func tappedImportContacts(_ sender: Any) {
-        self.contactManager.requestAccess { (granted, error) in
+        self.appleContactManager.requestAccess { (granted, error) in
             if !granted || error != nil {
                 let msg = "Please visit Settings > Daily Zap to grant access and continue."
                 let settingsAction = UIAlertAction.init(title: "Fix Now", style: .`default`, handler: { _ in
