@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Muli-Regular.ttf">
+            <string>Muli-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LandingViewController" customModule="DailyZap" customModuleProvider="target">
+            <connections>
+                <outlet property="footer" destination="lvu-CN-9ri" id="tKD-al-POw"/>
+                <outlet property="getStartedBtn" destination="WfH-xk-9en" id="Xz7-sP-Kju"/>
+                <outlet property="logo" destination="R0p-dn-Gsp" id="Pdf-ZX-6aa"/>
+                <outlet property="verticalLogoPosition" destination="Xqh-dw-2yB" id="0Vk-eO-zDz"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash" translatesAutoresizingMaskIntoConstraints="NO" id="R0p-dn-Gsp">
+                    <rect key="frame" x="-1" y="156.5" width="375.5" height="375"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="R0p-dn-Gsp" secondAttribute="height" multiplier="1:1" id="L0P-5c-6th"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WfH-xk-9en" customClass="CTAButton" customModule="DailyZap" customModuleProvider="target">
+                    <rect key="frame" x="138" y="428.5" width="99" height="30"/>
+                    <state key="normal" title="GET STARTED"/>
+                    <connections>
+                        <action selector="tappedGetStarted:" destination="-1" eventType="touchUpInside" id="mIV-sI-j5N"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lvu-CN-9ri" userLabel="Footer">
+                    <rect key="frame" x="-0.5" y="621" width="375" height="26"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="and" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t1i-sX-dxt" customClass="Label" customModule="DailyZap" customModuleProvider="target">
+                            <rect key="frame" x="195" y="14" width="18" height="12"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="type">
+                                    <integer key="value" value="3"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By continuing, you agree to Daily Zap's" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CUN-19-WiX" customClass="Label" customModule="DailyZap" customModuleProvider="target">
+                            <rect key="frame" x="92.5" y="0.0" width="188.5" height="12"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="type">
+                                    <integer key="value" value="3"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xcq-zp-YrW">
+                            <rect key="frame" x="92" y="8" width="98" height="24"/>
+                            <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="10"/>
+                            <state key="normal" title="Terms and Conditions">
+                                <color key="titleColor" red="1" green="0.96862745100000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="tappedTerms:" destination="-1" eventType="touchUpInside" id="dBR-mB-G7o"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e6R-nP-odb">
+                            <rect key="frame" x="218" y="7.5" width="63" height="24"/>
+                            <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="10"/>
+                            <state key="normal" title="Privacy Policy">
+                                <color key="titleColor" red="1" green="0.96862745100000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="tappedPrivacy:" destination="-1" eventType="touchUpInside" id="b1S-yc-MVg"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="CUN-19-WiX" firstAttribute="bottom" secondItem="t1i-sX-dxt" secondAttribute="top" constant="-2" id="0aO-fS-4Fn"/>
+                        <constraint firstItem="xcq-zp-YrW" firstAttribute="centerY" secondItem="t1i-sX-dxt" secondAttribute="centerY" id="0uA-Yb-XgV"/>
+                        <constraint firstItem="t1i-sX-dxt" firstAttribute="centerX" secondItem="CUN-19-WiX" secondAttribute="centerX" constant="17" id="FN0-Tq-46h"/>
+                        <constraint firstItem="t1i-sX-dxt" firstAttribute="leading" secondItem="xcq-zp-YrW" secondAttribute="trailing" constant="5" id="PoY-H0-hvz"/>
+                        <constraint firstItem="e6R-nP-odb" firstAttribute="centerY" secondItem="t1i-sX-dxt" secondAttribute="centerY" id="W78-1p-yxH"/>
+                        <constraint firstItem="CUN-19-WiX" firstAttribute="centerX" secondItem="lvu-CN-9ri" secondAttribute="centerX" id="fs5-TV-chc"/>
+                        <constraint firstItem="CUN-19-WiX" firstAttribute="top" secondItem="lvu-CN-9ri" secondAttribute="top" id="h1h-2t-Ul8"/>
+                        <constraint firstAttribute="bottom" secondItem="t1i-sX-dxt" secondAttribute="bottom" id="xsH-06-q5u"/>
+                        <constraint firstItem="e6R-nP-odb" firstAttribute="leading" secondItem="t1i-sX-dxt" secondAttribute="trailing" constant="5" id="zum-3a-Io5"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.25098039220000001" blue="0.82352941180000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="lvu-CN-9ri" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="7WV-gC-GD1"/>
+                <constraint firstItem="WfH-xk-9en" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" constant="100" id="UF7-f4-zbZ"/>
+                <constraint firstItem="R0p-dn-Gsp" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="X60-b4-eYY"/>
+                <constraint firstItem="R0p-dn-Gsp" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="Xqh-dw-2yB"/>
+                <constraint firstItem="WfH-xk-9en" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="Z6k-4j-aFt"/>
+                <constraint firstItem="R0p-dn-Gsp" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="aaz-7I-vlN"/>
+                <constraint firstItem="lvu-CN-9ri" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="apm-AK-4pt"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="lvu-CN-9ri" secondAttribute="bottom" constant="20" id="u0F-hD-0tQ"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="33.5" y="130.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="splash" width="413" height="180"/>
+    </resources>
+</document>

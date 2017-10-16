@@ -1,0 +1,642 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		633C43D41F846E7800DAEA46 /* Contacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 633C43D21F846E7800DAEA46 /* Contacts.framework */; };
+		633C43D51F846E7800DAEA46 /* ContactsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 633C43D31F846E7800DAEA46 /* ContactsUI.framework */; };
+		633C43D71F84757D00DAEA46 /* AlertInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633C43D61F84757D00DAEA46 /* AlertInjector.swift */; };
+		633C43DC1F847FB600DAEA46 /* AuthorizeNotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633C43DA1F847FB600DAEA46 /* AuthorizeNotificationsViewController.swift */; };
+		633C43DD1F847FB600DAEA46 /* AuthorizeNotificationsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 633C43DB1F847FB600DAEA46 /* AuthorizeNotificationsViewController.xib */; };
+		633C43DF1F8482C900DAEA46 /* SubtleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633C43DE1F8482C900DAEA46 /* SubtleButton.swift */; };
+		633C43E31F85C63500DAEA46 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633C43E11F85C63500DAEA46 /* MainViewController.swift */; };
+		633C43E41F85C63500DAEA46 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 633C43E21F85C63500DAEA46 /* MainViewController.xib */; };
+		633C43E71F85C85500DAEA46 /* CondensedContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633C43E51F85C85500DAEA46 /* CondensedContactTableViewCell.swift */; };
+		633C43E81F85C85500DAEA46 /* CondensedContactTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 633C43E61F85C85500DAEA46 /* CondensedContactTableViewCell.xib */; };
+		633C43EC1F85CB5A00DAEA46 /* TransitionInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633C43EB1F85CB5A00DAEA46 /* TransitionInjector.swift */; };
+		633C43EE1F85DCF300DAEA46 /* TwoLabelHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633C43ED1F85DCF300DAEA46 /* TwoLabelHeader.swift */; };
+		633C43F01F85DD1200DAEA46 /* XibLoadedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633C43EF1F85DD1200DAEA46 /* XibLoadedView.swift */; };
+		633C43F21F85DE7F00DAEA46 /* TwoLabelHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 633C43F11F85DE7F00DAEA46 /* TwoLabelHeader.xib */; };
+		6370A8C61F807DAC002641D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6370A8C51F807DAC002641D3 /* AppDelegate.swift */; };
+		6370A8C81F807DAC002641D3 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6370A8C71F807DAC002641D3 /* RootViewController.swift */; };
+		6370A8CD1F807DAC002641D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6370A8CC1F807DAC002641D3 /* Assets.xcassets */; };
+		6370A8D01F807DAC002641D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6370A8CE1F807DAC002641D3 /* LaunchScreen.storyboard */; };
+		6370A8DB1F807DAD002641D3 /* DailyZapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6370A8DA1F807DAD002641D3 /* DailyZapTests.swift */; };
+		6370A8EA1F808154002641D3 /* Muli-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6370A8E71F808154002641D3 /* Muli-LightItalic.ttf */; };
+		6370A8EB1F808154002641D3 /* Muli-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6370A8E81F808154002641D3 /* Muli-Regular.ttf */; };
+		6370A8EC1F808154002641D3 /* Norwester.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6370A8E91F808154002641D3 /* Norwester.ttf */; };
+		6370A8EF1F80834C002641D3 /* UIColor+ZAP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6370A8EE1F80834C002641D3 /* UIColor+ZAP.swift */; };
+		6370A8F11F80880F002641D3 /* UIFont+ZAP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6370A8F01F80880F002641D3 /* UIFont+ZAP.swift */; };
+		6370A8F41F8089F1002641D3 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6370A8F31F8089F1002641D3 /* BaseViewController.swift */; };
+		6370A8F81F808C9A002641D3 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6370A8F71F808C9A002641D3 /* Label.swift */; };
+		6370A8FE1F8099C3002641D3 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6370A8FC1F8099C3002641D3 /* LandingViewController.swift */; };
+		6370A8FF1F8099C3002641D3 /* LandingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6370A8FD1F8099C3002641D3 /* LandingViewController.xib */; };
+		6370A9011F809BC9002641D3 /* CTAButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6370A9001F809BC9002641D3 /* CTAButton.swift */; };
+		6370A9041F80B1FF002641D3 /* OnboardPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6370A9031F80B1FF002641D3 /* OnboardPageViewController.swift */; };
+		638086C51F81DE170096CEF5 /* ContactsInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638086C41F81DE170096CEF5 /* ContactsInjector.swift */; };
+		638086CA1F81EA6A0096CEF5 /* AuthorizeContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638086C81F81EA6A0096CEF5 /* AuthorizeContactsViewController.swift */; };
+		638086CB1F81EA6A0096CEF5 /* AuthorizeContactsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 638086C91F81EA6A0096CEF5 /* AuthorizeContactsViewController.xib */; };
+		63A312FF1F93142600BA5CE1 /* Int+ZAP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A312FE1F93142600BA5CE1 /* Int+ZAP.swift */; };
+		63A313011F93179300BA5CE1 /* UserDefaultsInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A313001F93179300BA5CE1 /* UserDefaultsInjector.swift */; };
+		63A313031F943EB500BA5CE1 /* DataSourceInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A313021F943EB500BA5CE1 /* DataSourceInjector.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6370A8D71F807DAD002641D3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6370A8BA1F807DAC002641D3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6370A8C11F807DAC002641D3;
+			remoteInfo = DailyZap;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		633C43D21F846E7800DAEA46 /* Contacts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Contacts.framework; path = System/Library/Frameworks/Contacts.framework; sourceTree = SDKROOT; };
+		633C43D31F846E7800DAEA46 /* ContactsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ContactsUI.framework; path = System/Library/Frameworks/ContactsUI.framework; sourceTree = SDKROOT; };
+		633C43D61F84757D00DAEA46 /* AlertInjector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertInjector.swift; sourceTree = "<group>"; };
+		633C43DA1F847FB600DAEA46 /* AuthorizeNotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizeNotificationsViewController.swift; sourceTree = "<group>"; };
+		633C43DB1F847FB600DAEA46 /* AuthorizeNotificationsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthorizeNotificationsViewController.xib; sourceTree = "<group>"; };
+		633C43DE1F8482C900DAEA46 /* SubtleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtleButton.swift; sourceTree = "<group>"; };
+		633C43E11F85C63500DAEA46 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		633C43E21F85C63500DAEA46 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		633C43E51F85C85500DAEA46 /* CondensedContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CondensedContactTableViewCell.swift; sourceTree = "<group>"; };
+		633C43E61F85C85500DAEA46 /* CondensedContactTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CondensedContactTableViewCell.xib; sourceTree = "<group>"; };
+		633C43EB1F85CB5A00DAEA46 /* TransitionInjector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionInjector.swift; sourceTree = "<group>"; };
+		633C43ED1F85DCF300DAEA46 /* TwoLabelHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoLabelHeader.swift; sourceTree = "<group>"; };
+		633C43EF1F85DD1200DAEA46 /* XibLoadedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibLoadedView.swift; sourceTree = "<group>"; };
+		633C43F11F85DE7F00DAEA46 /* TwoLabelHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TwoLabelHeader.xib; sourceTree = "<group>"; };
+		6370A8C21F807DAC002641D3 /* DailyZap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyZap.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6370A8C51F807DAC002641D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6370A8C71F807DAC002641D3 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		6370A8CC1F807DAC002641D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6370A8CF1F807DAC002641D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6370A8D11F807DAC002641D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6370A8D61F807DAD002641D3 /* DailyZapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DailyZapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6370A8DA1F807DAD002641D3 /* DailyZapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyZapTests.swift; sourceTree = "<group>"; };
+		6370A8DC1F807DAD002641D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6370A8E71F808154002641D3 /* Muli-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muli-LightItalic.ttf"; sourceTree = "<group>"; };
+		6370A8E81F808154002641D3 /* Muli-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muli-Regular.ttf"; sourceTree = "<group>"; };
+		6370A8E91F808154002641D3 /* Norwester.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Norwester.ttf; sourceTree = "<group>"; };
+		6370A8EE1F80834C002641D3 /* UIColor+ZAP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+ZAP.swift"; sourceTree = "<group>"; };
+		6370A8F01F80880F002641D3 /* UIFont+ZAP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+ZAP.swift"; sourceTree = "<group>"; };
+		6370A8F31F8089F1002641D3 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		6370A8F71F808C9A002641D3 /* Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
+		6370A8FC1F8099C3002641D3 /* LandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
+		6370A8FD1F8099C3002641D3 /* LandingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LandingViewController.xib; sourceTree = "<group>"; };
+		6370A9001F809BC9002641D3 /* CTAButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTAButton.swift; sourceTree = "<group>"; };
+		6370A9031F80B1FF002641D3 /* OnboardPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardPageViewController.swift; sourceTree = "<group>"; };
+		638086C41F81DE170096CEF5 /* ContactsInjector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsInjector.swift; sourceTree = "<group>"; };
+		638086C81F81EA6A0096CEF5 /* AuthorizeContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizeContactsViewController.swift; sourceTree = "<group>"; };
+		638086C91F81EA6A0096CEF5 /* AuthorizeContactsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthorizeContactsViewController.xib; sourceTree = "<group>"; };
+		63A312FE1F93142600BA5CE1 /* Int+ZAP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+ZAP.swift"; sourceTree = "<group>"; };
+		63A313001F93179300BA5CE1 /* UserDefaultsInjector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsInjector.swift; sourceTree = "<group>"; };
+		63A313021F943EB500BA5CE1 /* DataSourceInjector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSourceInjector.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6370A8BF1F807DAC002641D3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				633C43D41F846E7800DAEA46 /* Contacts.framework in Frameworks */,
+				633C43D51F846E7800DAEA46 /* ContactsUI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6370A8D31F807DAD002641D3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		633C43D11F846E7800DAEA46 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				633C43D21F846E7800DAEA46 /* Contacts.framework */,
+				633C43D31F846E7800DAEA46 /* ContactsUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		633C43E01F85C58900DAEA46 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				633C43E11F85C63500DAEA46 /* MainViewController.swift */,
+				633C43E21F85C63500DAEA46 /* MainViewController.xib */,
+				633C43E51F85C85500DAEA46 /* CondensedContactTableViewCell.swift */,
+				633C43E61F85C85500DAEA46 /* CondensedContactTableViewCell.xib */,
+				633C43ED1F85DCF300DAEA46 /* TwoLabelHeader.swift */,
+				633C43F11F85DE7F00DAEA46 /* TwoLabelHeader.xib */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		6370A8B91F807DAC002641D3 = {
+			isa = PBXGroup;
+			children = (
+				6370A8C41F807DAC002641D3 /* DailyZap */,
+				6370A8D91F807DAD002641D3 /* DailyZapTests */,
+				6370A8C31F807DAC002641D3 /* Products */,
+				633C43D11F846E7800DAEA46 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		6370A8C31F807DAC002641D3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6370A8C21F807DAC002641D3 /* DailyZap.app */,
+				6370A8D61F807DAD002641D3 /* DailyZapTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6370A8C41F807DAC002641D3 /* DailyZap */ = {
+			isa = PBXGroup;
+			children = (
+				633C43E01F85C58900DAEA46 /* Main */,
+				6370A8FB1F8099A2002641D3 /* Onboard */,
+				6370A8F21F8089E3002641D3 /* Base */,
+				6370A8E51F80813B002641D3 /* Assets */,
+				6370A8C51F807DAC002641D3 /* AppDelegate.swift */,
+				6370A8C71F807DAC002641D3 /* RootViewController.swift */,
+				6370A8CC1F807DAC002641D3 /* Assets.xcassets */,
+				6370A8CE1F807DAC002641D3 /* LaunchScreen.storyboard */,
+				6370A8D11F807DAC002641D3 /* Info.plist */,
+			);
+			path = DailyZap;
+			sourceTree = "<group>";
+		};
+		6370A8D91F807DAD002641D3 /* DailyZapTests */ = {
+			isa = PBXGroup;
+			children = (
+				6370A8DA1F807DAD002641D3 /* DailyZapTests.swift */,
+				6370A8DC1F807DAD002641D3 /* Info.plist */,
+			);
+			path = DailyZapTests;
+			sourceTree = "<group>";
+		};
+		6370A8E51F80813B002641D3 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				6370A8E61F808154002641D3 /* fonts */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		6370A8E61F808154002641D3 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				6370A8E71F808154002641D3 /* Muli-LightItalic.ttf */,
+				6370A8E81F808154002641D3 /* Muli-Regular.ttf */,
+				6370A8E91F808154002641D3 /* Norwester.ttf */,
+			);
+			name = fonts;
+			path = ../../../Assets/fonts;
+			sourceTree = "<group>";
+		};
+		6370A8ED1F808305002641D3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				6370A8EE1F80834C002641D3 /* UIColor+ZAP.swift */,
+				6370A8F01F80880F002641D3 /* UIFont+ZAP.swift */,
+				63A312FE1F93142600BA5CE1 /* Int+ZAP.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		6370A8F21F8089E3002641D3 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				638086C31F81DDCE0096CEF5 /* Injectors */,
+				6370A9021F809C42002641D3 /* Subclasses */,
+				6370A8ED1F808305002641D3 /* Extensions */,
+				638086C21F81DDC60096CEF5 /* ViewControllers */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		6370A8FB1F8099A2002641D3 /* Onboard */ = {
+			isa = PBXGroup;
+			children = (
+				6370A8FC1F8099C3002641D3 /* LandingViewController.swift */,
+				6370A8FD1F8099C3002641D3 /* LandingViewController.xib */,
+				6370A9031F80B1FF002641D3 /* OnboardPageViewController.swift */,
+				638086C81F81EA6A0096CEF5 /* AuthorizeContactsViewController.swift */,
+				638086C91F81EA6A0096CEF5 /* AuthorizeContactsViewController.xib */,
+				633C43DA1F847FB600DAEA46 /* AuthorizeNotificationsViewController.swift */,
+				633C43DB1F847FB600DAEA46 /* AuthorizeNotificationsViewController.xib */,
+			);
+			path = Onboard;
+			sourceTree = "<group>";
+		};
+		6370A9021F809C42002641D3 /* Subclasses */ = {
+			isa = PBXGroup;
+			children = (
+				6370A8F71F808C9A002641D3 /* Label.swift */,
+				6370A9001F809BC9002641D3 /* CTAButton.swift */,
+				633C43DE1F8482C900DAEA46 /* SubtleButton.swift */,
+				633C43EF1F85DD1200DAEA46 /* XibLoadedView.swift */,
+			);
+			path = Subclasses;
+			sourceTree = "<group>";
+		};
+		638086C21F81DDC60096CEF5 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				6370A8F31F8089F1002641D3 /* BaseViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		638086C31F81DDCE0096CEF5 /* Injectors */ = {
+			isa = PBXGroup;
+			children = (
+				638086C41F81DE170096CEF5 /* ContactsInjector.swift */,
+				633C43D61F84757D00DAEA46 /* AlertInjector.swift */,
+				633C43EB1F85CB5A00DAEA46 /* TransitionInjector.swift */,
+				63A313001F93179300BA5CE1 /* UserDefaultsInjector.swift */,
+				63A313021F943EB500BA5CE1 /* DataSourceInjector.swift */,
+			);
+			path = Injectors;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6370A8C11F807DAC002641D3 /* DailyZap */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6370A8DF1F807DAD002641D3 /* Build configuration list for PBXNativeTarget "DailyZap" */;
+			buildPhases = (
+				6370A8BE1F807DAC002641D3 /* Sources */,
+				6370A8BF1F807DAC002641D3 /* Frameworks */,
+				6370A8C01F807DAC002641D3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DailyZap;
+			productName = DailyZap;
+			productReference = 6370A8C21F807DAC002641D3 /* DailyZap.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6370A8D51F807DAD002641D3 /* DailyZapTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6370A8E21F807DAD002641D3 /* Build configuration list for PBXNativeTarget "DailyZapTests" */;
+			buildPhases = (
+				6370A8D21F807DAD002641D3 /* Sources */,
+				6370A8D31F807DAD002641D3 /* Frameworks */,
+				6370A8D41F807DAD002641D3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6370A8D81F807DAD002641D3 /* PBXTargetDependency */,
+			);
+			name = DailyZapTests;
+			productName = DailyZapTests;
+			productReference = 6370A8D61F807DAD002641D3 /* DailyZapTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6370A8BA1F807DAC002641D3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = dqlobo;
+				TargetAttributes = {
+					6370A8C11F807DAC002641D3 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+					6370A8D51F807DAD002641D3 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 6370A8C11F807DAC002641D3;
+					};
+				};
+			};
+			buildConfigurationList = 6370A8BD1F807DAC002641D3 /* Build configuration list for PBXProject "DailyZap" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6370A8B91F807DAC002641D3;
+			productRefGroup = 6370A8C31F807DAC002641D3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6370A8C11F807DAC002641D3 /* DailyZap */,
+				6370A8D51F807DAD002641D3 /* DailyZapTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6370A8C01F807DAC002641D3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6370A8FF1F8099C3002641D3 /* LandingViewController.xib in Resources */,
+				6370A8EC1F808154002641D3 /* Norwester.ttf in Resources */,
+				633C43E81F85C85500DAEA46 /* CondensedContactTableViewCell.xib in Resources */,
+				633C43F21F85DE7F00DAEA46 /* TwoLabelHeader.xib in Resources */,
+				638086CB1F81EA6A0096CEF5 /* AuthorizeContactsViewController.xib in Resources */,
+				6370A8D01F807DAC002641D3 /* LaunchScreen.storyboard in Resources */,
+				633C43E41F85C63500DAEA46 /* MainViewController.xib in Resources */,
+				6370A8CD1F807DAC002641D3 /* Assets.xcassets in Resources */,
+				633C43DD1F847FB600DAEA46 /* AuthorizeNotificationsViewController.xib in Resources */,
+				6370A8EA1F808154002641D3 /* Muli-LightItalic.ttf in Resources */,
+				6370A8EB1F808154002641D3 /* Muli-Regular.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6370A8D41F807DAD002641D3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6370A8BE1F807DAC002641D3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				633C43E71F85C85500DAEA46 /* CondensedContactTableViewCell.swift in Sources */,
+				63A312FF1F93142600BA5CE1 /* Int+ZAP.swift in Sources */,
+				6370A8F81F808C9A002641D3 /* Label.swift in Sources */,
+				6370A8FE1F8099C3002641D3 /* LandingViewController.swift in Sources */,
+				638086C51F81DE170096CEF5 /* ContactsInjector.swift in Sources */,
+				6370A8F41F8089F1002641D3 /* BaseViewController.swift in Sources */,
+				633C43DF1F8482C900DAEA46 /* SubtleButton.swift in Sources */,
+				633C43EE1F85DCF300DAEA46 /* TwoLabelHeader.swift in Sources */,
+				6370A8C81F807DAC002641D3 /* RootViewController.swift in Sources */,
+				6370A8C61F807DAC002641D3 /* AppDelegate.swift in Sources */,
+				63A313011F93179300BA5CE1 /* UserDefaultsInjector.swift in Sources */,
+				633C43F01F85DD1200DAEA46 /* XibLoadedView.swift in Sources */,
+				63A313031F943EB500BA5CE1 /* DataSourceInjector.swift in Sources */,
+				633C43EC1F85CB5A00DAEA46 /* TransitionInjector.swift in Sources */,
+				6370A9011F809BC9002641D3 /* CTAButton.swift in Sources */,
+				6370A8F11F80880F002641D3 /* UIFont+ZAP.swift in Sources */,
+				633C43E31F85C63500DAEA46 /* MainViewController.swift in Sources */,
+				633C43D71F84757D00DAEA46 /* AlertInjector.swift in Sources */,
+				6370A9041F80B1FF002641D3 /* OnboardPageViewController.swift in Sources */,
+				633C43DC1F847FB600DAEA46 /* AuthorizeNotificationsViewController.swift in Sources */,
+				638086CA1F81EA6A0096CEF5 /* AuthorizeContactsViewController.swift in Sources */,
+				6370A8EF1F80834C002641D3 /* UIColor+ZAP.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6370A8D21F807DAD002641D3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6370A8DB1F807DAD002641D3 /* DailyZapTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6370A8D81F807DAD002641D3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6370A8C11F807DAC002641D3 /* DailyZap */;
+			targetProxy = 6370A8D71F807DAD002641D3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6370A8CE1F807DAC002641D3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6370A8CF1F807DAC002641D3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6370A8DD1F807DAD002641D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6370A8DE1F807DAD002641D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6370A8E01F807DAD002641D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 88J4VM6686;
+				INFOPLIST_FILE = DailyZap/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dqlobo.DailyZap;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6370A8E11F807DAD002641D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 88J4VM6686;
+				INFOPLIST_FILE = DailyZap/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dqlobo.DailyZap;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		6370A8E31F807DAD002641D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 88J4VM6686;
+				INFOPLIST_FILE = DailyZapTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = dqlobo.DailyZapTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DailyZap.app/DailyZap";
+			};
+			name = Debug;
+		};
+		6370A8E41F807DAD002641D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 88J4VM6686;
+				INFOPLIST_FILE = DailyZapTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = dqlobo.DailyZapTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DailyZap.app/DailyZap";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6370A8BD1F807DAC002641D3 /* Build configuration list for PBXProject "DailyZap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6370A8DD1F807DAD002641D3 /* Debug */,
+				6370A8DE1F807DAD002641D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6370A8DF1F807DAD002641D3 /* Build configuration list for PBXNativeTarget "DailyZap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6370A8E01F807DAD002641D3 /* Debug */,
+				6370A8E11F807DAD002641D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6370A8E21F807DAD002641D3 /* Build configuration list for PBXNativeTarget "DailyZapTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6370A8E31F807DAD002641D3 /* Debug */,
+				6370A8E41F807DAD002641D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6370A8BA1F807DAC002641D3 /* Project object */;
+}
