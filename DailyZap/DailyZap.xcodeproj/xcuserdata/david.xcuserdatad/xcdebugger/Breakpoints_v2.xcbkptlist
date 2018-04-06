@@ -9,46 +9,62 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "DailyZap/Base/Injectors/FeedInjector.swift"
-            timestampString = "529823486.090508"
+            filePath = "DailyZap/Base/ViewControllers/BaseViewController.swift"
+            timestampString = "534533599.315134"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
-            landmarkName = "inflate(contacts:)"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "init(coder:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "DailyZap.FeedManager.(inflate in _92E9D05F236A7A6B8C941419C126A0FB)(contacts: Swift.Array&lt;DailyZap.Contact&gt;) -&gt; Swift.Array&lt;DailyZap.Contact&gt;"
-                  moduleName = "DailyZap"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/david/Documents/apps/DailyZap/DailyZap/DailyZap/Base/Injectors/FeedInjector.swift"
-                  timestampString = "529823274.582776"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "70"
-                  endingLineNumber = "70"
-                  offsetFromSymbolStart = "532">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 (__ObjC.CNContact) -&gt; DailyZap.Contact in DailyZap.FeedManager.(inflate in _92E9D05F236A7A6B8C941419C126A0FB)(contacts: Swift.Array&lt;DailyZap.Contact&gt;) -&gt; Swift.Array&lt;DailyZap.Contact&gt;"
-                  moduleName = "DailyZap"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/david/Documents/apps/DailyZap/DailyZap/DailyZap/Base/Injectors/FeedInjector.swift"
-                  timestampString = "529823274.585079"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "71"
-                  endingLineNumber = "71"
-                  offsetFromSymbolStart = "32">
-               </Location>
-            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DailyZap/ContactPicker/ContactPickerDataController.swift"
+            timestampString = "544735107.562093"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "didScrollToRefresh(refreshControl:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DailyZap/Main/FeedPresentationController.swift"
+            timestampString = "544735107.563287"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "149"
+            endingLineNumber = "149"
+            landmarkName = "messageComposeViewController(_:didFinishWith:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DailyZap/Main/FeedPresentationController.swift"
+            timestampString = "544735107.563507"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "126"
+            endingLineNumber = "126"
+            landmarkName = "contactViewController(_:shouldPerformDefaultActionFor:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

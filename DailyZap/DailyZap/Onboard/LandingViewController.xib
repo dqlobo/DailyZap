@@ -4,7 +4,8 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -35,9 +36,15 @@
                         <constraint firstAttribute="width" secondItem="R0p-dn-Gsp" secondAttribute="height" multiplier="1:1" id="L0P-5c-6th"/>
                     </constraints>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WfH-xk-9en" customClass="CTAButton" customModule="DailyZap" customModuleProvider="target">
-                    <rect key="frame" x="138" y="428.5" width="99" height="30"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WfH-xk-9en" customClass="Button" customModule="DailyZap" customModuleProvider="target">
+                    <rect key="frame" x="108.5" y="422.5" width="158" height="42"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
                     <state key="normal" title="GET STARTED"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="type">
+                            <integer key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <action selector="tappedGetStarted:" destination="-1" eventType="touchUpInside" id="mIV-sI-j5N"/>
                     </connections>

@@ -14,14 +14,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        self.window = UIWindow(frame: UIScreen.main.bounds)
-        self.window!.makeKeyAndVisible()
-        self.window!.rootViewController = RootViewController.createRootViewController()
+    func application(_ application: UIApplication,
+                     didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window!.makeKeyAndVisible()
+        window!.rootViewController = RootViewController.createRootViewController()
 
+        setAppearances()
+        
         return true
     }
+    
+    private func setAppearances() {
+        UIRefreshControl.appearance().tintColor = UIColor.zapGray
 
+    }
+    
     func printFonts() {
         for family in UIFont.familyNames.sorted(by: {$0 < $1}) {
             print(family)

@@ -12,15 +12,26 @@
 		633C43D71F84757D00DAEA46 /* AlertInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633C43D61F84757D00DAEA46 /* AlertInjector.swift */; };
 		633C43DC1F847FB600DAEA46 /* AuthorizeNotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633C43DA1F847FB600DAEA46 /* AuthorizeNotificationsViewController.swift */; };
 		633C43DD1F847FB600DAEA46 /* AuthorizeNotificationsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 633C43DB1F847FB600DAEA46 /* AuthorizeNotificationsViewController.xib */; };
-		633C43DF1F8482C900DAEA46 /* SubtleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633C43DE1F8482C900DAEA46 /* SubtleButton.swift */; };
-		633C43E31F85C63500DAEA46 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633C43E11F85C63500DAEA46 /* MainViewController.swift */; };
-		633C43E41F85C63500DAEA46 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 633C43E21F85C63500DAEA46 /* MainViewController.xib */; };
-		633C43E71F85C85500DAEA46 /* CondensedContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633C43E51F85C85500DAEA46 /* CondensedContactTableViewCell.swift */; };
-		633C43E81F85C85500DAEA46 /* CondensedContactTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 633C43E61F85C85500DAEA46 /* CondensedContactTableViewCell.xib */; };
+		633C43E41F85C63500DAEA46 /* FeedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 633C43E21F85C63500DAEA46 /* FeedViewController.xib */; };
+		633C43E71F85C85500DAEA46 /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633C43E51F85C85500DAEA46 /* ContactTableViewCell.swift */; };
+		633C43E81F85C85500DAEA46 /* SmallContactTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 633C43E61F85C85500DAEA46 /* SmallContactTableViewCell.xib */; };
 		633C43EC1F85CB5A00DAEA46 /* TransitionInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633C43EB1F85CB5A00DAEA46 /* TransitionInjector.swift */; };
 		633C43EE1F85DCF300DAEA46 /* TwoLabelHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633C43ED1F85DCF300DAEA46 /* TwoLabelHeader.swift */; };
 		633C43F01F85DD1200DAEA46 /* XibLoadedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633C43EF1F85DD1200DAEA46 /* XibLoadedView.swift */; };
 		633C43F21F85DE7F00DAEA46 /* TwoLabelHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 633C43F11F85DE7F00DAEA46 /* TwoLabelHeader.xib */; };
+		636FB2501FD4434900AC467C /* UIViewController+ZAP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636FB24F1FD4434900AC467C /* UIViewController+ZAP.swift */; };
+		636FB2541FD4635B00AC467C /* ButtonFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636FB2531FD4635B00AC467C /* ButtonFooter.swift */; };
+		636FB2561FD4636500AC467C /* ButtonFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 636FB2551FD4636500AC467C /* ButtonFooter.xib */; };
+		636FB2581FD469BC00AC467C /* todo.txt in Resources */ = {isa = PBXBuildFile; fileRef = 636FB2571FD469BC00AC467C /* todo.txt */; };
+		636FB25A1FD4815D00AC467C /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636FB2591FD4815D00AC467C /* Button.swift */; };
+		636FB25C1FD48A9200AC467C /* CircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636FB25B1FD48A9200AC467C /* CircleImageView.swift */; };
+		636FB2601FD497DA00AC467C /* BigContactTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 636FB25E1FD497DA00AC467C /* BigContactTableViewCell.xib */; };
+		636FB2621FD4ADB300AC467C /* PointFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636FB2611FD4ADB300AC467C /* PointFooter.swift */; };
+		636FB2641FD4ADC300AC467C /* PointFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 636FB2631FD4ADC300AC467C /* PointFooter.xib */; };
+		636FB2681FD4B9AB00AC467C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636FB2661FD4B9AB00AC467C /* SettingsViewController.swift */; };
+		636FB2691FD4B9AB00AC467C /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 636FB2671FD4B9AB00AC467C /* SettingsViewController.xib */; };
+		636FB26C1FD4C8F700AC467C /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636FB26A1FD4C8F700AC467C /* SettingsTableViewCell.swift */; };
+		636FB26D1FD4C8F700AC467C /* SettingsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 636FB26B1FD4C8F700AC467C /* SettingsTableViewCell.xib */; };
 		6370A8C61F807DAC002641D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6370A8C51F807DAC002641D3 /* AppDelegate.swift */; };
 		6370A8C81F807DAC002641D3 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6370A8C71F807DAC002641D3 /* RootViewController.swift */; };
 		6370A8CD1F807DAC002641D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6370A8CC1F807DAC002641D3 /* Assets.xcassets */; };
@@ -35,8 +46,9 @@
 		6370A8F81F808C9A002641D3 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6370A8F71F808C9A002641D3 /* Label.swift */; };
 		6370A8FE1F8099C3002641D3 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6370A8FC1F8099C3002641D3 /* LandingViewController.swift */; };
 		6370A8FF1F8099C3002641D3 /* LandingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6370A8FD1F8099C3002641D3 /* LandingViewController.xib */; };
-		6370A9011F809BC9002641D3 /* CTAButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6370A9001F809BC9002641D3 /* CTAButton.swift */; };
 		6370A9041F80B1FF002641D3 /* OnboardPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6370A9031F80B1FF002641D3 /* OnboardPageViewController.swift */; };
+		637CD94B1FDB41A400892870 /* PresentationInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637CD94A1FDB41A400892870 /* PresentationInjector.swift */; };
+		637CD94D1FDB5ADD00892870 /* NSObject+ZAP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637CD94C1FDB5ADD00892870 /* NSObject+ZAP.swift */; };
 		638086C51F81DE170096CEF5 /* AppleContactsInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638086C41F81DE170096CEF5 /* AppleContactsInjector.swift */; };
 		638086CA1F81EA6A0096CEF5 /* AuthorizeContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638086C81F81EA6A0096CEF5 /* AuthorizeContactsViewController.swift */; };
 		638086CB1F81EA6A0096CEF5 /* AuthorizeContactsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 638086C91F81EA6A0096CEF5 /* AuthorizeContactsViewController.xib */; };
@@ -47,6 +59,16 @@
 		63A3130B1F94519800BA5CE1 /* Date+ZAP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A3130A1F94519800BA5CE1 /* Date+ZAP.swift */; };
 		63A3130D1F94550000BA5CE1 /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A3130C1F94550000BA5CE1 /* Feed.swift */; };
 		63A313111F94693E00BA5CE1 /* FeedDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A313101F94693E00BA5CE1 /* FeedDataController.swift */; };
+		63B9F2CE1FEC11F90070ED3F /* ContactPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B9F2CC1FEC11F90070ED3F /* ContactPickerViewController.swift */; };
+		63B9F2CF1FEC11F90070ED3F /* ContactPickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63B9F2CD1FEC11F90070ED3F /* ContactPickerViewController.xib */; };
+		63B9F2D11FEC129B0070ED3F /* FeedPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B9F2D01FEC129B0070ED3F /* FeedPresentationController.swift */; };
+		63B9F2D21FEC14570070ED3F /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633C43E11F85C63500DAEA46 /* FeedViewController.swift */; };
+		63B9F2D41FEC15470070ED3F /* ContactPickerDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B9F2D31FEC15470070ED3F /* ContactPickerDataController.swift */; };
+		63B9F2D61FEC18880070ED3F /* BaseDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B9F2D51FEC18880070ED3F /* BaseDataController.swift */; };
+		63CDE8541FDDB9720004296F /* ZappedPlaceholderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CDE8521FDDB9720004296F /* ZappedPlaceholderTableViewCell.swift */; };
+		63CDE8551FDDB9720004296F /* ZappedPlaceholderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63CDE8531FDDB9720004296F /* ZappedPlaceholderTableViewCell.xib */; };
+		63D271EC2077C13C007AD36F /* LightningBoltView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D271EB2077C13C007AD36F /* LightningBoltView.swift */; };
+		63D271EE2077D122007AD36F /* UIView+ZAP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D271ED2077D122007AD36F /* UIView+ZAP.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,15 +87,27 @@
 		633C43D61F84757D00DAEA46 /* AlertInjector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertInjector.swift; sourceTree = "<group>"; };
 		633C43DA1F847FB600DAEA46 /* AuthorizeNotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizeNotificationsViewController.swift; sourceTree = "<group>"; };
 		633C43DB1F847FB600DAEA46 /* AuthorizeNotificationsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthorizeNotificationsViewController.xib; sourceTree = "<group>"; };
-		633C43DE1F8482C900DAEA46 /* SubtleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtleButton.swift; sourceTree = "<group>"; };
-		633C43E11F85C63500DAEA46 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		633C43E21F85C63500DAEA46 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
-		633C43E51F85C85500DAEA46 /* CondensedContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CondensedContactTableViewCell.swift; sourceTree = "<group>"; };
-		633C43E61F85C85500DAEA46 /* CondensedContactTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CondensedContactTableViewCell.xib; sourceTree = "<group>"; };
+		633C43E11F85C63500DAEA46 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		633C43E21F85C63500DAEA46 /* FeedViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedViewController.xib; sourceTree = "<group>"; };
+		633C43E51F85C85500DAEA46 /* ContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
+		633C43E61F85C85500DAEA46 /* SmallContactTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SmallContactTableViewCell.xib; sourceTree = "<group>"; };
 		633C43EB1F85CB5A00DAEA46 /* TransitionInjector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionInjector.swift; sourceTree = "<group>"; };
 		633C43ED1F85DCF300DAEA46 /* TwoLabelHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoLabelHeader.swift; sourceTree = "<group>"; };
 		633C43EF1F85DD1200DAEA46 /* XibLoadedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibLoadedView.swift; sourceTree = "<group>"; };
 		633C43F11F85DE7F00DAEA46 /* TwoLabelHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TwoLabelHeader.xib; sourceTree = "<group>"; };
+		636FB24F1FD4434900AC467C /* UIViewController+ZAP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ZAP.swift"; sourceTree = "<group>"; };
+		636FB2531FD4635B00AC467C /* ButtonFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonFooter.swift; sourceTree = "<group>"; };
+		636FB2551FD4636500AC467C /* ButtonFooter.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonFooter.xib; sourceTree = "<group>"; };
+		636FB2571FD469BC00AC467C /* todo.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = todo.txt; sourceTree = "<group>"; };
+		636FB2591FD4815D00AC467C /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		636FB25B1FD48A9200AC467C /* CircleImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImageView.swift; sourceTree = "<group>"; };
+		636FB25E1FD497DA00AC467C /* BigContactTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BigContactTableViewCell.xib; sourceTree = "<group>"; };
+		636FB2611FD4ADB300AC467C /* PointFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointFooter.swift; sourceTree = "<group>"; };
+		636FB2631FD4ADC300AC467C /* PointFooter.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PointFooter.xib; sourceTree = "<group>"; };
+		636FB2661FD4B9AB00AC467C /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		636FB2671FD4B9AB00AC467C /* SettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
+		636FB26A1FD4C8F700AC467C /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
+		636FB26B1FD4C8F700AC467C /* SettingsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsTableViewCell.xib; sourceTree = "<group>"; };
 		6370A8C21F807DAC002641D3 /* DailyZap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyZap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6370A8C51F807DAC002641D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6370A8C71F807DAC002641D3 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -92,8 +126,10 @@
 		6370A8F71F808C9A002641D3 /* Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
 		6370A8FC1F8099C3002641D3 /* LandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
 		6370A8FD1F8099C3002641D3 /* LandingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LandingViewController.xib; sourceTree = "<group>"; };
-		6370A9001F809BC9002641D3 /* CTAButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTAButton.swift; sourceTree = "<group>"; };
 		6370A9031F80B1FF002641D3 /* OnboardPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardPageViewController.swift; sourceTree = "<group>"; };
+		637CD94A1FDB41A400892870 /* PresentationInjector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationInjector.swift; sourceTree = "<group>"; };
+		637CD94C1FDB5ADD00892870 /* NSObject+ZAP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+ZAP.swift"; sourceTree = "<group>"; };
+		637CD94E1FDC4D4900892870 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		638086C41F81DE170096CEF5 /* AppleContactsInjector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleContactsInjector.swift; sourceTree = "<group>"; };
 		638086C81F81EA6A0096CEF5 /* AuthorizeContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizeContactsViewController.swift; sourceTree = "<group>"; };
 		638086C91F81EA6A0096CEF5 /* AuthorizeContactsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthorizeContactsViewController.xib; sourceTree = "<group>"; };
@@ -104,6 +140,15 @@
 		63A3130A1F94519800BA5CE1 /* Date+ZAP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+ZAP.swift"; sourceTree = "<group>"; };
 		63A3130C1F94550000BA5CE1 /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
 		63A313101F94693E00BA5CE1 /* FeedDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDataController.swift; sourceTree = "<group>"; };
+		63B9F2CC1FEC11F90070ED3F /* ContactPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactPickerViewController.swift; sourceTree = "<group>"; };
+		63B9F2CD1FEC11F90070ED3F /* ContactPickerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactPickerViewController.xib; sourceTree = "<group>"; };
+		63B9F2D01FEC129B0070ED3F /* FeedPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPresentationController.swift; sourceTree = "<group>"; };
+		63B9F2D31FEC15470070ED3F /* ContactPickerDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactPickerDataController.swift; sourceTree = "<group>"; };
+		63B9F2D51FEC18880070ED3F /* BaseDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseDataController.swift; sourceTree = "<group>"; };
+		63CDE8521FDDB9720004296F /* ZappedPlaceholderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZappedPlaceholderTableViewCell.swift; sourceTree = "<group>"; };
+		63CDE8531FDDB9720004296F /* ZappedPlaceholderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZappedPlaceholderTableViewCell.xib; sourceTree = "<group>"; };
+		63D271EB2077C13C007AD36F /* LightningBoltView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightningBoltView.swift; sourceTree = "<group>"; };
+		63D271ED2077D122007AD36F /* UIView+ZAP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ZAP.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +174,7 @@
 		633C43D11F846E7800DAEA46 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				637CD94E1FDC4D4900892870 /* MessageUI.framework */,
 				633C43D21F846E7800DAEA46 /* Contacts.framework */,
 				633C43D31F846E7800DAEA46 /* ContactsUI.framework */,
 			);
@@ -138,14 +184,35 @@
 		633C43E01F85C58900DAEA46 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				633C43E11F85C63500DAEA46 /* MainViewController.swift */,
-				633C43E21F85C63500DAEA46 /* MainViewController.xib */,
-				633C43E51F85C85500DAEA46 /* CondensedContactTableViewCell.swift */,
-				633C43E61F85C85500DAEA46 /* CondensedContactTableViewCell.xib */,
+				63A313101F94693E00BA5CE1 /* FeedDataController.swift */,
+				63B9F2D01FEC129B0070ED3F /* FeedPresentationController.swift */,
+				633C43E11F85C63500DAEA46 /* FeedViewController.swift */,
+				633C43E21F85C63500DAEA46 /* FeedViewController.xib */,
+				633C43E51F85C85500DAEA46 /* ContactTableViewCell.swift */,
+				633C43E61F85C85500DAEA46 /* SmallContactTableViewCell.xib */,
+				636FB25E1FD497DA00AC467C /* BigContactTableViewCell.xib */,
 				633C43ED1F85DCF300DAEA46 /* TwoLabelHeader.swift */,
 				633C43F11F85DE7F00DAEA46 /* TwoLabelHeader.xib */,
+				636FB2531FD4635B00AC467C /* ButtonFooter.swift */,
+				636FB2551FD4636500AC467C /* ButtonFooter.xib */,
+				636FB2611FD4ADB300AC467C /* PointFooter.swift */,
+				636FB2631FD4ADC300AC467C /* PointFooter.xib */,
+				63CDE8521FDDB9720004296F /* ZappedPlaceholderTableViewCell.swift */,
+				63CDE8531FDDB9720004296F /* ZappedPlaceholderTableViewCell.xib */,
+				63D271EB2077C13C007AD36F /* LightningBoltView.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		636FB2651FD4B98600AC467C /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				636FB2661FD4B9AB00AC467C /* SettingsViewController.swift */,
+				636FB2671FD4B9AB00AC467C /* SettingsViewController.xib */,
+				636FB26A1FD4C8F700AC467C /* SettingsTableViewCell.swift */,
+				636FB26B1FD4C8F700AC467C /* SettingsTableViewCell.xib */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		6370A8B91F807DAC002641D3 = {
@@ -170,15 +237,18 @@
 		6370A8C41F807DAC002641D3 /* DailyZap */ = {
 			isa = PBXGroup;
 			children = (
-				633C43E01F85C58900DAEA46 /* Main */,
-				6370A8FB1F8099A2002641D3 /* Onboard */,
 				6370A8F21F8089E3002641D3 /* Base */,
+				636FB2651FD4B98600AC467C /* Settings */,
+				633C43E01F85C58900DAEA46 /* Main */,
+				63B9F2CB1FEC11AA0070ED3F /* ContactPicker */,
+				6370A8FB1F8099A2002641D3 /* Onboard */,
 				6370A8E51F80813B002641D3 /* Assets */,
 				6370A8C51F807DAC002641D3 /* AppDelegate.swift */,
 				6370A8C71F807DAC002641D3 /* RootViewController.swift */,
 				6370A8CC1F807DAC002641D3 /* Assets.xcassets */,
 				6370A8CE1F807DAC002641D3 /* LaunchScreen.storyboard */,
 				6370A8D11F807DAC002641D3 /* Info.plist */,
+				636FB2571FD469BC00AC467C /* todo.txt */,
 			);
 			path = DailyZap;
 			sourceTree = "<group>";
@@ -218,6 +288,9 @@
 				6370A8F01F80880F002641D3 /* UIFont+ZAP.swift */,
 				63A312FE1F93142600BA5CE1 /* Int+ZAP.swift */,
 				63A3130A1F94519800BA5CE1 /* Date+ZAP.swift */,
+				636FB24F1FD4434900AC467C /* UIViewController+ZAP.swift */,
+				637CD94C1FDB5ADD00892870 /* NSObject+ZAP.swift */,
+				63D271ED2077D122007AD36F /* UIView+ZAP.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -225,12 +298,11 @@
 		6370A8F21F8089E3002641D3 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				63A3130F1F94692B00BA5CE1 /* DataManagers */,
-				63A3130E1F94550900BA5CE1 /* Models */,
-				638086C31F81DDCE0096CEF5 /* Injectors */,
-				6370A9021F809C42002641D3 /* Subclasses */,
 				6370A8ED1F808305002641D3 /* Extensions */,
-				638086C21F81DDC60096CEF5 /* ViewControllers */,
+				638086C31F81DDCE0096CEF5 /* Injectors */,
+				63A3130E1F94550900BA5CE1 /* Models */,
+				6370A9021F809C42002641D3 /* Subclasses */,
+				638086C21F81DDC60096CEF5 /* Controllers */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -253,24 +325,26 @@
 			isa = PBXGroup;
 			children = (
 				6370A8F71F808C9A002641D3 /* Label.swift */,
-				6370A9001F809BC9002641D3 /* CTAButton.swift */,
-				633C43DE1F8482C900DAEA46 /* SubtleButton.swift */,
+				636FB2591FD4815D00AC467C /* Button.swift */,
 				633C43EF1F85DD1200DAEA46 /* XibLoadedView.swift */,
+				636FB25B1FD48A9200AC467C /* CircleImageView.swift */,
 			);
 			path = Subclasses;
 			sourceTree = "<group>";
 		};
-		638086C21F81DDC60096CEF5 /* ViewControllers */ = {
+		638086C21F81DDC60096CEF5 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				6370A8F31F8089F1002641D3 /* BaseViewController.swift */,
+				63B9F2D51FEC18880070ED3F /* BaseDataController.swift */,
 			);
-			path = ViewControllers;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		638086C31F81DDCE0096CEF5 /* Injectors */ = {
 			isa = PBXGroup;
 			children = (
+				637CD94A1FDB41A400892870 /* PresentationInjector.swift */,
 				638086C41F81DE170096CEF5 /* AppleContactsInjector.swift */,
 				633C43D61F84757D00DAEA46 /* AlertInjector.swift */,
 				633C43EB1F85CB5A00DAEA46 /* TransitionInjector.swift */,
@@ -289,12 +363,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		63A3130F1F94692B00BA5CE1 /* DataManagers */ = {
+		63B9F2CB1FEC11AA0070ED3F /* ContactPicker */ = {
 			isa = PBXGroup;
 			children = (
-				63A313101F94693E00BA5CE1 /* FeedDataController.swift */,
+				63B9F2CC1FEC11F90070ED3F /* ContactPickerViewController.swift */,
+				63B9F2CD1FEC11F90070ED3F /* ContactPickerViewController.xib */,
+				63B9F2D31FEC15470070ED3F /* ContactPickerDataController.swift */,
 			);
-			path = DataManagers;
+			path = ContactPicker;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -382,14 +458,22 @@
 			files = (
 				6370A8FF1F8099C3002641D3 /* LandingViewController.xib in Resources */,
 				6370A8EC1F808154002641D3 /* Norwester.ttf in Resources */,
-				633C43E81F85C85500DAEA46 /* CondensedContactTableViewCell.xib in Resources */,
+				636FB2641FD4ADC300AC467C /* PointFooter.xib in Resources */,
+				633C43E81F85C85500DAEA46 /* SmallContactTableViewCell.xib in Resources */,
 				633C43F21F85DE7F00DAEA46 /* TwoLabelHeader.xib in Resources */,
 				638086CB1F81EA6A0096CEF5 /* AuthorizeContactsViewController.xib in Resources */,
+				636FB2581FD469BC00AC467C /* todo.txt in Resources */,
+				63CDE8551FDDB9720004296F /* ZappedPlaceholderTableViewCell.xib in Resources */,
 				6370A8D01F807DAC002641D3 /* LaunchScreen.storyboard in Resources */,
-				633C43E41F85C63500DAEA46 /* MainViewController.xib in Resources */,
+				636FB2561FD4636500AC467C /* ButtonFooter.xib in Resources */,
+				633C43E41F85C63500DAEA46 /* FeedViewController.xib in Resources */,
 				6370A8CD1F807DAC002641D3 /* Assets.xcassets in Resources */,
+				636FB2691FD4B9AB00AC467C /* SettingsViewController.xib in Resources */,
 				633C43DD1F847FB600DAEA46 /* AuthorizeNotificationsViewController.xib in Resources */,
+				636FB2601FD497DA00AC467C /* BigContactTableViewCell.xib in Resources */,
+				636FB26D1FD4C8F700AC467C /* SettingsTableViewCell.xib in Resources */,
 				6370A8EA1F808154002641D3 /* Muli-LightItalic.ttf in Resources */,
+				63B9F2CF1FEC11F90070ED3F /* ContactPickerViewController.xib in Resources */,
 				6370A8EB1F808154002641D3 /* Muli-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -408,29 +492,43 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				633C43E71F85C85500DAEA46 /* CondensedContactTableViewCell.swift in Sources */,
+				63B9F2D41FEC15470070ED3F /* ContactPickerDataController.swift in Sources */,
+				633C43E71F85C85500DAEA46 /* ContactTableViewCell.swift in Sources */,
+				63D271EE2077D122007AD36F /* UIView+ZAP.swift in Sources */,
+				63D271EC2077C13C007AD36F /* LightningBoltView.swift in Sources */,
 				63A312FF1F93142600BA5CE1 /* Int+ZAP.swift in Sources */,
 				6370A8F81F808C9A002641D3 /* Label.swift in Sources */,
+				636FB26C1FD4C8F700AC467C /* SettingsTableViewCell.swift in Sources */,
 				6370A8FE1F8099C3002641D3 /* LandingViewController.swift in Sources */,
+				636FB25A1FD4815D00AC467C /* Button.swift in Sources */,
 				63A313051F94494200BA5CE1 /* Contact.swift in Sources */,
 				638086C51F81DE170096CEF5 /* AppleContactsInjector.swift in Sources */,
 				63A3130D1F94550000BA5CE1 /* Feed.swift in Sources */,
+				637CD94B1FDB41A400892870 /* PresentationInjector.swift in Sources */,
+				63B9F2D21FEC14570070ED3F /* FeedViewController.swift in Sources */,
+				63B9F2D61FEC18880070ED3F /* BaseDataController.swift in Sources */,
 				6370A8F41F8089F1002641D3 /* BaseViewController.swift in Sources */,
-				633C43DF1F8482C900DAEA46 /* SubtleButton.swift in Sources */,
 				633C43EE1F85DCF300DAEA46 /* TwoLabelHeader.swift in Sources */,
 				6370A8C81F807DAC002641D3 /* RootViewController.swift in Sources */,
 				63A313111F94693E00BA5CE1 /* FeedDataController.swift in Sources */,
 				6370A8C61F807DAC002641D3 /* AppDelegate.swift in Sources */,
+				637CD94D1FDB5ADD00892870 /* NSObject+ZAP.swift in Sources */,
 				63A313011F93179300BA5CE1 /* UserDefaultsInjector.swift in Sources */,
+				636FB2541FD4635B00AC467C /* ButtonFooter.swift in Sources */,
 				633C43F01F85DD1200DAEA46 /* XibLoadedView.swift in Sources */,
+				636FB25C1FD48A9200AC467C /* CircleImageView.swift in Sources */,
+				636FB2621FD4ADB300AC467C /* PointFooter.swift in Sources */,
 				63A313031F943EB500BA5CE1 /* FeedInjector.swift in Sources */,
 				633C43EC1F85CB5A00DAEA46 /* TransitionInjector.swift in Sources */,
-				6370A9011F809BC9002641D3 /* CTAButton.swift in Sources */,
+				63CDE8541FDDB9720004296F /* ZappedPlaceholderTableViewCell.swift in Sources */,
 				6370A8F11F80880F002641D3 /* UIFont+ZAP.swift in Sources */,
+				63B9F2CE1FEC11F90070ED3F /* ContactPickerViewController.swift in Sources */,
 				63A3130B1F94519800BA5CE1 /* Date+ZAP.swift in Sources */,
-				633C43E31F85C63500DAEA46 /* MainViewController.swift in Sources */,
+				636FB2681FD4B9AB00AC467C /* SettingsViewController.swift in Sources */,
 				633C43D71F84757D00DAEA46 /* AlertInjector.swift in Sources */,
+				63B9F2D11FEC129B0070ED3F /* FeedPresentationController.swift in Sources */,
 				6370A9041F80B1FF002641D3 /* OnboardPageViewController.swift in Sources */,
+				636FB2501FD4434900AC467C /* UIViewController+ZAP.swift in Sources */,
 				633C43DC1F847FB600DAEA46 /* AuthorizeNotificationsViewController.swift in Sources */,
 				638086CA1F81EA6A0096CEF5 /* AuthorizeContactsViewController.swift in Sources */,
 				6370A8EF1F80834C002641D3 /* UIColor+ZAP.swift in Sources */,
@@ -581,6 +679,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 88J4VM6686;
 				INFOPLIST_FILE = DailyZap/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dqlobo.DailyZap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -596,6 +695,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 88J4VM6686;
 				INFOPLIST_FILE = DailyZap/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dqlobo.DailyZap;
 				PRODUCT_NAME = "$(TARGET_NAME)";

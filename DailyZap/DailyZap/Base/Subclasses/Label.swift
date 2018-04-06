@@ -17,22 +17,30 @@ enum LabelType: Int {
 class Label: UILabel {
     
     required init?(coder aDecoder: NSCoder) {
-        self.type = LabelType.normal.rawValue
+        self.type = 1
         super.init(coder: aDecoder)
+        self.configure()
+        
+    }
+    
+    func configure() {
+        if let t = LabelType(rawValue: self.type) {
+            switch t {
+            case .title:
+                self.font = UIFont.zapTitleFont(sz: self.font.pointSize)
+                self.text = self.text?.uppercased()
+            case .normal:
+                self.font = UIFont.zapNormalFont(sz: self.font.pointSize)
+            case .detail:
+                self.font = UIFont.zapDetailFont(sz: self.font.pointSize)
+                self.textColor = UIColor.zapGray
+            }
+        }
     }
 
     @IBInspectable var type: Int {
         didSet {
-            if let t = LabelType(rawValue: type) {
-                switch t {
-                case .title:
-                    self.font = UIFont.zapTitleFont(sz: self.font.pointSize)
-                case .normal:
-                    self.font = UIFont.zapNormalFont(sz: self.font.pointSize)
-                case .detail:
-                    self.font = UIFont.zapDetailFont(sz: self.font.pointSize)
-                }
-            }
+            self.configure()
         }
     }
 }

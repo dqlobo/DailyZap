@@ -32,12 +32,12 @@ class RootViewController: UINavigationController, AppleContactsInjector {
 // Static methods
 extension RootViewController {
     
-    class func createRootViewController() -> RootViewController {
-        let root = RootViewController(rootViewController: MainViewController())
+    class func createRootViewController() -> RootViewController? {
+        let root = RootViewController(rootViewController: FeedViewController())
         root.isNavigationBarHidden = true
-        root.navigationBar.barTintColor = UIColor.clear
+        root.navigationBar.barTintColor = UIColor.zapNearWhite
         root.view.backgroundColor = UIColor.clear
-        root.navigationBar.isTranslucent = true
+        root.navigationBar.isTranslucent = false
         root.navigationBar.setBackgroundImage(UIImage(), for: .default)
         root.navigationBar.shadowImage = UIImage()
         return root
@@ -53,6 +53,8 @@ extension RootViewController {
             self.pushViewController(AuthorizeNotificationsViewController(), animated: false)
             self.pushViewController(AuthorizeContactsViewController(), animated: false)
             self.pushViewController(LandingViewController(), animated: false)
+        } else {
+            self.appleContactManager.refreshContactList()
         }
     }
     

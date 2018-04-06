@@ -10,8 +10,33 @@ import UIKit
 
 class XibLoadedView: UIView {
 
-    class func loadFromXib(withOwner owner: Any?) -> Any? {
-        let nibName = String(describing: type(of: self))
-        return Bundle.main.loadNibNamed(nibName, owner: owner, options: nil)?.first
+//    class func loadFromXib(withOwner owner: Any?) -> Any? {
+//        return self.loadFromXib(withOwner:owner)
+//    }
+}
+
+extension UIView {
+    func getDashedBorderLayer(color: UIColor, borderWidth: CGFloat = 1, cornerRadius: CGFloat = 5) -> CALayer {
+        let borderLayer = CAShapeLayer()
+        borderLayer.frame = self.frame
+        borderLayer.fillColor = UIColor.clear.cgColor
+        borderLayer.strokeColor = color.cgColor
+        borderLayer.lineWidth = borderWidth
+        borderLayer.lineJoin = kCALineJoinRound
+        borderLayer.lineDashPattern = [8, 4]
+        
+        let path = UIBezierPath.init(roundedRect: borderLayer.bounds, cornerRadius: cornerRadius)
+        
+        borderLayer.path = path.cgPath
+        return borderLayer
+    }
+}
+
+extension UIView {
+    class func loadFromXib<T>(withOwner owner: Any?) -> T? {
+        if let nib = Bundle.main.loadNibNamed(self.className(), owner: owner, options: nil)?.first as? T{
+            return nib
+        }
+        return nil
     }
 }

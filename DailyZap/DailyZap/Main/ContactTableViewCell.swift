@@ -8,14 +8,22 @@
 
 import UIKit
 
-class CondensedContactTableViewCell: UITableViewCell {
+class ContactTableViewCell: UITableViewCell {
 
     @IBOutlet weak var userPicture: UIImageView!
-    @IBOutlet weak var name: Label!
+    @IBOutlet private weak var nameLabel: Label!
+    @IBOutlet weak var zapBtn: Button!
+    @IBOutlet weak var dueLabel: Label!
+    
+    var name: String = "" {
+        didSet {
+            nameLabel.text = name.uppercased()
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
         self.layer.cornerRadius = 10
     }
-
+    
 }

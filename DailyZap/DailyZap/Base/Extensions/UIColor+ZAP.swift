@@ -16,4 +16,12 @@ extension UIColor {
     class var zapYellow: UIColor {
         return UIColor(red: 1, green: 247.0/255.0, blue: 0, alpha: 1)
     }
+    
+    class var zapNearWhite: UIColor {
+        return UIColor(hue: 0, saturation: 0, brightness: 0.97, alpha: 1)
+    }
+    
+    class var zapGray: UIColor {
+        return UIColor(hue: 0, saturation: 0, brightness: 0.6, alpha: 1)
+    }
 }

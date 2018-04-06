@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="PointFooter" customModule="DailyZap" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n8A-5L-8WT">
+                    <rect key="frame" x="0.0" y="28.5" width="375" height="40.5"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 ZAP POINTS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x1X-W7-8bm" customClass="Label" customModule="DailyZap" customModuleProvider="target">
+                            <rect key="frame" x="131" y="0.0" width="112" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="type">
+                                    <integer key="value" value="0"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zap now to improve your score!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EI5-3m-zVE" customClass="Label" customModule="DailyZap" customModuleProvider="target">
+                            <rect key="frame" x="98" y="26" width="179" height="15"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="type">
+                                    <integer key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="EI5-3m-zVE" firstAttribute="centerX" secondItem="n8A-5L-8WT" secondAttribute="centerX" id="1h9-Xn-rCe"/>
+                        <constraint firstItem="EI5-3m-zVE" firstAttribute="width" relation="lessThanOrEqual" secondItem="n8A-5L-8WT" secondAttribute="width" id="40L-Rf-jo9"/>
+                        <constraint firstItem="x1X-W7-8bm" firstAttribute="top" secondItem="n8A-5L-8WT" secondAttribute="top" id="7Yt-wU-LnU"/>
+                        <constraint firstItem="EI5-3m-zVE" firstAttribute="top" secondItem="x1X-W7-8bm" secondAttribute="bottom" constant="5" id="ODB-z4-0ZJ"/>
+                        <constraint firstAttribute="bottom" secondItem="EI5-3m-zVE" secondAttribute="bottom" id="OI6-Q4-1Vo"/>
+                        <constraint firstItem="x1X-W7-8bm" firstAttribute="centerX" secondItem="n8A-5L-8WT" secondAttribute="centerX" id="Rxz-B7-aHe"/>
+                        <constraint firstItem="x1X-W7-8bm" firstAttribute="width" relation="lessThanOrEqual" secondItem="n8A-5L-8WT" secondAttribute="width" id="ybH-8C-7mS"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="n8A-5L-8WT" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="KRD-ot-3Ji"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="n8A-5L-8WT" secondAttribute="bottom" constant="20" id="bbq-El-dMl"/>
+                <constraint firstItem="n8A-5L-8WT" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="mvV-gv-E6w"/>
+                <constraint firstItem="n8A-5L-8WT" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="pf1-Bb-ShJ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="captionLabel" destination="EI5-3m-zVE" id="yh3-t4-nFj"/>
+                <outlet property="pointLabel" destination="x1X-W7-8bm" id="cvO-K1-56k"/>
+            </connections>
+            <point key="canvasLocation" x="33.5" y="340"/>
+        </view>
+    </objects>
+</document>

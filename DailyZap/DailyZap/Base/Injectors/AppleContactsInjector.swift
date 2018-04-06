@@ -20,7 +20,12 @@ extension AppleContactsInjector {
 
 class AppleContactsManager {
         // todo ability to actually mutate a contact
+    fileprivate let backgroundQueue = DispatchQueue(label: "Contact-Background-Queue")
+    static let loadedContactsNotification = NSNotification.Name("ContactListFinishedLoading")
+
     let store: CNContactStore = CNContactStore()
+    var isLoading: Bool = false
+    var contactList: Array<Contact> = []
     var defaultContactKeys: [CNKeyDescriptor] = [CNContactGivenNameKey, CNContactFamilyNameKey,
                               CNContactPhoneNumbersKey, CNContactImageDataKey,
                               CNContactImageDataAvailableKey] as [CNKeyDescriptor]
@@ -42,14 +47,21 @@ class AppleContactsManager {
         return contactCount
     }
 
-    func getRandomContact() -> CNContact? {
-        let keys: [CNKeyDescriptor] = self.defaultContactKeys
+    fileprivate func allContactFetch() -> CNContactFetchRequest {
+        let keys: [CNKeyDescriptor] = defaultContactKeys
         let fetch = CNContactFetchRequest(keysToFetch: keys)
+        fetch.sortOrder = .givenName
+        fetch.unifyResults = true
+        return fetch
+    }
+    
+    func getRandomContact() -> CNContact? {
+        let fetch = self.allContactFetch()
         
         let count = self.getContactCount()
         var index = Int.random(upTo: count)
         var output:CNContact?
-        
+        // TODO sort by name + store ids in array -> use this as datasource later..?
         try? self.store.enumerateContacts(with: fetch) { (contact, stop) in
             index -= 1
             if index == 0 {
@@ -59,25 +71,42 @@ class AppleContactsManager {
         return output
     }
     
-    func getContactWithID(contactID: String) -> CNContact? {
-        let contact: CNContact? = try? store.unifiedContact(withIdentifier: contactID, keysToFetch: self.defaultContactKeys)
+    func getContactWithID(contactID: String, keysToFetch: [CNKeyDescriptor] = []) -> CNContact? {
+        let contact: CNContact? = try? store.unifiedContact(withIdentifier: contactID, keysToFetch: defaultContactKeys + keysToFetch)
         return contact
     }
     
     func getContactsWithIDs(contactIDs: [String]) -> [CNContact] {
         let predicate = CNContact.predicateForContacts(withIdentifiers: contactIDs)
        
-        let output = try? self.store.unifiedContacts(matching: predicate,
-                                                     keysToFetch: self.defaultContactKeys)
+        let output = try? store.unifiedContacts(matching: predicate,
+                                                keysToFetch: self.defaultContactKeys)
         if output == nil {
             return []
         }
         return output!
     }
     
-    // TODO who manages contact modal view for choosing custom contact
-    // TODO feed fetch injector - parse the following into ui displayable objects (Extends contacts AND UserDefaultsInjector)
-        // - fetch due (if empty -> generate with getRandomContact)
-        // - fetch upcoming (no special behavior)
-        // - update/delete/complete contact zap (How does this differ for due vs upcoming? Use subclassing!)
+    func refreshContactList() {
+        isLoading = true
+        backgroundQueue.async { [weak self] in
+            guard let strong = self else { return }
+            var set = Set<Contact>()
+            let fetch = strong.allContactFetch()
+            try? strong.store.enumerateContacts(with: fetch) { (contact, stop) in
+                let c: Contact = Contact(contact: contact)
+                if c.hasName {
+                    set.insert(c)
+                }
+            }
+            
+            DispatchQueue.main.sync { [weak self] in
+                self?.isLoading = false
+                self?.contactList = set.sorted { $0.lastName < $1.lastName }
+                NotificationCenter.default.post(name: AppleContactsManager.loadedContactsNotification, object: nil)
+            }
+        }
+    }
+    
 }
+

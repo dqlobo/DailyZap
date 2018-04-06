@@ -23,11 +23,11 @@ class UserDefaultsManager {
     let contactQueueKey = "ContactDefaultsKeyQueued"
     
     init() {
-        self.setupDefaults()
+        setupDefaults()
     }
     
     func setupDefaults() {
-        _ = self.getUpcoming()
+        _ = getUpcoming()
     }
 }
 
@@ -35,9 +35,9 @@ extension UserDefaultsManager { // upcoming - public interface
     
     func addToQueue(contactID: String, due: Date) {
         let contact = Contact(contactID: contactID, due: due)
-        var currentUpcoming = self.getUpcoming()
+        var currentUpcoming = getUpcoming()
         currentUpcoming.append(contact)
-        self.setUpcoming(currentUpcoming)
+        setUpcoming(currentUpcoming)
     }
     
     func removeFromQueue(contactID: String) {
@@ -45,12 +45,18 @@ extension UserDefaultsManager { // upcoming - public interface
         let index: Int? = upcoming.index { $0.contactID == contactID }
         if let toRemoveIndex = index {
             upcoming.remove(at: toRemoveIndex)
-            self.setUpcoming(upcoming)
+            setUpcoming(upcoming)
         }
     }
 }
 
 extension UserDefaultsManager { // private defaults integrations
+    
+    func hasContactWithID(contactID: String) -> Bool {
+        let contactIDs = self.getUpcoming().map { c in c.contactID }
+        
+        return contactIDs.contains(contactID)
+    }
     
     func getUpcoming() -> [Contact] {
         guard let queue = defaults.array(forKey: contactQueueKey) as? [SerializedContact] else {

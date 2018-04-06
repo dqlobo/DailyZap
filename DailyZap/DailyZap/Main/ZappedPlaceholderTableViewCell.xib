@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="219" id="KGk-i7-Jjw" customClass="ZappedPlaceholderTableViewCell" customModule="DailyZap" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="219"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="218.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xHU-eZ-ZSh">
+                        <rect key="frame" x="105.5" y="30.5" width="109.5" height="159"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="check" translatesAutoresizingMaskIntoConstraints="NO" id="Yn3-gV-GBB">
+                                <rect key="frame" x="0.0" y="0.0" width="109.5" height="109.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Yn3-gV-GBB" secondAttribute="height" multiplier="1:1" id="tcC-Yk-s0i"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="751" text="Complete" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="jl5-D7-T0E" customClass="Label" customModule="DailyZap" customModuleProvider="target">
+                                <rect key="frame" x="0.5" y="115" width="109.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="type">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Yn3-gV-GBB" firstAttribute="width" secondItem="xHU-eZ-ZSh" secondAttribute="width" id="Oe2-v2-NKD"/>
+                            <constraint firstItem="jl5-D7-T0E" firstAttribute="top" secondItem="Yn3-gV-GBB" secondAttribute="bottom" constant="5" id="OwH-9M-hCV"/>
+                            <constraint firstAttribute="bottom" secondItem="jl5-D7-T0E" secondAttribute="bottom" constant="23.5" id="SqD-MG-zMM"/>
+                            <constraint firstItem="Yn3-gV-GBB" firstAttribute="centerX" secondItem="xHU-eZ-ZSh" secondAttribute="centerX" id="UgZ-Lc-k4c"/>
+                            <constraint firstItem="Yn3-gV-GBB" firstAttribute="top" secondItem="xHU-eZ-ZSh" secondAttribute="top" id="bDt-2W-wTp"/>
+                            <constraint firstItem="jl5-D7-T0E" firstAttribute="width" secondItem="xHU-eZ-ZSh" secondAttribute="width" id="mhs-E2-uL4"/>
+                            <constraint firstItem="jl5-D7-T0E" firstAttribute="centerX" secondItem="xHU-eZ-ZSh" secondAttribute="centerX" id="x6E-wa-wMV"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="xHU-eZ-ZSh" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="0On-pG-sTN"/>
+                    <constraint firstItem="xHU-eZ-ZSh" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="hPb-mM-W35"/>
+                    <constraint firstItem="Yn3-gV-GBB" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.5" id="p8M-LB-9ME"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="checkImageView" destination="Yn3-gV-GBB" id="GHb-Ja-iiw"/>
+                <outlet property="label" destination="jl5-D7-T0E" id="ujN-EI-k5Y"/>
+            </connections>
+            <point key="canvasLocation" x="34" y="-33.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="check" width="100" height="100"/>
+    </resources>
+</document>

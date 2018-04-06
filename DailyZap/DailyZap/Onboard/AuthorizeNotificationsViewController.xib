@@ -4,7 +4,8 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -72,16 +73,27 @@
                         <constraint firstAttribute="bottom" secondItem="7Ce-Qf-eLP" secondAttribute="bottom" id="sk9-mD-7Dn"/>
                     </constraints>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uD0-Hq-X4C" customClass="CTAButton" customModule="DailyZap" customModuleProvider="target">
-                    <rect key="frame" x="97" y="452" width="182" height="30"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uD0-Hq-X4C" customClass="Button" customModule="DailyZap" customModuleProvider="target">
+                    <rect key="frame" x="41.5" y="452" width="293" height="42"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
                     <state key="normal" title="TURN ON NOTIFICATIONS"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="type">
+                            <integer key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <action selector="tappedEnableNotifications:" destination="-1" eventType="touchUpInside" id="LYp-9W-ErM"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="71O-7G-Y4z" customClass="SubtleButton" customModule="DailyZap" customModuleProvider="target">
-                    <rect key="frame" x="145" y="507" width="84" height="30"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="71O-7G-Y4z" customClass="Button" customModule="DailyZap" customModuleProvider="target">
+                    <rect key="frame" x="145" y="519" width="84" height="30"/>
                     <state key="normal" title="skip for now"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="type">
+                            <integer key="value" value="3"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <action selector="tappedSkip:" destination="-1" eventType="touchUpInside" id="5f7-Bw-40R"/>
                     </connections>

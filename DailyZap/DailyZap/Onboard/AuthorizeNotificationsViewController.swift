@@ -10,8 +10,8 @@ import UIKit
 
 class AuthorizeNotificationsViewController: UIViewController {
     @IBOutlet weak var infoSection: UIView!
-    @IBOutlet weak var enableBtn: CTAButton!
-    @IBOutlet weak var skipBtn: SubtleButton!
+    @IBOutlet weak var enableBtn: Button!
+    @IBOutlet weak var skipBtn: Button!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,5 +65,10 @@ class AuthorizeNotificationsViewController: UIViewController {
         transition.subtype = kCATransitionFromRight
         self.navigationController!.view.layer.add(transition, forKey: nil)
         self.navigationController?.popViewController(animated: false)
+    }
+    
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return UIStatusBarStyle.lightContent
     }
 }

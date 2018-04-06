@@ -8,7 +8,12 @@
 
 import UIKit
 
-class TwoLabelHeader: XibLoadedView {
+class TwoLabelHeader: UITableViewHeaderFooterView {
 
-
+    @IBOutlet weak var titleLabel: Label!
+    @IBOutlet weak var subtitleLabel: Label!
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        self.contentView.backgroundColor = UIColor.zapNearWhite
+    }
 }

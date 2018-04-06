@@ -27,10 +27,12 @@ class OnboardPageViewController: UIPageViewController {
     }
     
     @objc func landingToContacts(sender: UIButton!) {
-        print("YES")
         
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return UIStatusBarStyle.lightContent
+    }
     
 }
 

@@ -4,7 +4,8 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -73,9 +74,15 @@
                         <constraint firstItem="rlM-5e-HhM" firstAttribute="centerX" secondItem="5D0-FN-d9p" secondAttribute="centerX" id="qq6-O6-ta4"/>
                     </constraints>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X9G-aS-hUK" customClass="CTAButton" customModule="DailyZap" customModuleProvider="target">
-                    <rect key="frame" x="118" y="463.5" width="139" height="30"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X9G-aS-hUK" customClass="Button" customModule="DailyZap" customModuleProvider="target">
+                    <rect key="frame" x="74.5" y="463.5" width="226" height="42"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
                     <state key="normal" title="IMPORT CONTACTS"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="type">
+                            <integer key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <action selector="tappedImportContacts:" destination="-1" eventType="touchUpInside" id="ZjP-VZ-lsV"/>
                     </connections>

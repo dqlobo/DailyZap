@@ -10,7 +10,7 @@ import UIKit
 
 class AuthorizeContactsViewController: BaseViewController, AppleContactsInjector, AlertInjector {
     @IBOutlet weak var verticalLogoPosition: NSLayoutConstraint!
-    @IBOutlet weak var importBtn: CTAButton!
+    @IBOutlet weak var importBtn: Button!
     @IBOutlet weak var infoSection: UIView!
     
     override func viewDidLoad() {
@@ -63,19 +63,23 @@ class AuthorizeContactsViewController: BaseViewController, AppleContactsInjector
     
     @IBAction func tappedImportContacts(_ sender: Any) {
         self.appleContactManager.requestAccess { (granted, error) in
-            if !granted || error != nil {
+            if granted && error == nil {
+                DispatchQueue.main.async {
+                    self.appleContactManager.refreshContactList()
+                    self.hideButtonAndSection()
+                }
+            } else {
                 let msg = "Please visit Settings > Daily Zap to grant access and continue."
                 let settingsAction = UIAlertAction.init(title: "Fix Now", style: .`default`, handler: { _ in
                     let url = URL(string: UIApplicationOpenSettingsURLString)!
                     UIApplication.shared.open(url, options: [:], completionHandler: nil)
                 })
                 self.alertManager.presentCancellableAction(from: self, title: "Access Failed", message: msg, customAction: settingsAction)
-            } else {
-                DispatchQueue.main.async {
-                    self.hideButtonAndSection()
-                }
             }
-//            self.navigationController?.popViewController(animated: true)
         }
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return UIStatusBarStyle.lightContent
     }
 }

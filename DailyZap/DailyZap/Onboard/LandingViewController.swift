@@ -11,7 +11,7 @@ import UIKit
 class LandingViewController: BaseViewController {
     
     @IBOutlet weak var verticalLogoPosition: NSLayoutConstraint!
-    @IBOutlet weak var getStartedBtn: CTAButton!
+    @IBOutlet weak var getStartedBtn: Button!
     @IBOutlet weak var footer: UIView!
     @IBOutlet weak var logo: UIImageView!
     
@@ -65,5 +65,9 @@ class LandingViewController: BaseViewController {
     }
     @IBAction func tappedPrivacy(_ sender: Any) {
         // TODO open Privacy URL
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return UIStatusBarStyle.lightContent
     }
 }

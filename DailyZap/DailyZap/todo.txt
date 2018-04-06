@@ -1,0 +1,9 @@
+[12/3]=> Due today card
+[12/10]=> Connect contact Queueing to interface
+
+[       ]=> Empty state
+[       ]=> Zapped Event + Animations
+[       ]=> Notifications + Permissions in settings
+[       ]=> Splash page
+[       ]=> Contact picker with NO DUPLICATES + ability to merge etc.
+[       ]=> Loading spinner for contacts fetch
