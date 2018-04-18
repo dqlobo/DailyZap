@@ -6,7 +6,10 @@ target 'DailyZap' do
   use_frameworks!
 
   # Pods for DailyZap
-
+  pod "InitialsImageView"
+  pod 'PopupDialog', '~> 0.6'
+  pod 'SACountingLabel'
+  
   target 'DailyZapTests' do
     inherit! :search_paths
     # Pods for testing

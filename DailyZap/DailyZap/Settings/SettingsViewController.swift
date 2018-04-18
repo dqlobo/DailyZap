@@ -7,19 +7,15 @@
 //
 
 import UIKit
-
-fileprivate enum SettingsRow: Int {
-    case definition
-    case notifications
-    
-    case rowCount
-}
+import PopupDialog
 
 class SettingsViewController: BaseViewController {
     let settingsCellReuseID = "SettingsCellReuseID"
+    let notificationsCellReuseID = "SettingsNotificationsReuseID"
     let settingsFooterReuseID = "SettingsFooterReuseID"
-    
+
     @IBOutlet weak var tableView: UITableView!
+    lazy var presenter = SettingsPresentationController(viewController: self)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,16 +32,19 @@ class SettingsViewController: BaseViewController {
         self.tableView.register(cellNib, forCellReuseIdentifier: self.settingsCellReuseID)
         let footerNib = UINib(nibName: "ButtonFooter", bundle: Bundle.main)
         self.tableView.register(footerNib, forHeaderFooterViewReuseIdentifier: self.settingsFooterReuseID)
-        self.tableView.backgroundColor = UIColor.clear
-        self.tableView.rowHeight = 120
-        self.tableView.sectionFooterHeight = 100
-        self.tableView.bounces = false
-        self.tableView.delegate = self
-        self.tableView.dataSource = self
+        let notifNib = UINib(nibName: "NotificationSettingsTableViewCell", bundle: .main)
+        tableView.register(notifNib, forCellReuseIdentifier: notificationsCellReuseID)
+        tableView.backgroundColor = UIColor.clear
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 120
+        tableView.sectionFooterHeight = 100
+        tableView.bounces = false
+        tableView.delegate = self
+        tableView.dataSource = self
     }
     
     @objc func goBack() {
-        self.dismiss(animated: true, completion: nil)
+        dismiss(animated: true, completion: nil)
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -54,23 +53,29 @@ class SettingsViewController: BaseViewController {
 
 }
 
-extension SettingsViewController: UITableViewDataSource {
+extension SettingsViewController: UITableViewDataSource, UITableViewDelegate, NotificationInjector {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return SettingsRow.rowCount.rawValue
+        return 2
     }
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: SettingsTableViewCell = tableView.dequeueReusableCell(withIdentifier: self.settingsCellReuseID, for: indexPath) as! SettingsTableViewCell
         if indexPath.row == 0 {
+            let cell: SettingsTableViewCell = tableView.dequeueReusableCell(withIdentifier: settingsCellReuseID, for: indexPath) as! SettingsTableViewCell
             cell.titleLabel.text = "Zap"
             cell.detailLabel.text = "/zap/ (verb) to send a message that refreshes an old connection"
-        } else {
-            cell.titleLabel.text = "Notifications"
-            cell.detailLabel.text = "Turn on notifications for reminders to supercharge your network"
+            return cell
+        } else if indexPath.row == 1 {
+            let cell: NotificationSettingsTableViewCell = tableView.dequeueReusableCell(withIdentifier: notificationsCellReuseID, for: indexPath) as! NotificationSettingsTableViewCell
+            cell.delegate = self
+            cell.setCollapsed(!notificationManager.enabled)
+            cell.enabled = notificationManager.enabled
+            cell.timing = notificationManager.timing
+            cell.frequency = notificationManager.frequency
+            return cell
         }
-        return cell
+        fatalError("Check your datasource")
     }
     
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
@@ -87,6 +92,23 @@ extension SettingsViewController: UITableViewDataSource {
     
 }
 
-extension SettingsViewController: UITableViewDelegate {
+extension SettingsViewController: NotificationSettingsDelegate {
+    func didToggleNotifications(_ isOn: Bool, cell: NotificationSettingsTableViewCell) {
+        notificationManager.setEnabled(isOn) { [weak self] result in
+            if case let .success(flag) = result {
+                cell.enabled = flag
+                self?.tableView.reloadData()
+            } else {
+                cell.enabled = false
+                self?.presenter.openAppSettings()
+            }
+        }
+    }
     
+    func didSetTime(_ time: NotificationTiming, cell: NotificationSettingsTableViewCell) {
+        notificationManager.setTiming(time)
+    }
+    func didSetFrequency(_ freq: NotificationFrequency, cell: NotificationSettingsTableViewCell) {
+        notificationManager.setFrequency(freq)
+    }
 }

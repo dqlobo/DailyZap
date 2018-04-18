@@ -14,17 +14,17 @@ class Feed {
     
     var overdue: [Contact] {
         let today = Date()
-        return self.queue.filter { today.daysUntil(date: $0.due) < 0 }
+        return queue.filter { today.daysUntil(date: $0.due) < 0 }
     }
     
     var due: [Contact] {
         let today = Date()
-        return self.queue.filter { today.daysUntil(date: $0.due) == 0 }
+        return queue.filter { today.daysUntil(date: $0.due) <= 0 } // includes overdue
     }
     
     var upcoming: [Contact] {
         let today = Date()
-        return self.queue.filter { today.daysUntil(date: $0.due) > 0 }
+        return queue.filter { today.daysUntil(date: $0.due) > 0 }
     }
     
     init(queue: [Contact]) {
@@ -32,11 +32,11 @@ class Feed {
     }
     
     func add(contact: Contact) {
-        self.queue.append(contact)
+        queue.append(contact)
     }
     
     func remove(contact: Contact) {
-        if let index = self.queue.index(of: contact) {
+        if let index = queue.index(of: contact) {
             self.queue.remove(at: index)
         }
     }        

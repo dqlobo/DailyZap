@@ -92,7 +92,7 @@
             <connections>
                 <outlet property="dueLabel" destination="tFy-3d-IkB" id="uuu-za-fhK"/>
                 <outlet property="nameLabel" destination="85z-zb-dYt" id="w2g-Mg-vyX"/>
-                <outlet property="userPicture" destination="wyV-cd-Zxw" id="09O-aX-MBE"/>
+                <outlet property="userImageView" destination="wyV-cd-Zxw" id="09O-aX-MBE"/>
                 <outlet property="zapBtn" destination="vsA-M3-Fy8" id="m6e-6t-TV5"/>
             </connections>
             <point key="canvasLocation" x="34" y="97"/>

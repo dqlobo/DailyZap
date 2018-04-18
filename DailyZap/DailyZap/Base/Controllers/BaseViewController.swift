@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BaseViewController: UIViewController, PresentationInjector {
+class BaseViewController: UIViewController {
 //    var presenter: PresentationManager
     
     required init?(coder aDecoder: NSCoder) {

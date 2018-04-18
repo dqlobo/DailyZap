@@ -16,6 +16,7 @@ enum ButtonType: Int {
     case darkEmpty
     case lightEmpty
     case disabled
+    case deselected
 }
 
 class Button: UIButton {
@@ -37,12 +38,12 @@ class Button: UIButton {
             case .darkFilled:
                 self.makeFilled(foregroundColor: UIColor.white, backgroundColor: UIColor.zapBlue)
             case .lightFilled:
-                self.makeFilled(foregroundColor: UIColor.zapBlue, backgroundColor: UIColor.zapYellow)
+                makeFilled(foregroundColor: UIColor.zapBlue, backgroundColor: UIColor.zapYellow)
             case .plain:
-                self.titleLabel?.font = UIFont.zapTitleFont(sz: self.titleLabel!.font.pointSize)
+                self.titleLabel?.font = UIFont.zapTitleFont(sz: titleLabel!.font.pointSize)
                 self.tintColor = UIColor.zapBlue
             case .subtle:
-                self.titleLabel?.font = UIFont.zapDetailFont(sz: self.titleLabel!.font.pointSize)
+                self.titleLabel?.font = UIFont.zapDetailFont(sz: titleLabel!.font.pointSize)
                 self.tintColor = UIColor.white
             case .darkEmpty:
                 self.makeFilled(foregroundColor: UIColor.zapBlue, backgroundColor: UIColor.clear)
@@ -54,7 +55,9 @@ class Button: UIButton {
                 setTitleColor(UIColor.zapGray, for: .disabled)
                 self.makeFilled(foregroundColor: UIColor.zapGray, backgroundColor: UIColor.clear)
                 self.makeBorder(color: UIColor.zapGray)
-
+            case .deselected:
+                makeFilled(foregroundColor: .white, backgroundColor: .zapBlue)
+                makeBorder(color: .clear)
             }
             
         }
@@ -62,16 +65,19 @@ class Button: UIButton {
     
     func makeFilled(foregroundColor: UIColor, backgroundColor: UIColor) {
         let sz = self.titleLabel!.font.pointSize // 30
-        let leftInset = sz / 1.5
+        let leftInset = sz / 1.2
         let topInset = sz / 1.5
         let cornerRadius = sz / 2
         
         layer.cornerRadius = cornerRadius
         layer.backgroundColor = backgroundColor.cgColor
         tintColor = foregroundColor
-
+        setTitleColor(foregroundColor, for: .normal)
+        
         titleLabel?.font = UIFont.zapTitleFont(sz: sz)
         contentEdgeInsets = UIEdgeInsetsMake(topInset, leftInset, topInset, leftInset)
+//        setTitle(titleLabel?.text?.lowercased(), for: .normal)
+
     }
     
     func makeBorder(color: UIColor) {
@@ -88,5 +94,5 @@ class Button: UIButton {
             }
         }
     }
-    
+   
 }

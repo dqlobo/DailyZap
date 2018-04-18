@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AuthorizeNotificationsViewController: UIViewController {
+class AuthorizeNotificationsViewController: UIViewController, NotificationInjector {
     @IBOutlet weak var infoSection: UIView!
     @IBOutlet weak var enableBtn: Button!
     @IBOutlet weak var skipBtn: Button!
@@ -50,11 +50,14 @@ class AuthorizeNotificationsViewController: UIViewController {
     }
     
     @IBAction func tappedEnableNotifications(_ sender: Any) {
-        // TODO actually access notifications
-        self.popAndFlip()
+        notificationManager.requestAccess() { [weak self] _ in
+            self?.popAndFlip()
+        }
     }
     @IBAction func tappedSkip(_ sender: Any) {
-        self.popAndFlip()
+        notificationManager.setEnabled(false) { [weak self] _ in
+            self?.popAndFlip()
+        }
     }
     
     func popAndFlip() {
@@ -63,8 +66,8 @@ class AuthorizeNotificationsViewController: UIViewController {
         transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
         transition.type = kCATransitionMoveIn
         transition.subtype = kCATransitionFromRight
-        self.navigationController!.view.layer.add(transition, forKey: nil)
-        self.navigationController?.popViewController(animated: false)
+        navigationController?.view.layer.add(transition, forKey: nil)
+        navigationController?.popViewController(animated: false)
     }
     
     

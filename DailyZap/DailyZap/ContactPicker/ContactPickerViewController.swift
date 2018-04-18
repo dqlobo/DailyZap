@@ -18,8 +18,12 @@ class ContactPickerViewController: BaseViewController {
     lazy var dataController: ContactPickerDataController = {
         let dataController = ContactPickerDataController(tableView: tableView)
         dataController.addContactCallback = addContactCallback
+        dataController.presenter = presenter
         return dataController
     }()
+    
+    lazy var presenter = ContactPickerPresentationController(viewController: self)
+
     
     override func viewDidLoad() {
         super.viewDidLoad()

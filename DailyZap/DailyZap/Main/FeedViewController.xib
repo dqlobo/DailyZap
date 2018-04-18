@@ -31,21 +31,10 @@
                     <rect key="frame" x="0.0" y="589" width="375" height="78"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lsS-J1-HO8">
-                            <rect key="frame" x="0.0" y="16.5" width="375" height="43.5"/>
+                            <rect key="frame" x="0.0" y="15.5" width="375" height="48"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 ZAP POINTS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vdq-gL-GDv" customClass="Label" customModule="DailyZap" customModuleProvider="target">
-                                    <rect key="frame" x="122.5" y="0.0" width="129.5" height="24"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                    <nil key="textColor"/>
-                                    <nil key="highlightedColor"/>
-                                    <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="type">
-                                            <integer key="value" value="0"/>
-                                        </userDefinedRuntimeAttribute>
-                                    </userDefinedRuntimeAttributes>
-                                </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zap someone now to improve your score!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oIr-h5-T2O" customClass="Label" customModule="DailyZap" customModuleProvider="target">
-                                    <rect key="frame" x="70.5" y="29" width="234" height="15"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zap someone now to improve your score!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vdq-gL-GDv" customClass="Label" customModule="DailyZap" customModuleProvider="target">
+                                    <rect key="frame" x="71" y="0.0" width="233.5" height="14.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
@@ -55,10 +44,21 @@
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 Zap Points" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oIr-h5-T2O" customClass="BigCountingLabel" customModule="DailyZap" customModuleProvider="target">
+                                    <rect key="frame" x="132.5" y="24.5" width="110" height="24"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="type">
+                                            <integer key="value" value="0"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </label>
                             </subviews>
                             <constraints>
                                 <constraint firstItem="oIr-h5-T2O" firstAttribute="centerX" secondItem="lsS-J1-HO8" secondAttribute="centerX" id="6tZ-V6-AOs"/>
-                                <constraint firstItem="oIr-h5-T2O" firstAttribute="top" secondItem="vdq-gL-GDv" secondAttribute="bottom" constant="5" id="9bw-ZK-bn1"/>
+                                <constraint firstItem="oIr-h5-T2O" firstAttribute="top" secondItem="vdq-gL-GDv" secondAttribute="bottom" constant="10" id="9bw-ZK-bn1"/>
                                 <constraint firstAttribute="bottom" secondItem="oIr-h5-T2O" secondAttribute="bottom" id="Yba-AO-K7v"/>
                                 <constraint firstItem="vdq-gL-GDv" firstAttribute="width" relation="lessThanOrEqual" secondItem="lsS-J1-HO8" secondAttribute="width" id="eLx-u7-cq1"/>
                                 <constraint firstItem="vdq-gL-GDv" firstAttribute="centerX" secondItem="lsS-J1-HO8" secondAttribute="centerX" id="kmH-1b-Cmm"/>
@@ -70,13 +70,13 @@
                     <color key="backgroundColor" red="1" green="0.96862745100000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstItem="lsS-J1-HO8" firstAttribute="width" secondItem="WUl-0S-oG2" secondAttribute="width" id="3cp-4R-dfc"/>
+                        <constraint firstItem="lsS-J1-HO8" firstAttribute="top" secondItem="WUl-0S-oG2" secondAttribute="top" constant="15.5" id="Gs3-2b-U2f"/>
                         <constraint firstItem="lsS-J1-HO8" firstAttribute="centerX" secondItem="WUl-0S-oG2" secondAttribute="centerX" id="Iur-IS-cLW"/>
-                        <constraint firstAttribute="height" constant="78" id="Qiu-cI-txs"/>
-                        <constraint firstItem="lsS-J1-HO8" firstAttribute="centerY" secondItem="WUl-0S-oG2" secondAttribute="centerY" id="itC-IB-7S1"/>
+                        <constraint firstAttribute="bottom" secondItem="lsS-J1-HO8" secondAttribute="bottom" constant="14.5" id="r8H-qc-qgp"/>
                     </constraints>
                     <connections>
-                        <outlet property="captionLabel" destination="oIr-h5-T2O" id="Bg3-rM-P4m"/>
-                        <outlet property="pointLabel" destination="vdq-gL-GDv" id="0ya-ol-PbH"/>
+                        <outlet property="captionLabel" destination="vdq-gL-GDv" id="9B1-TH-WYG"/>
+                        <outlet property="pointCountLabel" destination="oIr-h5-T2O" id="g42-Tq-mOl"/>
                     </connections>
                 </view>
             </subviews>

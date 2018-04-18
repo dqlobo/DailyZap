@@ -24,7 +24,8 @@ class FeedDataController: NSObject, FeedInjector {
     let smallCellReuseID = "FeedSmallCellReuseID"
     let bigCellReuseID = "FeedBigCellReuseID"
     let emptyCellReuseID = "FeedEmptyCellReuseID"
-    let maxUpcoming = 2
+    let dueEmptyReuseID = "FeedDueEmptyReuseID"
+    let maxUpcoming = 5
 
     var presenter: FeedPresentationController?   
 
@@ -50,11 +51,13 @@ class FeedDataController: NSObject, FeedInjector {
         tableView.register(UINib(nibName: "TwoLabelHeader", bundle: Bundle.main), forHeaderFooterViewReuseIdentifier: self.headerReuseID)
         tableView.register(UINib(nibName: "SmallContactTableViewCell", bundle: Bundle.main), forCellReuseIdentifier: self.smallCellReuseID)
         tableView.register(UINib(nibName: "BigContactTableViewCell", bundle: Bundle.main), forCellReuseIdentifier: self.bigCellReuseID)
+        tableView.register(UINib(nibName: "DueEmptyTableViewCell", bundle: .main),
+                           forCellReuseIdentifier: dueEmptyReuseID)
         tableView.register(UINib(nibName: "ZappedPlaceholderTableViewCell", bundle: Bundle.main), forCellReuseIdentifier: self.emptyCellReuseID)
 
         tableView.sectionHeaderHeight = 100
         footer = ButtonFooter.loadFromXib(withOwner: self)
-        footer?.frame = CGRect(x: 0, y: 0, width: self.tableView.bounds.width, height: 150)
+        footer?.frame = CGRect(x: 0, y: 0, width: self.tableView.bounds.width, height: 125)
         footer?.btn.addTarget(self, action: #selector(queueZap), for:.touchUpInside)
         tableView.tableFooterView = footer
     }
@@ -72,9 +75,13 @@ class FeedDataController: NSObject, FeedInjector {
         self.executeOnSection(indexPath.section) { (type) in
             switch type {
             case .due:
-                contact = feedManager.feed.due[indexPath.row]
+                if indexPath.row < feedManager.feed.due.count {
+                    contact = feedManager.feed.due[indexPath.row]
+                }
             case .upcoming:
-                contact = feedManager.feed.upcoming[indexPath.row]
+                if indexPath.row < feedManager.feed.upcoming.count {
+                    contact = feedManager.feed.upcoming[indexPath.row]
+                }
             default:
                 return
             }
@@ -85,17 +92,12 @@ class FeedDataController: NSObject, FeedInjector {
 
 extension FeedDataController {
     @objc func queueZap() {
-        if let p = self.presenter {
-            p.tappedAddContact { contact, success in
-                if success {
-                    self.feedManager.addToFeed(contact: contact)
-                    self.tableView.reloadData()
-                    // give points?
-                } else {
-                    // signal failure
-                }
-            }
-        }
+        presenter?.tappedAddContact()
+    }
+    
+    @objc func queueRandomToday() {
+        feedManager.addRandom()
+        presenter?.reloadFeed(sections: [0])
     }
     
     @objc func zapContact(sender: Button)  {
@@ -103,37 +105,61 @@ extension FeedDataController {
         guard let indexPath = tableView.indexPathForRow(at: point) else {
             return
         }
-        if let contact = self.contactForIndexPath(indexPath), let p = self.presenter {
-            p.tappedZapForContact(contact: contact) { contact, success in
-                if (success) {
-                    self.feedManager.removeFromFeed(contact: contact)
-                    self.tableView.reloadData()
-                    // give points!
-                } else {
-                    // signal failure
-                }
-            }
+        if let contact = self.contactForIndexPath(indexPath) {
+            presenter?.tappedZapForContact(contact: contact)
         }
     }
 }
 
 extension FeedDataController: UITableViewDataSource {
+    
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard !(indexPath.section == 0 && feedManager.feed.due.isEmpty) else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: dueEmptyReuseID, for: indexPath) as! DueEmptyTableViewCell
+            cell.btn.addTarget(self, action: #selector(queueRandomToday), for: .touchUpInside)
+            return cell
+        }
         let identifier = indexPath.section </*==*/ 0 ? self.bigCellReuseID : self.smallCellReuseID
         let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! ContactTableViewCell
         if let contact = contactForIndexPath(indexPath) {
             cell.zapBtn.addTarget(self, action: #selector(zapContact(sender:)), for: .touchUpInside)
-            if let data = contact.imageData {
-                cell.userPicture.image = UIImage(data: data)
-            } else {
-                cell.userPicture.image = nil
-            }
             cell.name = contact.fullName
             let dayCount = contact.due.daysFromNow()
-            let plural = dayCount == 1 ? "" : "s"
-            cell.dueLabel?.text = String(format: "Due in %d day%@", dayCount, plural)
+            setDueLabelForContact(contact, in: cell)
+            if dayCount < 0 {
+                styleAsOverdue(cell: cell)
+            }
+            if let data = contact.imageData {
+                cell.userImage = UIImage(data: data)
+            } else {
+                cell.userImage = nil
+            }
+           
         }
         return cell
+    }
+    
+    func styleAsOverdue(cell: ContactTableViewCell) {
+        let dashLayer = cell.contentView.getDashedBorderLayer(color: .zapNavy, borderWidth: 2, cornerRadius: cell.layer.cornerRadius)
+        cell.layer.addSublayer(dashLayer)
+        let s = NSMutableAttributedString(string: "overdue\n",
+                                          attributes: [ .font: UIFont.zapTitleFont(sz: 12),
+                                                       .foregroundColor: UIColor.zapRed ])
+        s.append(cell.nameLabel.attributedText ?? NSAttributedString())
+        cell.nameLabel.attributedText = s
+    }
+    
+    func setDueLabelForContact(_ contact: Contact, `in` cell: ContactTableViewCell) {
+        let dayCount = contact.due.daysFromNow()
+        if dayCount > 0 {
+            let plural = dayCount == 1 ? "" : "s"
+            cell.dueLabel.text = "Due in \(dayCount) day\(plural)"
+        } else if dayCount == 0 {
+            cell.dueLabel.text = "Due today"
+        } else {
+            cell.dueLabel.text = "\(abs(dayCount)) days late"
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -141,7 +167,11 @@ extension FeedDataController: UITableViewDataSource {
         self.executeOnSection(section) { (type) in
             switch type {
             case .due:
-                count = self.feedManager.feed.due.count
+                count = feedManager.feed.due.count
+                UIApplication.shared.applicationIconBadgeNumber = count
+                if count == 0 {
+                    count = 1
+                }
             case .upcoming:
                 count = self.feedManager.feed.upcoming.count
                 footer?.btn.isEnabled = count < maxUpcoming
@@ -170,7 +200,7 @@ extension FeedDataController: UITableViewDelegate {
                     case .due:
                         var subtitle: String
                         if let contact = self.feedManager.feed.due.first {
-                             subtitle = String(format: "Reach out to %@ to continue your Zap Streak!", contact.firstName)
+                             subtitle = String(format: "Reach out to %@ now!", contact.firstName)
                         } else {
                             let formatter = DateFormatter()
                             formatter.timeStyle = .none
@@ -178,10 +208,13 @@ extension FeedDataController: UITableViewDelegate {
                             subtitle = String(format: "✓ Completed everything for %@", formatter.string(from: Date()))
                         }
                         header.titleLabel!.text = "Today"
-                        header.subtitleLabel!.text = subtitle                        
+                        header.subtitleLabel!.text = subtitle
+                        header.count = feedManager.feed.due.count
                     default:
                         header.titleLabel!.text = "This Week"
+                        header.highlightsCounter = false
                         header.subtitleLabel!.text = String(format: "Queue up to %d people to catch up with this week", self.maxUpcoming)
+                        header.count = feedManager.feed.upcoming.count
                     }
                 })
 

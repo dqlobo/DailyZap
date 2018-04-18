@@ -13,7 +13,8 @@ class ContactPickerDataController: BaseDataController, AppleContactsInjector {
     var addContactCallback: ((Contact?) -> Void)?
     lazy var contactList: [Contact] = appleContactManager.contactList
     lazy var filteredContacts: [Contact] = getSortedContacts()
-
+    var presenter: ContactPickerPresentationController?
+    
     var queryString = "" {
         didSet {
             recalculateFilter()
@@ -82,7 +83,7 @@ extension ContactPickerDataController {
         if let indexPath = tableView.indexPathForRow(at: point) {
             let contact = filteredContacts[indexPath.row]
             if let cb = addContactCallback {
-                cb(contact) // todo use Contact
+                cb(contact)
             }
         }
     }
@@ -96,32 +97,41 @@ extension ContactPickerDataController: UITableViewDataSource, UserDefaultsInject
         cell.dueLabel?.text = contact.primaryPhone
         if userDefaultsManager.hasContactWithID(contactID: contact.contactID) {
             // already queued
-            cell.zapBtn.setTitle("ADDED", for: .normal)
+            cell.zapBtn.setTitle("added", for: .normal)
             cell.zapBtn.type = ButtonType.disabled.rawValue
+
         } else {
-            cell.zapBtn.setTitle("+ ADD", for: .normal)
+            cell.zapBtn.setTitle("+ add", for: .normal)
             cell.zapBtn.type = ButtonType.darkFilled.rawValue
         }
+        if feedManager.userDefaultsManager.isOnBlackList(contactID: contact.contactID) {
+            cell.dueLabel.textColor = .zapRed
+            cell.dueLabel.text = "Blacklisted"
+        } else {
+            cell.dueLabel.textColor = .zapGray
+        }
         cell.zapBtn.addTarget(self, action: #selector(add), for: .touchUpInside)
-        cell.userPicture.image = nil
+        cell.userImage = nil
+
         if let data = contact.imageData {
-            cell.userPicture.image = UIImage(data: data)
+            cell.userImage = UIImage(data: data)
         }
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("Contact count \(filteredContacts.count)")
         return filteredContacts.count
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
+    
 }
 
 extension ContactPickerDataController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        if let cb = self.
+        let contact = filteredContacts[indexPath.row]
+        presenter?.showDetailsFor(contact: contact, at: indexPath)
     }
 }

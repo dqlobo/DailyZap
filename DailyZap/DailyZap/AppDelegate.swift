@@ -7,9 +7,10 @@
 //
 
 import UIKit
+import PopupDialog
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, NotificationInjector {
 
     var window: UIWindow?
 
@@ -18,16 +19,40 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                      didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
         window!.makeKeyAndVisible()
+        notificationManager.configureDelegate()
         window!.rootViewController = RootViewController.createRootViewController()
-
         setAppearances()
         
         return true
     }
     
+    
     private func setAppearances() {
         UIRefreshControl.appearance().tintColor = UIColor.zapGray
+        setPopupAppearances()
+    }
 
+    private func setPopupAppearances() {
+        let normalFont: UIFont! = UIFont.zapNormalFont(sz: 15)
+        let disabled = UIColor.zapGray
+        
+        let popupAppearance = PopupDialogDefaultView.appearance()
+        popupAppearance.titleFont = UIFont.zapTitleFont(sz: 20)
+        popupAppearance.titleColor = UIColor.zapLavender
+        popupAppearance.messageFont = normalFont
+        
+        
+        let defAppearance = DefaultButton.appearance()
+        defAppearance.titleColor = UIColor.darkText
+        defAppearance.titleFont = normalFont
+        
+        let negAppearance = DestructiveButton.appearance()
+        negAppearance.titleColor = disabled
+        negAppearance.titleFont = normalFont
+        
+        let canAppearance = CancelButton.appearance()
+        canAppearance.titleColor = disabled
+        canAppearance.titleFont = UIFont.zapNormalFont(sz: 12)
     }
     
     func printFonts() {
@@ -38,6 +63,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
+    
+    func applicationWillEnterForeground(_ application: UIApplication) {
+        notificationManager.checkSystemSettingsChange() // check notification permissions
+    }
+    
     
 
 }

@@ -8,20 +8,20 @@
 
 import UIKit
 
-
-class FeedViewController: BaseViewController {
+class FeedViewController: BaseViewController, PointInjector {
     
     @IBOutlet weak var footer: PointFooter!
     @IBOutlet weak var tableView: UITableView!
     var dataController: FeedDataController?
     lazy var feedPresenter: FeedPresentationController = FeedPresentationController(viewController: self)
     
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    }
-    
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: "FeedViewController", bundle: Bundle.main)
+        NotificationCenter.default.addObserver(self, selector: #selector(updateAfterTimeChange), name: NSNotification.Name.UIApplicationSignificantTimeChange, object: nil)
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
     
     override func viewDidLoad() {
@@ -29,11 +29,20 @@ class FeedViewController: BaseViewController {
         setupNavigationItems()
         setupTableView()
         view.backgroundColor = UIColor.zapNearWhite
+        
     }
-    
+   
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(false, animated: false)
+    }
+    
+    @objc func updateAfterTimeChange() {
+        feedPresenter.reloadFeed()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("Not yet implemented")
     }
 }
 

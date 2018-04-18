@@ -22,6 +22,11 @@ class Contact: Hashable {
         return !(firstName.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
             && lastName.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)
     }
+    
+    var hasPhone: Bool {
+        return !primaryPhone.isEmpty
+    }
+    
     var fullName: String  {
         return self.firstName + " " + self.lastName
     }
@@ -42,6 +47,8 @@ class Contact: Hashable {
             primaryPhone = phoneNumber
         }
     }
+    
+    var isDue: Bool { return Date().daysUntil(date: due) == 0 }
    
 }
 

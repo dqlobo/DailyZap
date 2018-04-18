@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -38,18 +40,28 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9sM-ap-YRC" customClass="CircleImageView" customModule="DailyZap" customModuleProvider="target">
+                    <rect key="frame" x="134.5" y="33.5" width="19.5" height="19.5"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="9sM-ap-YRC" secondAttribute="height" multiplier="1:1" id="DNv-sE-V3A"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <constraints>
                 <constraint firstItem="x34-mZ-Q4X" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="5" id="1XV-fV-TC0"/>
                 <constraint firstItem="RDa-C4-aWt" firstAttribute="leading" secondItem="x34-mZ-Q4X" secondAttribute="leading" id="8Ah-G0-SdJ"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="RDa-C4-aWt" secondAttribute="trailing" constant="10" id="C5P-Ek-3WT"/>
+                <constraint firstItem="9sM-ap-YRC" firstAttribute="height" secondItem="x34-mZ-Q4X" secondAttribute="height" multiplier="0.65" id="N0Y-Qa-UvD"/>
+                <constraint firstItem="9sM-ap-YRC" firstAttribute="leading" secondItem="x34-mZ-Q4X" secondAttribute="trailing" constant="15" id="PqY-N8-vjq"/>
                 <constraint firstItem="x34-mZ-Q4X" firstAttribute="top" relation="greaterThanOrEqual" secondItem="vUN-kp-3ea" secondAttribute="top" constant="15" id="bCN-sV-qkZ"/>
                 <constraint firstItem="RDa-C4-aWt" firstAttribute="top" secondItem="x34-mZ-Q4X" secondAttribute="bottom" constant="10" id="dei-Xd-1zA"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="RDa-C4-aWt" secondAttribute="bottom" constant="15" id="r4O-4R-scs"/>
+                <constraint firstItem="9sM-ap-YRC" firstAttribute="centerY" secondItem="x34-mZ-Q4X" secondAttribute="centerY" id="wq9-DA-r5o"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
+                <outlet property="countCircle" destination="9sM-ap-YRC" id="fr2-Kv-hnj"/>
                 <outlet property="subtitleLabel" destination="RDa-C4-aWt" id="L8K-RV-6Nf"/>
                 <outlet property="titleLabel" destination="x34-mZ-Q4X" id="GYb-eB-9Ac"/>
             </connections>

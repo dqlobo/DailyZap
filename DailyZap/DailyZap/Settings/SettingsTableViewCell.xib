@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -45,6 +45,7 @@
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="0yh-v6-THw" secondAttribute="trailing" constant="10" id="48n-td-CWg"/>
                     <constraint firstItem="uJi-Jb-fmD" firstAttribute="top" secondItem="0yh-v6-THw" secondAttribute="bottom" constant="5" id="FMM-8V-QzY"/>
+                    <constraint firstAttribute="bottom" secondItem="uJi-Jb-fmD" secondAttribute="bottom" constant="18" id="iub-sw-TXz"/>
                     <constraint firstItem="uJi-Jb-fmD" firstAttribute="leading" secondItem="0yh-v6-THw" secondAttribute="leading" id="kKD-Jd-NQA"/>
                     <constraint firstItem="0yh-v6-THw" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="paZ-Tt-iVM"/>
                     <constraint firstItem="0yh-v6-THw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="u7b-PM-KCd"/>

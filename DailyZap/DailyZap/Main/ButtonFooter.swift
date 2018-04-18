@@ -10,4 +10,7 @@ import UIKit
 
 class ButtonFooter: UITableViewHeaderFooterView {
     @IBOutlet weak var btn: Button!
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
 }

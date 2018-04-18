@@ -24,4 +24,20 @@ extension UIColor {
     class var zapGray: UIColor {
         return UIColor(hue: 0, saturation: 0, brightness: 0.6, alpha: 1)
     }
+    
+    class var zapLavender: UIColor {
+        return UIColor(red:178.0/255.0, green: 69.0/255.0, blue: 146.0/255.0, alpha: 1)
+    }
+    
+    class var zapRed: UIColor {
+        return UIColor(red: 1, green: 30.0/255.0, blue: 0, alpha: 1)
+    }
+    
+    class var zapDarkGray: UIColor {
+        return UIColor(white: 0.2, alpha: 1)
+    }
+    
+    class var zapNavy: UIColor {
+        return UIColor(red: 0, green: 38.0/255.0, blue: 125.0/255.0, alpha: 1)
+    }
 }
