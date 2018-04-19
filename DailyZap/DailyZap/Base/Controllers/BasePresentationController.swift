@@ -9,7 +9,7 @@
 import Foundation
 import PopupDialog
 
-class BasePresentationController<T>: NSObject where T: UIViewController {
+class BasePresentationController<T>: NSObject, AnalyticsInjector where T: UIViewController {
     let vc: T
     init(viewController: T) {
         vc = viewController

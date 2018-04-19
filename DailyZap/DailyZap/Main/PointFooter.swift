@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SACountingLabel
 
 class PointFooter: UIView, PointInjector {
     @IBOutlet private weak var captionLabel: Label!
@@ -16,25 +15,30 @@ class PointFooter: UIView, PointInjector {
     private lazy var points: Int64 = pointManager.points
     
     func addPoints(_ val: Int, animated: Bool, duration: TimeInterval = 0.3) {
-        let cap = "Completed Zap: \(val < 0 ? "-" : "+")\(Int64(val))"
+        let cap = val > 0 ? "Completed Zap: + \(val)" : "Removed Zap: - \(-val)"
+        let color: UIColor = val >= 0 ? .zapBlue : .zapRed
+        pointCountLabel.textColor = color
+        captionLabel.textColor = color
         pointManager.addPoints(val)
-        setCaption(cap, animated: false) {
-            self.pointCountLabel.countFrom(fromValue: self.points,
-                             to: self.points + Int64(val),
+        setCaption(cap, animated: false) { [weak self] in
+            guard let strong = self else { return }
+            strong .pointCountLabel.countFrom(fromValue: strong.points,
+                             to: strong.points + Int64(val),
                              withDuration: duration,
                              andAnimationType: .EaseInOut)
-           self.points += Int64(val)
+            strong.points += Int64(val)
         }
     }
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        pointCountLabel.textColor = UIColor.zapBlue
+
         pointCountLabel.formatFunction = { "\(Int64($0)) ZAP POINTS" }
 
         pointCountLabel.countFrom(fromValue: 0, to: points, withDuration: 0, andAnimationType: .EaseIn)
-        captionLabel.textColor = UIColor.zapBlue
         pointCountLabel.styleForType(.title)
+        resetCaption()
+        
         pointCountLabel.callback = { [weak self] in
             self?.perform(#selector(self?.resetCaption), with: self, afterDelay: 1)
         }
@@ -50,6 +54,9 @@ class PointFooter: UIView, PointInjector {
     
     @objc func resetCaption() {
         setCaption("Zap someone now to improve your score!", animated: true)
+        let color: UIColor = points >= 0 ? .zapBlue : .zapRed
+        pointCountLabel.textColor = color
+        captionLabel.textColor = color
     }
     
 }

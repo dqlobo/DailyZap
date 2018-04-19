@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Flurry_iOS_SDK
 
 fileprivate struct AnalyticsInstance {
     static let analytics: AnalyticsManager = AnalyticsManager()
@@ -19,73 +20,28 @@ extension AnalyticsInjector {
 }
 
 class AnalyticsManager {
-//    func log(_ event: AnalyticsEvent) {
-//
-//    }
+   
+    func beginSession() {
+        let builder = FlurrySessionBuilder()
+            .withLogLevel(FlurryLogLevelDebug)
+            .withCrashReporting(true)
+            .withAppVersion(Constants.appVersion)
+        Flurry.startSession(Constants.flurryKey, with: builder)
+    }
+   
+    func log(_ event: AnalyticsEvent) {
+        switch event {
+        case .view(.start):
+            Flurry.logEvent(event.title, timed: true)
+        case .view(.end):
+            Flurry.endTimedEvent(event.title, withParameters: event.params)
+        default:
+            Flurry.logEvent(event.title, withParameters: event.params)
+        }
+    }
     
 }
 protocol Loggable {
-    func log()
+    var title: String { get }
+    var params: [String: String] { get }
 }
-//
-//extension Loggable {
-//    func baseLog() -> Dictionary {
-//        return [:]
-//    }
-//}
-//
-//enum AnalyticsEvent: Loggable {
-//    case onboard(OnboardEvent)
-//    case feed(FeedEvent)
-//    case settings(SettingsEvent)
-//    case launch(LaunchEvent)
-//    case view(ViewEvent)
-//    func log() {
-//        let a = baseLog()
-//    }
-//}
-//
-//enum OnboardEvent: Loggable {
-//    case contact(PermissionEvent)
-//    case notification(PermissionEvent)
-//    case complete
-//}
-//
-//enum ViewEvent: Loggable {
-//    case start(UIViewController)
-//    case end(UIViewController)
-//}
-//
-//enum LaunchEvent: Loggable {
-//    case notification
-//    case normal
-//}
-//
-//enum PermissionEvent: Loggable {
-//    case accept, deny
-//}
-//
-//enum FeedEvent: Loggable {
-//    case queueRandom
-//    case queueSpecific
-//    case zap(ZapEvent)
-//    case remove(RemoveEvent)
-//}
-//
-//enum SettingsEvent: Loggable {
-//    case notification(PermissionEvent)
-//    case changeFreq(NotificationFrequency)
-//    case changeTime(NotificationTiming)
-//}
-//
-//enum RemoveEvent: Loggable {
-//    case blacklist
-//    case once
-//    case markDone
-//}
-//
-//enum ZapEvent: Loggable {
-//    case call(daysUntilDue: Int)
-//    case text(daysUntilDue: Int)
-//}
-

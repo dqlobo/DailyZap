@@ -22,11 +22,13 @@ class SoundManager {
     private var pointsSoundID: UInt32 = 0
     private var boltSoundID: UInt32 = 0
     private var successSoundID: UInt32 = 0
+    private var negativeSoundID: UInt32 = 0
 
     init() {
         registerSound(named: "points_only", id: &pointsSoundID)
         registerSound(named: "success", id: &successSoundID)
         registerSound(named: "bolt", id: &boltSoundID)
+        registerSound(named: "negative", id: &negativeSoundID)
     }
     
     func registerSound(named name: String, ext: String = "mp3", id: inout UInt32) {
@@ -43,5 +45,10 @@ class SoundManager {
     }
     func playSuccessSound() {
         AudioServicesPlaySystemSound(successSoundID)
+    }
+    
+    func playNegativeSound() {
+        AudioServicesPlaySystemSound(negativeSoundID)
+
     }
 }

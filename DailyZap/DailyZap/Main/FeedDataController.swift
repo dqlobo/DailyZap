@@ -90,12 +90,13 @@ class FeedDataController: NSObject, FeedInjector {
     }
 }
 
-extension FeedDataController {
+extension FeedDataController: AnalyticsInjector {
     @objc func queueZap() {
         presenter?.tappedAddContact()
     }
     
     @objc func queueRandomToday() {
+        analytics.log(.feed(.queueRandom))
         feedManager.addRandom()
         presenter?.reloadFeed(sections: [0])
     }
@@ -152,13 +153,13 @@ extension FeedDataController: UITableViewDataSource {
     
     func setDueLabelForContact(_ contact: Contact, `in` cell: ContactTableViewCell) {
         let dayCount = contact.due.daysFromNow()
+        let plural = 1 == abs(dayCount) ? "" : "s"
         if dayCount > 0 {
-            let plural = dayCount == 1 ? "" : "s"
             cell.dueLabel.text = "Due in \(dayCount) day\(plural)"
         } else if dayCount == 0 {
             cell.dueLabel.text = "Due today"
         } else {
-            cell.dueLabel.text = "\(abs(dayCount)) days late"
+            cell.dueLabel.text = "\(abs(dayCount)) day\(plural) late"
         }
     }
     

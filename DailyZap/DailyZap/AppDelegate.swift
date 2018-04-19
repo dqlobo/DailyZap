@@ -10,7 +10,7 @@ import UIKit
 import PopupDialog
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, NotificationInjector {
+class AppDelegate: UIResponder, UIApplicationDelegate, AnalyticsInjector, NotificationInjector {
 
     var window: UIWindow?
 
@@ -19,13 +19,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate, NotificationInjector {
                      didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
         window!.makeKeyAndVisible()
-        notificationManager.configureDelegate()
         window!.rootViewController = RootViewController.createRootViewController()
+
+        // addl configuration
+        analytics.beginSession()
+        notificationManager.configureDelegate()
         setAppearances()
         
         return true
     }
-    
     
     private func setAppearances() {
         UIRefreshControl.appearance().tintColor = UIColor.zapGray
@@ -38,7 +40,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, NotificationInjector {
         
         let popupAppearance = PopupDialogDefaultView.appearance()
         popupAppearance.titleFont = UIFont.zapTitleFont(sz: 20)
-        popupAppearance.titleColor = UIColor.zapLavender
+        popupAppearance.titleColor = UIColor.zapNavy
         popupAppearance.messageFont = normalFont
         
         

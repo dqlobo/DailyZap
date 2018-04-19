@@ -30,9 +30,9 @@ class FeedPresentationController: BasePresentationController<FeedViewController>
         let contactPicker = ContactPickerViewController()
         contactPicker.addContactCallback = { [weak self] contactOrNil in
             self?.vc.dismiss(animated: true) {
-               
                 if let contact = contactOrNil,
                     self?.vc.dataController?.feedManager.addToFeed(contact: contact) ?? false {
+                    self?.analytics.log(.feed(.queueSpecific))
                     self?.reloadFeed(sections: [1])
                 } else {
                     self?.showOkayPopup(title: "Failed to queue contact".lowercased(), message: "Please try again later.")
@@ -71,15 +71,18 @@ class FeedPresentationController: BasePresentationController<FeedViewController>
 // MARK: - Leaving App Events
 extension FeedPresentationController {
     func sendText(contact: Contact) {
+        
         guard MFMessageComposeViewController.canSendText() else {
             showFailPopup(action: "send text")
             return
         }
-        
         let message = MFMessageComposeViewController()
         message.body = "⚡️ Hey, long time no see! How's it going? (Sent with the DailyZap app)"
         message.recipients = [contact.primaryPhone]
+        let daysRemaining = contact.due.daysFromNow()
+
         messageCallbackHandler = MessageComposeCallbackHandler(contact: contact) { [weak self] result in
+            self?.analytics.log(.feed(.zap(.text(daysUntilDue: daysRemaining))))
             self?.vc.dismiss(animated: true, completion: nil)
             if case let .success(contact) = result {
                 self?.rewardForZapping(contact: contact, pts: 20)
@@ -91,13 +94,15 @@ extension FeedPresentationController {
         vc.present(message, animated: true, completion: nil)
     }
     
-    func makeCall(contact: Contact) {// \(contact.primaryPhone) TODO
-        guard let url = URL(string: "tel://3019293385") else { return }
+    func makeCall(contact: Contact) {
+        let daysRemaining = contact.due.daysFromNow()
+        guard let url = URL(string: "tel://\(contact.primaryPhone)") else { return }
         guard UIApplication.shared.canOpenURL(url) else {
             showFailPopup(action: "open phone")
             return
         }
         UIApplication.shared.open(url, options: [:]) { [weak self] success in
+            self?.analytics.log(.feed(.zap(.call(daysUntilDue: daysRemaining))))
             self?.currentCalledContact = contact
         }
     }
@@ -126,11 +131,11 @@ extension FeedPresentationController {
             self.soundManager.playSuccessSound()
             UIView.animate(withDuration: 0.2, animations: {
                 animation.alpha = 0
-            }, completion: { _ in
+            }, completion: { [weak self] _ in
                 animation.removeFromSuperview()
-                self.vc.footer.addPoints(minPoints + Int.random(upTo: 10),
+                self?.vc.footer.addPoints(minPoints + Int.random(upTo: 10),
                                          animated: true)
-                self.soundManager.playPointsSound()
+                self?.soundManager.playPointsSound()
             })
         }
     }
@@ -177,6 +182,7 @@ extension FeedPresentationController {
     func decorateZapRemove(for contact: Contact, in popup: PopupDialog, recommendsRemoval: Bool = true) {
         let blacklist = DestructiveButton(title: "🏴  Never suggest this contact again") { [weak self] in
             let sections = contact.isDue ? [0] : [1]
+            self?.analytics.log(.feed(.remove(.blacklist)))
             self?.vc.dataController?.feedManager.addToBlackList(contact: contact)
             self?.reloadFeed(sections: sections)
             
@@ -185,17 +191,25 @@ extension FeedPresentationController {
         let rmTitle = "🗓  Remove \(contact.firstName) just this once"
         let rmAction: PopupDialogButton.PopupDialogButtonAction = { [weak self] in
             let sections = contact.isDue ? [0] : [1]
+            self?.analytics.log(.feed(.remove(.once)))
             self?.vc.dataController?.feedManager.removeFromFeed(contact: contact)
-            self?.reloadFeed(sections: sections)
+            if contact.isDue {
+                self?.vc.footer.addPoints(-(5 + Int.random(upTo: 5)), animated: true)
+                self?.soundManager.playNegativeSound()
+                self?.reloadFeed(sections: [0])
+            } else {
+                self?.reloadFeed(sections: [1])
+            }
+           
         }
         let rm = recommendsRemoval ?
             DefaultButton(title: rmTitle, action: rmAction) :
             DestructiveButton(title: rmTitle, action: rmAction)
         
         let compTitle = "☑️  Mark as completed"
-        let compAction: PopupDialogButton.PopupDialogButtonAction = {  [weak self] in self?.rewardForZapping(contact: contact,
-                                                                                                             pts: 5,
-                                                                                                             extraWait: -0.5) }
+        let compAction: PopupDialogButton.PopupDialogButtonAction = {  [weak self] in self?.rewardForZapping(contact: contact, pts: 0, extraWait: -0.5)
+            self?.analytics.log(.feed(.remove(.markDone)))
+        }
         let comp = recommendsRemoval ?
             DestructiveButton(title: compTitle, action: compAction) :
             DefaultButton(title: compTitle, action: compAction)

@@ -66,10 +66,12 @@ class AuthorizeContactsViewController: BaseViewController, AppleContactsInjector
         self.appleContactManager.requestAccess { [weak self] (granted, error) in
             if granted && error == nil {
                 DispatchQueue.main.async {
+                    self?.analytics.log(.onboard(.contact(.accept)))
                     self?.appleContactManager.refreshContactList()
                     self?.hideButtonAndSection()
                 }
             } else {
+                self?.analytics.log(.onboard(.contact(.deny)))
                 self?.presenter.openAppSettings()
             }
         }

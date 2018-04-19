@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TextFieldViewController" customModule="DailyZap" customModuleProvider="target">
+            <connections>
+                <outlet property="textField" destination="x4g-vI-MAF" id="86r-ib-DNA"/>
+                <outlet property="titleLabel" destination="eWQ-ZT-bPd" id="MQ8-0z-Pk6"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="220"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x4g-vI-MAF">
+                    <rect key="frame" x="28" y="106.5" width="319" height="83.5"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Request a feature" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eWQ-ZT-bPd" customClass="Label" customModule="DailyZap" customModuleProvider="target">
+                    <rect key="frame" x="-0.5" y="20" width="375" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                    <color key="textColor" red="0.0" green="0.25098039220000001" blue="0.82352941180000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="type">
+                            <integer key="value" value="0"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Got an idea for how to make Daily Zap even better? Type your idea below and tap submit!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7dn-Se-Trg" customClass="Label" customModule="DailyZap" customModuleProvider="target">
+                    <rect key="frame" x="28" y="60" width="319" height="31.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="type">
+                            <integer key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="x4g-vI-MAF" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="6QL-Og-IdE"/>
+                <constraint firstItem="7dn-Se-Trg" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.85" id="IWb-Eg-G6x"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="x4g-vI-MAF" secondAttribute="bottom" constant="30" id="JP2-s3-tta"/>
+                <constraint firstItem="eWQ-ZT-bPd" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="JvD-Dp-OCF"/>
+                <constraint firstItem="eWQ-ZT-bPd" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="KAI-bT-mi8"/>
+                <constraint firstItem="x4g-vI-MAF" firstAttribute="top" secondItem="7dn-Se-Trg" secondAttribute="bottom" constant="15" id="QAt-kR-guc"/>
+                <constraint firstItem="x4g-vI-MAF" firstAttribute="width" secondItem="7dn-Se-Trg" secondAttribute="width" id="TKy-xv-xNC"/>
+                <constraint firstItem="7dn-Se-Trg" firstAttribute="top" secondItem="eWQ-ZT-bPd" secondAttribute="bottom" constant="10" id="TTp-La-iYB"/>
+                <constraint firstItem="7dn-Se-Trg" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="VYj-sk-IkV"/>
+                <constraint firstItem="eWQ-ZT-bPd" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="cea-qu-RLm"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="86.5" y="278"/>
+        </view>
+    </objects>
+</document>

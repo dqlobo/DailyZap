@@ -48,7 +48,7 @@ class Contact: Hashable {
         }
     }
     
-    var isDue: Bool { return Date().daysUntil(date: due) == 0 }
+    var isDue: Bool { return Date().daysUntil(date: due) <= 0 }
    
 }
 

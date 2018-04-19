@@ -19,5 +19,15 @@ class SettingsPresentationController: BasePresentationController<SettingsViewCon
         showPopup(popup, showsCancel: true)
     }
     
+    func showIdeaPopup() {
+        let textVC = TextFieldViewController()
+        let popup = PopupDialog(viewController: textVC, buttonAlignment: .horizontal)
+        let cancel = CancelButton(title: "Cancel") {}
+        let submit = DefaultButton(title: "Submit") { [weak self] in
+            self?.analytics.log(.featureRequest(description: textVC.text))
+        }
+        popup.addButtons([cancel, submit])
+        showPopup(popup, showsCancel: false)
+    }
    
 }

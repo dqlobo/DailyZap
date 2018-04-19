@@ -44,7 +44,7 @@ class Button: UIButton {
                 self.tintColor = UIColor.zapBlue
             case .subtle:
                 self.titleLabel?.font = UIFont.zapDetailFont(sz: titleLabel!.font.pointSize)
-                self.tintColor = UIColor.white
+                self.tintColor = UIColor.zapYellow
             case .darkEmpty:
                 self.makeFilled(foregroundColor: UIColor.zapBlue, backgroundColor: UIColor.clear)
                 self.makeBorder(color: UIColor.zapBlue)

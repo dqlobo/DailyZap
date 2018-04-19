@@ -86,6 +86,11 @@
 		63D27207207ACC48007AD36F /* PointInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D27206207ACC48007AD36F /* PointInjector.swift */; };
 		63D27209207BC975007AD36F /* NotificationInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D27208207BC975007AD36F /* NotificationInjector.swift */; };
 		63DBF2BD208646A300C0A9DF /* ContactPickerPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DBF2BC208646A300C0A9DF /* ContactPickerPresentationController.swift */; };
+		63DBF2BF2087B7BE00C0A9DF /* AnalyticsEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DBF2BE2087B7BE00C0A9DF /* AnalyticsEvent.swift */; };
+		63DBF2C12087D42900C0A9DF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DBF2C02087D42900C0A9DF /* Constants.swift */; };
+		63DBF2C92088E40800C0A9DF /* negative.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 63DBF2C82088E40800C0A9DF /* negative.mp3 */; };
+		63DBF2CC2089086100C0A9DF /* TextFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DBF2CA2089086100C0A9DF /* TextFieldViewController.swift */; };
+		63DBF2CD2089086100C0A9DF /* TextFieldViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63DBF2CB2089086100C0A9DF /* TextFieldViewController.xib */; };
 		63FDAA692081493B00E52F96 /* AuthorizeContactsPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FDAA682081493B00E52F96 /* AuthorizeContactsPresentationController.swift */; };
 		63FDAA6C20814D7300E52F96 /* DueEmptyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FDAA6A20814D7300E52F96 /* DueEmptyTableViewCell.swift */; };
 		63FDAA6D20814D7300E52F96 /* DueEmptyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63FDAA6B20814D7300E52F96 /* DueEmptyTableViewCell.xib */; };
@@ -188,6 +193,11 @@
 		63D27206207ACC48007AD36F /* PointInjector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointInjector.swift; sourceTree = "<group>"; };
 		63D27208207BC975007AD36F /* NotificationInjector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationInjector.swift; sourceTree = "<group>"; };
 		63DBF2BC208646A300C0A9DF /* ContactPickerPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactPickerPresentationController.swift; sourceTree = "<group>"; };
+		63DBF2BE2087B7BE00C0A9DF /* AnalyticsEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsEvent.swift; sourceTree = "<group>"; };
+		63DBF2C02087D42900C0A9DF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		63DBF2C82088E40800C0A9DF /* negative.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = negative.mp3; path = ../../../../Assets/negative.mp3; sourceTree = "<group>"; };
+		63DBF2CA2089086100C0A9DF /* TextFieldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldViewController.swift; sourceTree = "<group>"; };
+		63DBF2CB2089086100C0A9DF /* TextFieldViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextFieldViewController.xib; sourceTree = "<group>"; };
 		63FDAA682081493B00E52F96 /* AuthorizeContactsPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizeContactsPresentationController.swift; sourceTree = "<group>"; };
 		63FDAA6A20814D7300E52F96 /* DueEmptyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DueEmptyTableViewCell.swift; sourceTree = "<group>"; };
 		63FDAA6B20814D7300E52F96 /* DueEmptyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DueEmptyTableViewCell.xib; sourceTree = "<group>"; };
@@ -268,6 +278,8 @@
 				63995D9D207E664300955412 /* NotificationSettingsTableViewCell.swift */,
 				63995D9E207E664300955412 /* NotificationSettingsTableViewCell.xib */,
 				63995DA520810A7100955412 /* SettingsPresentationController.swift */,
+				63DBF2CA2089086100C0A9DF /* TextFieldViewController.swift */,
+				63DBF2CB2089086100C0A9DF /* TextFieldViewController.xib */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -363,6 +375,7 @@
 				6370A9021F809C42002641D3 /* Subclasses */,
 				638086C21F81DDC60096CEF5 /* Controllers */,
 				6307A7F0207D49260076BEC8 /* Result.swift */,
+				63DBF2C02087D42900C0A9DF /* Constants.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -423,6 +436,7 @@
 			children = (
 				63A313041F94494200BA5CE1 /* Contact.swift */,
 				63A3130C1F94550000BA5CE1 /* Feed.swift */,
+				63DBF2BE2087B7BE00C0A9DF /* AnalyticsEvent.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -442,6 +456,7 @@
 			isa = PBXGroup;
 			children = (
 				63D271FC2079255B007AD36F /* bolt.mp3 */,
+				63DBF2C82088E40800C0A9DF /* negative.mp3 */,
 				63D271FD2079255B007AD36F /* points.mp3 */,
 				63D27201207926F5007AD36F /* points_only.mp3 */,
 				63D27204207927D9007AD36F /* points_only.mp3 */,
@@ -580,7 +595,9 @@
 				63D271FF2079255B007AD36F /* points.mp3 in Resources */,
 				636FB2691FD4B9AB00AC467C /* SettingsViewController.xib in Resources */,
 				633C43DD1F847FB600DAEA46 /* AuthorizeNotificationsViewController.xib in Resources */,
+				63DBF2CD2089086100C0A9DF /* TextFieldViewController.xib in Resources */,
 				636FB2601FD497DA00AC467C /* BigContactTableViewCell.xib in Resources */,
+				63DBF2C92088E40800C0A9DF /* negative.mp3 in Resources */,
 				636FB26D1FD4C8F700AC467C /* SettingsTableViewCell.xib in Resources */,
 				6370A8EA1F808154002641D3 /* Muli-LightItalic.ttf in Resources */,
 				63B9F2CF1FEC11F90070ED3F /* ContactPickerViewController.xib in Resources */,
@@ -622,6 +639,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-DailyZap/Pods-DailyZap-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/DynamicBlurView/DynamicBlurView.framework",
+				"${BUILT_PRODUCTS_DIR}/Flurry-iOS-SDK/Flurry_iOS_SDK.framework",
 				"${BUILT_PRODUCTS_DIR}/InitialsImageView/InitialsImageView.framework",
 				"${BUILT_PRODUCTS_DIR}/PopupDialog/PopupDialog.framework",
 				"${BUILT_PRODUCTS_DIR}/SACountingLabel/SACountingLabel.framework",
@@ -629,6 +647,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DynamicBlurView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Flurry_iOS_SDK.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/InitialsImageView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PopupDialog.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SACountingLabel.framework",
@@ -728,6 +747,7 @@
 				63995D9F207E664300955412 /* NotificationSettingsTableViewCell.swift in Sources */,
 				637CD94B1FDB41A400892870 /* PresentationInjector.swift in Sources */,
 				63B9F2D21FEC14570070ED3F /* FeedViewController.swift in Sources */,
+				63DBF2BF2087B7BE00C0A9DF /* AnalyticsEvent.swift in Sources */,
 				63B9F2D61FEC18880070ED3F /* BaseDataController.swift in Sources */,
 				63FDAA6C20814D7300E52F96 /* DueEmptyTableViewCell.swift in Sources */,
 				63DBF2BD208646A300C0A9DF /* ContactPickerPresentationController.swift in Sources */,
@@ -736,6 +756,7 @@
 				6370A8C81F807DAC002641D3 /* RootViewController.swift in Sources */,
 				63A313111F94693E00BA5CE1 /* FeedDataController.swift in Sources */,
 				6370A8C61F807DAC002641D3 /* AppDelegate.swift in Sources */,
+				63DBF2CC2089086100C0A9DF /* TextFieldViewController.swift in Sources */,
 				637CD94D1FDB5ADD00892870 /* NSObject+ZAP.swift in Sources */,
 				63D27209207BC975007AD36F /* NotificationInjector.swift in Sources */,
 				63A313011F93179300BA5CE1 /* UserDefaultsInjector.swift in Sources */,
@@ -760,6 +781,7 @@
 				636FB2501FD4434900AC467C /* UIViewController+ZAP.swift in Sources */,
 				633C43DC1F847FB600DAEA46 /* AuthorizeNotificationsViewController.swift in Sources */,
 				63D271F920791FBA007AD36F /* SoundInjector.swift in Sources */,
+				63DBF2C12087D42900C0A9DF /* Constants.swift in Sources */,
 				638086CA1F81EA6A0096CEF5 /* AuthorizeContactsViewController.swift in Sources */,
 				6370A8EF1F80834C002641D3 /* UIColor+ZAP.swift in Sources */,
 			);

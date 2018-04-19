@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -13,6 +13,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingsViewController" customModule="DailyZap" customModuleProvider="target">
             <connections>
+                <outlet property="backBtn" destination="8h4-6j-92Q" id="Thw-rf-GvO"/>
                 <outlet property="tableView" destination="EEa-ar-Hr5" id="lpM-hq-zt8"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -23,16 +24,44 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EEa-ar-Hr5">
-                    <rect key="frame" x="9.5" y="20" width="356" height="647"/>
+                    <rect key="frame" x="10" y="20" width="356" height="537"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8h4-6j-92Q" customClass="Button" customModule="DailyZap" customModuleProvider="target">
+                    <rect key="frame" x="171" y="577" width="34" height="30"/>
+                    <state key="normal" title="back"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="type">
+                            <integer key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="goBack" destination="-1" eventType="touchUpInside" id="n4b-5g-5R4"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yB9-E2-sry" customClass="Button" customModule="DailyZap" customModuleProvider="target">
+                    <rect key="frame" x="10" y="631" width="109" height="26"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                    <state key="normal" title="💡 request a feature"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="type">
+                            <integer key="value" value="3"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="requestFeature" destination="-1" eventType="touchUpInside" id="PdQ-Gy-XqJ"/>
+                    </connections>
+                </button>
             </subviews>
             <constraints>
-                <constraint firstItem="EEa-ar-Hr5" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="QhW-aD-0sy"/>
+                <constraint firstItem="8h4-6j-92Q" firstAttribute="top" secondItem="EEa-ar-Hr5" secondAttribute="bottom" constant="20" id="OCQ-Mt-TFd"/>
                 <constraint firstItem="EEa-ar-Hr5" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.95" id="Uec-00-wac"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="EEa-ar-Hr5" secondAttribute="bottom" id="gm4-k5-aiZ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="yB9-E2-sry" secondAttribute="bottom" constant="10" id="Vim-rM-bMF"/>
+                <constraint firstItem="yB9-E2-sry" firstAttribute="top" secondItem="8h4-6j-92Q" secondAttribute="bottom" constant="24" id="XHA-Aa-fgE"/>
+                <constraint firstItem="8h4-6j-92Q" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="YXb-aT-8oE"/>
                 <constraint firstItem="EEa-ar-Hr5" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="oRD-h3-WdU"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="top" secondItem="EEa-ar-Hr5" secondAttribute="top" id="p0x-RQ-jCn"/>
+                <constraint firstItem="yB9-E2-sry" firstAttribute="leading" secondItem="EEa-ar-Hr5" secondAttribute="leading" id="p6M-SI-faL"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
         </view>

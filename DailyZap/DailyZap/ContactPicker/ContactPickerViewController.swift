@@ -50,7 +50,8 @@ class ContactPickerViewController: BaseViewController {
     }
     
     func setupSearch() {
-        searchBar.barTintColor = UIColor.zapNearWhite
+        searchBar.barTintColor = .zapNearWhite
+        searchBar.tintColor = .zapNavy
         searchBar.delegate = self
     }
 

@@ -17,6 +17,7 @@ class SettingsViewController: BaseViewController {
     @IBOutlet weak var tableView: UITableView!
     lazy var presenter = SettingsPresentationController(viewController: self)
     
+    @IBOutlet weak var backBtn: Button!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.zapBlue
@@ -43,8 +44,12 @@ class SettingsViewController: BaseViewController {
         tableView.dataSource = self
     }
     
-    @objc func goBack() {
+    @IBAction func goBack() {
         dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func requestFeature() {
+        presenter.showIdeaPopup()
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -78,18 +83,18 @@ extension SettingsViewController: UITableViewDataSource, UITableViewDelegate, No
         fatalError("Check your datasource")
     }
     
-    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        let view = tableView.dequeueReusableHeaderFooterView(withIdentifier: self.settingsFooterReuseID)
-        if let footer = view as? ButtonFooter {
-
-            footer.btn.type = ButtonType.lightFilled.rawValue
-            footer.btn.setTitle("BACK", for: .normal)
-            footer.btn.addTarget(self, action: #selector(goBack), for: .touchUpInside)
-            return footer
-        }
-        return nil
-    }
-    
+//    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+//        let view = tableView.dequeueReusableHeaderFooterView(withIdentifier: self.settingsFooterReuseID)
+//        if let footer = view as? ButtonFooter {
+//
+//            footer.btn.type = ButtonType.lightEmpty
+//            footer.btn.setTitle("request a feature", for: .normal)
+//            footer.btn.addTarget(self, action: #selector(requestFeature), for: .touchUpInside)
+//            return footer
+//        }
+//        return nil
+//    }
+//    
 }
 
 extension SettingsViewController: NotificationSettingsDelegate {
@@ -97,18 +102,22 @@ extension SettingsViewController: NotificationSettingsDelegate {
         notificationManager.setEnabled(isOn) { [weak self] result in
             if case let .success(flag) = result {
                 cell.enabled = flag
+                self?.analytics.log(.settings(.notification(flag ? .accept : .deny)))
                 self?.tableView.reloadData()
             } else {
                 cell.enabled = false
+                self?.analytics.log(.settings(.notification(.deny)))
                 self?.presenter.openAppSettings()
             }
         }
     }
     
     func didSetTime(_ time: NotificationTiming, cell: NotificationSettingsTableViewCell) {
+        analytics.log(.settings(.changeTime(time)))
         notificationManager.setTiming(time)
     }
     func didSetFrequency(_ freq: NotificationFrequency, cell: NotificationSettingsTableViewCell) {
+        analytics.log(.settings(.changeFreq(freq)))
         notificationManager.setFrequency(freq)
     }
 }
