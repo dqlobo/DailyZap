@@ -7,7 +7,8 @@
 //
 
 import UIKit
-import InitialsImageView
+//import InitialsImageView
+
 class ContactTableViewCell: UITableViewCell {
 
     @IBOutlet private weak var userImageView: UIImageView!

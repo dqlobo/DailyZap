@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2F9987B9CD63FBB351A5028F /* Pods_DailyZap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F757C2E7338FF3362A760FC7 /* Pods_DailyZap.framework */; };
+		53291DBC9510367BA7B03E15 /* Pods_DailyZap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F757C2E7338FF3362A760FC7 /* Pods_DailyZap.framework */; };
 		6307A7F1207D49260076BEC8 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6307A7F0207D49260076BEC8 /* Result.swift */; };
 		633C43D41F846E7800DAEA46 /* Contacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 633C43D21F846E7800DAEA46 /* Contacts.framework */; };
 		633C43D51F846E7800DAEA46 /* ContactsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 633C43D31F846E7800DAEA46 /* ContactsUI.framework */; };
@@ -91,9 +92,95 @@
 		63DBF2C92088E40800C0A9DF /* negative.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 63DBF2C82088E40800C0A9DF /* negative.mp3 */; };
 		63DBF2CC2089086100C0A9DF /* TextFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DBF2CA2089086100C0A9DF /* TextFieldViewController.swift */; };
 		63DBF2CD2089086100C0A9DF /* TextFieldViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63DBF2CB2089086100C0A9DF /* TextFieldViewController.xib */; };
+		63DBF2D120892AF800C0A9DF /* ContactPickerDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B9F2D31FEC15470070ED3F /* ContactPickerDataController.swift */; };
+		63DBF2D220892AF800C0A9DF /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633C43E51F85C85500DAEA46 /* ContactTableViewCell.swift */; };
+		63DBF2D320892AF800C0A9DF /* UIView+ZAP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D271ED2077D122007AD36F /* UIView+ZAP.swift */; };
+		63DBF2D420892AF800C0A9DF /* LightningBoltView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D271EB2077C13C007AD36F /* LightningBoltView.swift */; };
+		63DBF2D520892AF800C0A9DF /* Int+ZAP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A312FE1F93142600BA5CE1 /* Int+ZAP.swift */; };
+		63DBF2D620892AF800C0A9DF /* BasePresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63995DA32081072500955412 /* BasePresentationController.swift */; };
+		63DBF2D720892AF800C0A9DF /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6370A8F71F808C9A002641D3 /* Label.swift */; };
+		63DBF2D820892AF800C0A9DF /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636FB26A1FD4C8F700AC467C /* SettingsTableViewCell.swift */; };
+		63DBF2D920892AF800C0A9DF /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6370A8FC1F8099C3002641D3 /* LandingViewController.swift */; };
+		63DBF2DA20892AF800C0A9DF /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636FB2591FD4815D00AC467C /* Button.swift */; };
+		63DBF2DB20892AF800C0A9DF /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A313041F94494200BA5CE1 /* Contact.swift */; };
+		63DBF2DC20892AF800C0A9DF /* BigCountingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D271F320791137007AD36F /* BigCountingLabel.swift */; };
+		63DBF2DD20892AF800C0A9DF /* AppleContactsInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638086C41F81DE170096CEF5 /* AppleContactsInjector.swift */; };
+		63DBF2DE20892AF800C0A9DF /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A3130C1F94550000BA5CE1 /* Feed.swift */; };
+		63DBF2DF20892AF800C0A9DF /* NotificationSettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63995D9D207E664300955412 /* NotificationSettingsTableViewCell.swift */; };
+		63DBF2E020892AF800C0A9DF /* PresentationInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637CD94A1FDB41A400892870 /* PresentationInjector.swift */; };
+		63DBF2E120892AF800C0A9DF /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633C43E11F85C63500DAEA46 /* FeedViewController.swift */; };
+		63DBF2E220892AF800C0A9DF /* AnalyticsEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DBF2BE2087B7BE00C0A9DF /* AnalyticsEvent.swift */; };
+		63DBF2E320892AF800C0A9DF /* BaseDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B9F2D51FEC18880070ED3F /* BaseDataController.swift */; };
+		63DBF2E420892AF800C0A9DF /* DueEmptyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FDAA6A20814D7300E52F96 /* DueEmptyTableViewCell.swift */; };
+		63DBF2E520892AF800C0A9DF /* ContactPickerPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DBF2BC208646A300C0A9DF /* ContactPickerPresentationController.swift */; };
+		63DBF2E620892AF800C0A9DF /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6370A8F31F8089F1002641D3 /* BaseViewController.swift */; };
+		63DBF2E720892AF800C0A9DF /* TwoLabelHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633C43ED1F85DCF300DAEA46 /* TwoLabelHeader.swift */; };
+		63DBF2E820892AF800C0A9DF /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6370A8C71F807DAC002641D3 /* RootViewController.swift */; };
+		63DBF2E920892AF800C0A9DF /* FeedDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A313101F94693E00BA5CE1 /* FeedDataController.swift */; };
+		63DBF2EA20892AF800C0A9DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6370A8C51F807DAC002641D3 /* AppDelegate.swift */; };
+		63DBF2EB20892AF800C0A9DF /* TextFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DBF2CA2089086100C0A9DF /* TextFieldViewController.swift */; };
+		63DBF2EC20892AF800C0A9DF /* NSObject+ZAP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637CD94C1FDB5ADD00892870 /* NSObject+ZAP.swift */; };
+		63DBF2ED20892AF800C0A9DF /* NotificationInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D27208207BC975007AD36F /* NotificationInjector.swift */; };
+		63DBF2EE20892AF800C0A9DF /* UserDefaultsInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A313001F93179300BA5CE1 /* UserDefaultsInjector.swift */; };
+		63DBF2EF20892AF800C0A9DF /* ButtonFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636FB2531FD4635B00AC467C /* ButtonFooter.swift */; };
+		63DBF2F020892AF800C0A9DF /* XibLoadedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633C43EF1F85DD1200DAEA46 /* XibLoadedView.swift */; };
+		63DBF2F120892AF800C0A9DF /* CircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636FB25B1FD48A9200AC467C /* CircleImageView.swift */; };
+		63DBF2F220892AF800C0A9DF /* PointFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636FB2611FD4ADB300AC467C /* PointFooter.swift */; };
+		63DBF2F320892AF800C0A9DF /* PointInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D27206207ACC48007AD36F /* PointInjector.swift */; };
+		63DBF2F420892AF800C0A9DF /* FeedInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A313021F943EB500BA5CE1 /* FeedInjector.swift */; };
+		63DBF2F520892AF800C0A9DF /* SettingsPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63995DA520810A7100955412 /* SettingsPresentationController.swift */; };
+		63DBF2F620892AF800C0A9DF /* AnalyticsInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633C43EB1F85CB5A00DAEA46 /* AnalyticsInjector.swift */; };
+		63DBF2F720892AF800C0A9DF /* ZappedPlaceholderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CDE8521FDDB9720004296F /* ZappedPlaceholderTableViewCell.swift */; };
+		63DBF2F820892AF800C0A9DF /* UIFont+ZAP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6370A8F01F80880F002641D3 /* UIFont+ZAP.swift */; };
+		63DBF2F920892AF800C0A9DF /* ContactPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B9F2CC1FEC11F90070ED3F /* ContactPickerViewController.swift */; };
+		63DBF2FA20892AF800C0A9DF /* Date+ZAP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A3130A1F94519800BA5CE1 /* Date+ZAP.swift */; };
+		63DBF2FB20892AF800C0A9DF /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636FB2661FD4B9AB00AC467C /* SettingsViewController.swift */; };
+		63DBF2FC20892AF800C0A9DF /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6307A7F0207D49260076BEC8 /* Result.swift */; };
+		63DBF2FD20892AF800C0A9DF /* AlertInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633C43D61F84757D00DAEA46 /* AlertInjector.swift */; };
+		63DBF2FE20892AF800C0A9DF /* AuthorizeContactsPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FDAA682081493B00E52F96 /* AuthorizeContactsPresentationController.swift */; };
+		63DBF2FF20892AF800C0A9DF /* FeedPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B9F2D01FEC129B0070ED3F /* FeedPresentationController.swift */; };
+		63DBF30020892AF800C0A9DF /* OnboardPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6370A9031F80B1FF002641D3 /* OnboardPageViewController.swift */; };
+		63DBF30120892AF800C0A9DF /* UIViewController+ZAP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636FB24F1FD4434900AC467C /* UIViewController+ZAP.swift */; };
+		63DBF30220892AF800C0A9DF /* AuthorizeNotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633C43DA1F847FB600DAEA46 /* AuthorizeNotificationsViewController.swift */; };
+		63DBF30320892AF800C0A9DF /* SoundInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D271F820791FBA007AD36F /* SoundInjector.swift */; };
+		63DBF30420892AF800C0A9DF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DBF2C02087D42900C0A9DF /* Constants.swift */; };
+		63DBF30520892AF800C0A9DF /* AuthorizeContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638086C81F81EA6A0096CEF5 /* AuthorizeContactsViewController.swift */; };
+		63DBF30620892AF800C0A9DF /* UIColor+ZAP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6370A8EE1F80834C002641D3 /* UIColor+ZAP.swift */; };
+		63DBF30820892AF800C0A9DF /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63D271FA2079202D007AD36F /* AudioToolbox.framework */; };
+		63DBF30920892AF800C0A9DF /* Contacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 633C43D21F846E7800DAEA46 /* Contacts.framework */; };
+		63DBF30A20892AF800C0A9DF /* ContactsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 633C43D31F846E7800DAEA46 /* ContactsUI.framework */; };
+		63DBF30D20892AF800C0A9DF /* LandingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6370A8FD1F8099C3002641D3 /* LandingViewController.xib */; };
+		63DBF30E20892AF800C0A9DF /* Norwester.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6370A8E91F808154002641D3 /* Norwester.ttf */; };
+		63DBF30F20892AF800C0A9DF /* PointFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 636FB2631FD4ADC300AC467C /* PointFooter.xib */; };
+		63DBF31020892AF800C0A9DF /* SmallContactTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 633C43E61F85C85500DAEA46 /* SmallContactTableViewCell.xib */; };
+		63DBF31120892AF800C0A9DF /* TwoLabelHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 633C43F11F85DE7F00DAEA46 /* TwoLabelHeader.xib */; };
+		63DBF31220892AF800C0A9DF /* success.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 63D27200207926F5007AD36F /* success.mp3 */; };
+		63DBF31320892AF800C0A9DF /* AuthorizeContactsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 638086C91F81EA6A0096CEF5 /* AuthorizeContactsViewController.xib */; };
+		63DBF31420892AF800C0A9DF /* todo.txt in Resources */ = {isa = PBXBuildFile; fileRef = 636FB2571FD469BC00AC467C /* todo.txt */; };
+		63DBF31520892AF800C0A9DF /* ZappedPlaceholderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63CDE8531FDDB9720004296F /* ZappedPlaceholderTableViewCell.xib */; };
+		63DBF31620892AF800C0A9DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6370A8CE1F807DAC002641D3 /* LaunchScreen.storyboard */; };
+		63DBF31720892AF800C0A9DF /* points_only.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 63D27201207926F5007AD36F /* points_only.mp3 */; };
+		63DBF31820892AF800C0A9DF /* points_only.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 63D27204207927D9007AD36F /* points_only.mp3 */; };
+		63DBF31920892AF800C0A9DF /* ButtonFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 636FB2551FD4636500AC467C /* ButtonFooter.xib */; };
+		63DBF31A20892AF800C0A9DF /* FeedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 633C43E21F85C63500DAEA46 /* FeedViewController.xib */; };
+		63DBF31B20892AF800C0A9DF /* DueEmptyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63FDAA6B20814D7300E52F96 /* DueEmptyTableViewCell.xib */; };
+		63DBF31C20892AF800C0A9DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6370A8CC1F807DAC002641D3 /* Assets.xcassets */; };
+		63DBF31D20892AF800C0A9DF /* NotificationSettingsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63995D9E207E664300955412 /* NotificationSettingsTableViewCell.xib */; };
+		63DBF31E20892AF800C0A9DF /* points.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 63D271FD2079255B007AD36F /* points.mp3 */; };
+		63DBF31F20892AF800C0A9DF /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 636FB2671FD4B9AB00AC467C /* SettingsViewController.xib */; };
+		63DBF32020892AF800C0A9DF /* AuthorizeNotificationsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 633C43DB1F847FB600DAEA46 /* AuthorizeNotificationsViewController.xib */; };
+		63DBF32120892AF800C0A9DF /* TextFieldViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63DBF2CB2089086100C0A9DF /* TextFieldViewController.xib */; };
+		63DBF32220892AF800C0A9DF /* BigContactTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 636FB25E1FD497DA00AC467C /* BigContactTableViewCell.xib */; };
+		63DBF32320892AF800C0A9DF /* negative.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 63DBF2C82088E40800C0A9DF /* negative.mp3 */; };
+		63DBF32420892AF800C0A9DF /* SettingsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 636FB26B1FD4C8F700AC467C /* SettingsTableViewCell.xib */; };
+		63DBF32520892AF800C0A9DF /* Muli-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6370A8E71F808154002641D3 /* Muli-LightItalic.ttf */; };
+		63DBF32620892AF800C0A9DF /* ContactPickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63B9F2CD1FEC11F90070ED3F /* ContactPickerViewController.xib */; };
+		63DBF32720892AF800C0A9DF /* Muli-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6370A8E81F808154002641D3 /* Muli-Regular.ttf */; };
+		63DBF32820892AF800C0A9DF /* bolt.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 63D271FC2079255B007AD36F /* bolt.mp3 */; };
 		63FDAA692081493B00E52F96 /* AuthorizeContactsPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FDAA682081493B00E52F96 /* AuthorizeContactsPresentationController.swift */; };
 		63FDAA6C20814D7300E52F96 /* DueEmptyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FDAA6A20814D7300E52F96 /* DueEmptyTableViewCell.swift */; };
 		63FDAA6D20814D7300E52F96 /* DueEmptyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63FDAA6B20814D7300E52F96 /* DueEmptyTableViewCell.xib */; };
+		EAB3C0F43F4624EDC3974FD0 /* Pods_Beta_DailyZap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42725ADBC61BF5ACD36BFCE8 /* Pods_Beta_DailyZap.framework */; };
 		F7E25A5DC21DACEB6EF5A78F /* Pods_DailyZapTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4346BBE5D83FDFDE7656D105 /* Pods_DailyZapTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -108,7 +195,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		05690D360BEB48BE5E773471 /* Pods-Beta-DailyZap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Beta-DailyZap.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Beta-DailyZap/Pods-Beta-DailyZap.debug.xcconfig"; sourceTree = "<group>"; };
+		42725ADBC61BF5ACD36BFCE8 /* Pods_Beta_DailyZap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Beta_DailyZap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4346BBE5D83FDFDE7656D105 /* Pods_DailyZapTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DailyZapTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		48E64233E0904B26438F348C /* Pods-DailyZap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DailyZap.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DailyZap/Pods-DailyZap.debug.xcconfig"; sourceTree = "<group>"; };
 		4937B9CA0563215C57864F2E /* Pods-DailyZapTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DailyZapTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DailyZapTests/Pods-DailyZapTests.release.xcconfig"; sourceTree = "<group>"; };
 		6307A7F0207D49260076BEC8 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		633C43D21F846E7800DAEA46 /* Contacts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Contacts.framework; path = System/Library/Frameworks/Contacts.framework; sourceTree = SDKROOT; };
@@ -198,13 +288,15 @@
 		63DBF2C82088E40800C0A9DF /* negative.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = negative.mp3; path = ../../../../Assets/negative.mp3; sourceTree = "<group>"; };
 		63DBF2CA2089086100C0A9DF /* TextFieldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldViewController.swift; sourceTree = "<group>"; };
 		63DBF2CB2089086100C0A9DF /* TextFieldViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextFieldViewController.xib; sourceTree = "<group>"; };
+		63DBF32E20892AF800C0A9DF /* Beta-DailyZap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Beta-DailyZap.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		63DBF32F20892AF900C0A9DF /* DailyZap copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "DailyZap copy-Info.plist"; path = "/Users/david/Documents/apps/DailyZap/DailyZap/DailyZap copy-Info.plist"; sourceTree = "<absolute>"; };
 		63FDAA682081493B00E52F96 /* AuthorizeContactsPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizeContactsPresentationController.swift; sourceTree = "<group>"; };
 		63FDAA6A20814D7300E52F96 /* DueEmptyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DueEmptyTableViewCell.swift; sourceTree = "<group>"; };
 		63FDAA6B20814D7300E52F96 /* DueEmptyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DueEmptyTableViewCell.xib; sourceTree = "<group>"; };
-		8B6C9C7C0AF1E4EEEDAF5B7B /* Pods-DailyZap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DailyZap.release.xcconfig"; path = "Pods/Target Support Files/Pods-DailyZap/Pods-DailyZap.release.xcconfig"; sourceTree = "<group>"; };
+		7D069071848542B453913E70 /* Pods-DailyZap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DailyZap.release.xcconfig"; path = "Pods/Target Support Files/Pods-DailyZap/Pods-DailyZap.release.xcconfig"; sourceTree = "<group>"; };
 		A24962998F3D6CC3A716BDB0 /* Pods-DailyZapTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DailyZapTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DailyZapTests/Pods-DailyZapTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C2FE7E90F39E53EC80CD560F /* Pods-Beta-DailyZap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Beta-DailyZap.release.xcconfig"; path = "Pods/Target Support Files/Pods-Beta-DailyZap/Pods-Beta-DailyZap.release.xcconfig"; sourceTree = "<group>"; };
 		F757C2E7338FF3362A760FC7 /* Pods_DailyZap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DailyZap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FA6756942DCB5BD671DBC095 /* Pods-DailyZap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DailyZap.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DailyZap/Pods-DailyZap.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,6 +308,7 @@
 				633C43D41F846E7800DAEA46 /* Contacts.framework in Frameworks */,
 				633C43D51F846E7800DAEA46 /* ContactsUI.framework in Frameworks */,
 				2F9987B9CD63FBB351A5028F /* Pods_DailyZap.framework in Frameworks */,
+				53291DBC9510367BA7B03E15 /* Pods_DailyZap.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,6 +317,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				F7E25A5DC21DACEB6EF5A78F /* Pods_DailyZapTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63DBF30720892AF800C0A9DF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63DBF30820892AF800C0A9DF /* AudioToolbox.framework in Frameworks */,
+				63DBF30920892AF800C0A9DF /* Contacts.framework in Frameworks */,
+				63DBF30A20892AF800C0A9DF /* ContactsUI.framework in Frameworks */,
+				EAB3C0F43F4624EDC3974FD0 /* Pods_Beta_DailyZap.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,6 +343,7 @@
 				633C43D31F846E7800DAEA46 /* ContactsUI.framework */,
 				F757C2E7338FF3362A760FC7 /* Pods_DailyZap.framework */,
 				4346BBE5D83FDFDE7656D105 /* Pods_DailyZapTests.framework */,
+				42725ADBC61BF5ACD36BFCE8 /* Pods_Beta_DailyZap.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -292,6 +397,7 @@
 				6370A8C31F807DAC002641D3 /* Products */,
 				633C43D11F846E7800DAEA46 /* Frameworks */,
 				66A3D8A17B661A5DA4392E2C /* Pods */,
+				63DBF32F20892AF900C0A9DF /* DailyZap copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -300,6 +406,7 @@
 			children = (
 				6370A8C21F807DAC002641D3 /* DailyZap.app */,
 				6370A8D61F807DAD002641D3 /* DailyZapTests.xctest */,
+				63DBF32E20892AF800C0A9DF /* Beta-DailyZap.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -478,10 +585,12 @@
 		66A3D8A17B661A5DA4392E2C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				FA6756942DCB5BD671DBC095 /* Pods-DailyZap.debug.xcconfig */,
-				8B6C9C7C0AF1E4EEEDAF5B7B /* Pods-DailyZap.release.xcconfig */,
 				A24962998F3D6CC3A716BDB0 /* Pods-DailyZapTests.debug.xcconfig */,
 				4937B9CA0563215C57864F2E /* Pods-DailyZapTests.release.xcconfig */,
+				48E64233E0904B26438F348C /* Pods-DailyZap.debug.xcconfig */,
+				7D069071848542B453913E70 /* Pods-DailyZap.release.xcconfig */,
+				05690D360BEB48BE5E773471 /* Pods-Beta-DailyZap.debug.xcconfig */,
+				C2FE7E90F39E53EC80CD560F /* Pods-Beta-DailyZap.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -530,6 +639,26 @@
 			productReference = 6370A8D61F807DAD002641D3 /* DailyZapTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		63DBF2CE20892AF800C0A9DF /* Beta-DailyZap */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 63DBF32B20892AF800C0A9DF /* Build configuration list for PBXNativeTarget "Beta-DailyZap" */;
+			buildPhases = (
+				3A462324E8BE6D9CC54310C1 /* [CP] Check Pods Manifest.lock */,
+				63DBF2D020892AF800C0A9DF /* Sources */,
+				63DBF30720892AF800C0A9DF /* Frameworks */,
+				63DBF30C20892AF800C0A9DF /* Resources */,
+				85D3235CE5CDD4FAAFDC926C /* [CP] Embed Pods Frameworks */,
+				D091FC2525D1A869A64FB54D /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Beta-DailyZap";
+			productName = DailyZap;
+			productReference = 63DBF32E20892AF800C0A9DF /* Beta-DailyZap.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -549,6 +678,9 @@
 						ProvisioningStyle = Automatic;
 						TestTargetID = 6370A8C11F807DAC002641D3;
 					};
+					63DBF2CE20892AF800C0A9DF = {
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = 6370A8BD1F807DAC002641D3 /* Build configuration list for PBXProject "DailyZap" */;
@@ -566,6 +698,7 @@
 			targets = (
 				6370A8C11F807DAC002641D3 /* DailyZap */,
 				6370A8D51F807DAD002641D3 /* DailyZapTests */,
+				63DBF2CE20892AF800C0A9DF /* Beta-DailyZap */,
 			);
 		};
 /* End PBXProject section */
@@ -613,9 +746,62 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		63DBF30C20892AF800C0A9DF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63DBF30D20892AF800C0A9DF /* LandingViewController.xib in Resources */,
+				63DBF30E20892AF800C0A9DF /* Norwester.ttf in Resources */,
+				63DBF30F20892AF800C0A9DF /* PointFooter.xib in Resources */,
+				63DBF31020892AF800C0A9DF /* SmallContactTableViewCell.xib in Resources */,
+				63DBF31120892AF800C0A9DF /* TwoLabelHeader.xib in Resources */,
+				63DBF31220892AF800C0A9DF /* success.mp3 in Resources */,
+				63DBF31320892AF800C0A9DF /* AuthorizeContactsViewController.xib in Resources */,
+				63DBF31420892AF800C0A9DF /* todo.txt in Resources */,
+				63DBF31520892AF800C0A9DF /* ZappedPlaceholderTableViewCell.xib in Resources */,
+				63DBF31620892AF800C0A9DF /* LaunchScreen.storyboard in Resources */,
+				63DBF31720892AF800C0A9DF /* points_only.mp3 in Resources */,
+				63DBF31820892AF800C0A9DF /* points_only.mp3 in Resources */,
+				63DBF31920892AF800C0A9DF /* ButtonFooter.xib in Resources */,
+				63DBF31A20892AF800C0A9DF /* FeedViewController.xib in Resources */,
+				63DBF31B20892AF800C0A9DF /* DueEmptyTableViewCell.xib in Resources */,
+				63DBF31C20892AF800C0A9DF /* Assets.xcassets in Resources */,
+				63DBF31D20892AF800C0A9DF /* NotificationSettingsTableViewCell.xib in Resources */,
+				63DBF31E20892AF800C0A9DF /* points.mp3 in Resources */,
+				63DBF31F20892AF800C0A9DF /* SettingsViewController.xib in Resources */,
+				63DBF32020892AF800C0A9DF /* AuthorizeNotificationsViewController.xib in Resources */,
+				63DBF32120892AF800C0A9DF /* TextFieldViewController.xib in Resources */,
+				63DBF32220892AF800C0A9DF /* BigContactTableViewCell.xib in Resources */,
+				63DBF32320892AF800C0A9DF /* negative.mp3 in Resources */,
+				63DBF32420892AF800C0A9DF /* SettingsTableViewCell.xib in Resources */,
+				63DBF32520892AF800C0A9DF /* Muli-LightItalic.ttf in Resources */,
+				63DBF32620892AF800C0A9DF /* ContactPickerViewController.xib in Resources */,
+				63DBF32720892AF800C0A9DF /* Muli-Regular.ttf in Resources */,
+				63DBF32820892AF800C0A9DF /* bolt.mp3 in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		3A462324E8BE6D9CC54310C1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Beta-DailyZap-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		45354B27E4FC54DE37A8AA6A /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -642,7 +828,6 @@
 				"${BUILT_PRODUCTS_DIR}/Flurry-iOS-SDK/Flurry_iOS_SDK.framework",
 				"${BUILT_PRODUCTS_DIR}/InitialsImageView/InitialsImageView.framework",
 				"${BUILT_PRODUCTS_DIR}/PopupDialog/PopupDialog.framework",
-				"${BUILT_PRODUCTS_DIR}/SACountingLabel/SACountingLabel.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -650,11 +835,25 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Flurry_iOS_SDK.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/InitialsImageView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PopupDialog.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SACountingLabel.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DailyZap/Pods-DailyZap-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		85D3235CE5CDD4FAAFDC926C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Beta-DailyZap/Pods-Beta-DailyZap-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		8A232457F1DEED0F6462E38F /* [CP] Copy Pods Resources */ = {
@@ -703,6 +902,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D091FC2525D1A869A64FB54D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Beta-DailyZap/Pods-Beta-DailyZap-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D7A22407466D0FB1D5121331 /* [CP] Check Pods Manifest.lock */ = {
@@ -792,6 +1006,67 @@
 			buildActionMask = 2147483647;
 			files = (
 				6370A8DB1F807DAD002641D3 /* DailyZapTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63DBF2D020892AF800C0A9DF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63DBF2D120892AF800C0A9DF /* ContactPickerDataController.swift in Sources */,
+				63DBF2D220892AF800C0A9DF /* ContactTableViewCell.swift in Sources */,
+				63DBF2D320892AF800C0A9DF /* UIView+ZAP.swift in Sources */,
+				63DBF2D420892AF800C0A9DF /* LightningBoltView.swift in Sources */,
+				63DBF2D520892AF800C0A9DF /* Int+ZAP.swift in Sources */,
+				63DBF2D620892AF800C0A9DF /* BasePresentationController.swift in Sources */,
+				63DBF2D720892AF800C0A9DF /* Label.swift in Sources */,
+				63DBF2D820892AF800C0A9DF /* SettingsTableViewCell.swift in Sources */,
+				63DBF2D920892AF800C0A9DF /* LandingViewController.swift in Sources */,
+				63DBF2DA20892AF800C0A9DF /* Button.swift in Sources */,
+				63DBF2DB20892AF800C0A9DF /* Contact.swift in Sources */,
+				63DBF2DC20892AF800C0A9DF /* BigCountingLabel.swift in Sources */,
+				63DBF2DD20892AF800C0A9DF /* AppleContactsInjector.swift in Sources */,
+				63DBF2DE20892AF800C0A9DF /* Feed.swift in Sources */,
+				63DBF2DF20892AF800C0A9DF /* NotificationSettingsTableViewCell.swift in Sources */,
+				63DBF2E020892AF800C0A9DF /* PresentationInjector.swift in Sources */,
+				63DBF2E120892AF800C0A9DF /* FeedViewController.swift in Sources */,
+				63DBF2E220892AF800C0A9DF /* AnalyticsEvent.swift in Sources */,
+				63DBF2E320892AF800C0A9DF /* BaseDataController.swift in Sources */,
+				63DBF2E420892AF800C0A9DF /* DueEmptyTableViewCell.swift in Sources */,
+				63DBF2E520892AF800C0A9DF /* ContactPickerPresentationController.swift in Sources */,
+				63DBF2E620892AF800C0A9DF /* BaseViewController.swift in Sources */,
+				63DBF2E720892AF800C0A9DF /* TwoLabelHeader.swift in Sources */,
+				63DBF2E820892AF800C0A9DF /* RootViewController.swift in Sources */,
+				63DBF2E920892AF800C0A9DF /* FeedDataController.swift in Sources */,
+				63DBF2EA20892AF800C0A9DF /* AppDelegate.swift in Sources */,
+				63DBF2EB20892AF800C0A9DF /* TextFieldViewController.swift in Sources */,
+				63DBF2EC20892AF800C0A9DF /* NSObject+ZAP.swift in Sources */,
+				63DBF2ED20892AF800C0A9DF /* NotificationInjector.swift in Sources */,
+				63DBF2EE20892AF800C0A9DF /* UserDefaultsInjector.swift in Sources */,
+				63DBF2EF20892AF800C0A9DF /* ButtonFooter.swift in Sources */,
+				63DBF2F020892AF800C0A9DF /* XibLoadedView.swift in Sources */,
+				63DBF2F120892AF800C0A9DF /* CircleImageView.swift in Sources */,
+				63DBF2F220892AF800C0A9DF /* PointFooter.swift in Sources */,
+				63DBF2F320892AF800C0A9DF /* PointInjector.swift in Sources */,
+				63DBF2F420892AF800C0A9DF /* FeedInjector.swift in Sources */,
+				63DBF2F520892AF800C0A9DF /* SettingsPresentationController.swift in Sources */,
+				63DBF2F620892AF800C0A9DF /* AnalyticsInjector.swift in Sources */,
+				63DBF2F720892AF800C0A9DF /* ZappedPlaceholderTableViewCell.swift in Sources */,
+				63DBF2F820892AF800C0A9DF /* UIFont+ZAP.swift in Sources */,
+				63DBF2F920892AF800C0A9DF /* ContactPickerViewController.swift in Sources */,
+				63DBF2FA20892AF800C0A9DF /* Date+ZAP.swift in Sources */,
+				63DBF2FB20892AF800C0A9DF /* SettingsViewController.swift in Sources */,
+				63DBF2FC20892AF800C0A9DF /* Result.swift in Sources */,
+				63DBF2FD20892AF800C0A9DF /* AlertInjector.swift in Sources */,
+				63DBF2FE20892AF800C0A9DF /* AuthorizeContactsPresentationController.swift in Sources */,
+				63DBF2FF20892AF800C0A9DF /* FeedPresentationController.swift in Sources */,
+				63DBF30020892AF800C0A9DF /* OnboardPageViewController.swift in Sources */,
+				63DBF30120892AF800C0A9DF /* UIViewController+ZAP.swift in Sources */,
+				63DBF30220892AF800C0A9DF /* AuthorizeNotificationsViewController.swift in Sources */,
+				63DBF30320892AF800C0A9DF /* SoundInjector.swift in Sources */,
+				63DBF30420892AF800C0A9DF /* Constants.swift in Sources */,
+				63DBF30520892AF800C0A9DF /* AuthorizeContactsViewController.swift in Sources */,
+				63DBF30620892AF800C0A9DF /* UIColor+ZAP.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -926,9 +1201,11 @@
 		};
 		6370A8E01F807DAD002641D3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FA6756942DCB5BD671DBC095 /* Pods-DailyZap.debug.xcconfig */;
+			baseConfigurationReference = 48E64233E0904B26438F348C /* Pods-DailyZap.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 88J4VM6686;
 				INFOPLIST_FILE = DailyZap/Info.plist;
@@ -936,6 +1213,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dqlobo.DailyZap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -943,9 +1221,11 @@
 		};
 		6370A8E11F807DAD002641D3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8B6C9C7C0AF1E4EEEDAF5B7B /* Pods-DailyZap.release.xcconfig */;
+			baseConfigurationReference = 7D069071848542B453913E70 /* Pods-DailyZap.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 88J4VM6686;
 				INFOPLIST_FILE = DailyZap/Info.plist;
@@ -953,6 +1233,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dqlobo.DailyZap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -994,6 +1275,46 @@
 			};
 			name = Release;
 		};
+		63DBF32C20892AF800C0A9DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 05690D360BEB48BE5E773471 /* Pods-Beta-DailyZap.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 88J4VM6686;
+				INFOPLIST_FILE = "DailyZap copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dqlobo.DailyZap;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		63DBF32D20892AF800C0A9DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C2FE7E90F39E53EC80CD560F /* Pods-Beta-DailyZap.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 88J4VM6686;
+				INFOPLIST_FILE = "DailyZap copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dqlobo.DailyZap;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1020,6 +1341,15 @@
 			buildConfigurations = (
 				6370A8E31F807DAD002641D3 /* Debug */,
 				6370A8E41F807DAD002641D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		63DBF32B20892AF800C0A9DF /* Build configuration list for PBXNativeTarget "Beta-DailyZap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63DBF32C20892AF800C0A9DF /* Debug */,
+				63DBF32D20892AF800C0A9DF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

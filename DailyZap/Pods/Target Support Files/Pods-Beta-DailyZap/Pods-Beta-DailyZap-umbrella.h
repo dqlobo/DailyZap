@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double SACountingLabelVersionNumber;
-FOUNDATION_EXPORT const unsigned char SACountingLabelVersionString[];
+FOUNDATION_EXPORT double Pods_Beta_DailyZapVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_Beta_DailyZapVersionString[];
 

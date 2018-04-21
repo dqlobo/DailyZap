@@ -190,7 +190,6 @@ extension FeedPresentationController {
         
         let rmTitle = "🗓  Remove \(contact.firstName) just this once"
         let rmAction: PopupDialogButton.PopupDialogButtonAction = { [weak self] in
-            let sections = contact.isDue ? [0] : [1]
             self?.analytics.log(.feed(.remove(.once)))
             self?.vc.dataController?.feedManager.removeFromFeed(contact: contact)
             if contact.isDue {

@@ -8,9 +8,11 @@ target 'DailyZap' do
   # Pods for DailyZap
   pod "InitialsImageView"
   pod 'PopupDialog', '~> 0.6'
-  pod 'SACountingLabel'
+#  pod 'SACountingLabel'
   pod 'Flurry-iOS-SDK/FlurrySDK'
-  
+  target 'Beta-DailyZap' do
+    inherit! :search_paths
+  end
   target 'DailyZapTests' do
     inherit! :search_paths
     # Pods for testing

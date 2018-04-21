@@ -4,7 +4,17 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>DailyZap.xcscheme</key>
+		<key>Beta-DailyZap.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>9</integer>
+		</dict>
+		<key>DailyZap copy.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>9</integer>
+		</dict>
+		<key>DailyZap.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -18,6 +28,11 @@
 			<true/>
 		</dict>
 		<key>6370A8D51F807DAD002641D3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>63DBF2CE20892AF800C0A9DF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
