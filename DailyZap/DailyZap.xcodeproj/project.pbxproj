@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2F9987B9CD63FBB351A5028F /* Pods_DailyZap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F757C2E7338FF3362A760FC7 /* Pods_DailyZap.framework */; };
-		53291DBC9510367BA7B03E15 /* Pods_DailyZap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F757C2E7338FF3362A760FC7 /* Pods_DailyZap.framework */; };
 		6307A7F1207D49260076BEC8 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6307A7F0207D49260076BEC8 /* Result.swift */; };
 		633C43D41F846E7800DAEA46 /* Contacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 633C43D21F846E7800DAEA46 /* Contacts.framework */; };
 		633C43D51F846E7800DAEA46 /* ContactsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 633C43D31F846E7800DAEA46 /* ContactsUI.framework */; };
@@ -22,6 +21,7 @@
 		633C43EE1F85DCF300DAEA46 /* TwoLabelHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633C43ED1F85DCF300DAEA46 /* TwoLabelHeader.swift */; };
 		633C43F01F85DD1200DAEA46 /* XibLoadedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633C43EF1F85DD1200DAEA46 /* XibLoadedView.swift */; };
 		633C43F21F85DE7F00DAEA46 /* TwoLabelHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 633C43F11F85DE7F00DAEA46 /* TwoLabelHeader.xib */; };
+		635D4F4B2098F88E005AF905 /* Pods_Beta_DailyZap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 635D4F4C2098F88E005AF905 /* Pods_Beta_DailyZap.framework */; };
 		636FB2501FD4434900AC467C /* UIViewController+ZAP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636FB24F1FD4434900AC467C /* UIViewController+ZAP.swift */; };
 		636FB2541FD4635B00AC467C /* ButtonFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636FB2531FD4635B00AC467C /* ButtonFooter.swift */; };
 		636FB2561FD4636500AC467C /* ButtonFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 636FB2551FD4636500AC467C /* ButtonFooter.xib */; };
@@ -177,10 +177,14 @@
 		63DBF32620892AF800C0A9DF /* ContactPickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63B9F2CD1FEC11F90070ED3F /* ContactPickerViewController.xib */; };
 		63DBF32720892AF800C0A9DF /* Muli-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6370A8E81F808154002641D3 /* Muli-Regular.ttf */; };
 		63DBF32820892AF800C0A9DF /* bolt.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 63D271FC2079255B007AD36F /* bolt.mp3 */; };
+		63E8F1E820A34D3700DA4F0A /* WelcomePopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E8F1E620A34D3700DA4F0A /* WelcomePopupViewController.swift */; };
+		63E8F1E920A34D3700DA4F0A /* WelcomePopupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63E8F1E720A34D3700DA4F0A /* WelcomePopupViewController.xib */; };
+		63E8F1EA20A357BD00DA4F0A /* WelcomePopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E8F1E620A34D3700DA4F0A /* WelcomePopupViewController.swift */; };
+		63E8F1EB20A357BD00DA4F0A /* WelcomePopupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63E8F1E720A34D3700DA4F0A /* WelcomePopupViewController.xib */; };
 		63FDAA692081493B00E52F96 /* AuthorizeContactsPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FDAA682081493B00E52F96 /* AuthorizeContactsPresentationController.swift */; };
 		63FDAA6C20814D7300E52F96 /* DueEmptyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FDAA6A20814D7300E52F96 /* DueEmptyTableViewCell.swift */; };
 		63FDAA6D20814D7300E52F96 /* DueEmptyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63FDAA6B20814D7300E52F96 /* DueEmptyTableViewCell.xib */; };
-		EAB3C0F43F4624EDC3974FD0 /* Pods_Beta_DailyZap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42725ADBC61BF5ACD36BFCE8 /* Pods_Beta_DailyZap.framework */; };
+		9C5423494CAADFCBC70A77CD /* Pods_DailyZap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 635D4F4E2098F8BD005AF905 /* Pods_DailyZap.framework */; };
 		F7E25A5DC21DACEB6EF5A78F /* Pods_DailyZapTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4346BBE5D83FDFDE7656D105 /* Pods_DailyZapTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -214,6 +218,8 @@
 		633C43ED1F85DCF300DAEA46 /* TwoLabelHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoLabelHeader.swift; sourceTree = "<group>"; };
 		633C43EF1F85DD1200DAEA46 /* XibLoadedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibLoadedView.swift; sourceTree = "<group>"; };
 		633C43F11F85DE7F00DAEA46 /* TwoLabelHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TwoLabelHeader.xib; sourceTree = "<group>"; };
+		635D4F4C2098F88E005AF905 /* Pods_Beta_DailyZap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_Beta_DailyZap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		635D4F4E2098F8BD005AF905 /* Pods_DailyZap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_DailyZap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		636FB24F1FD4434900AC467C /* UIViewController+ZAP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ZAP.swift"; sourceTree = "<group>"; };
 		636FB2531FD4635B00AC467C /* ButtonFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonFooter.swift; sourceTree = "<group>"; };
 		636FB2551FD4636500AC467C /* ButtonFooter.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonFooter.xib; sourceTree = "<group>"; };
@@ -290,6 +296,9 @@
 		63DBF2CB2089086100C0A9DF /* TextFieldViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextFieldViewController.xib; sourceTree = "<group>"; };
 		63DBF32E20892AF800C0A9DF /* Beta-DailyZap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Beta-DailyZap.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		63DBF32F20892AF900C0A9DF /* DailyZap copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "DailyZap copy-Info.plist"; path = "/Users/david/Documents/apps/DailyZap/DailyZap/DailyZap copy-Info.plist"; sourceTree = "<absolute>"; };
+		63E6A9DD2098F32300FA6428 /* Pods_DailyZap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_DailyZap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		63E8F1E620A34D3700DA4F0A /* WelcomePopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePopupViewController.swift; sourceTree = "<group>"; };
+		63E8F1E720A34D3700DA4F0A /* WelcomePopupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WelcomePopupViewController.xib; sourceTree = "<group>"; };
 		63FDAA682081493B00E52F96 /* AuthorizeContactsPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizeContactsPresentationController.swift; sourceTree = "<group>"; };
 		63FDAA6A20814D7300E52F96 /* DueEmptyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DueEmptyTableViewCell.swift; sourceTree = "<group>"; };
 		63FDAA6B20814D7300E52F96 /* DueEmptyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DueEmptyTableViewCell.xib; sourceTree = "<group>"; };
@@ -308,7 +317,7 @@
 				633C43D41F846E7800DAEA46 /* Contacts.framework in Frameworks */,
 				633C43D51F846E7800DAEA46 /* ContactsUI.framework in Frameworks */,
 				2F9987B9CD63FBB351A5028F /* Pods_DailyZap.framework in Frameworks */,
-				53291DBC9510367BA7B03E15 /* Pods_DailyZap.framework in Frameworks */,
+				9C5423494CAADFCBC70A77CD /* Pods_DailyZap.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,10 +333,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				635D4F4B2098F88E005AF905 /* Pods_Beta_DailyZap.framework in Frameworks */,
 				63DBF30820892AF800C0A9DF /* AudioToolbox.framework in Frameworks */,
 				63DBF30920892AF800C0A9DF /* Contacts.framework in Frameworks */,
 				63DBF30A20892AF800C0A9DF /* ContactsUI.framework in Frameworks */,
-				EAB3C0F43F4624EDC3974FD0 /* Pods_Beta_DailyZap.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,6 +346,9 @@
 		633C43D11F846E7800DAEA46 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				635D4F4E2098F8BD005AF905 /* Pods_DailyZap.framework */,
+				635D4F4C2098F88E005AF905 /* Pods_Beta_DailyZap.framework */,
+				63E6A9DD2098F32300FA6428 /* Pods_DailyZap.framework */,
 				63D271FA2079202D007AD36F /* AudioToolbox.framework */,
 				637CD94E1FDC4D4900892870 /* MessageUI.framework */,
 				633C43D21F846E7800DAEA46 /* Contacts.framework */,
@@ -369,6 +381,8 @@
 				63D271EB2077C13C007AD36F /* LightningBoltView.swift */,
 				63FDAA6A20814D7300E52F96 /* DueEmptyTableViewCell.swift */,
 				63FDAA6B20814D7300E52F96 /* DueEmptyTableViewCell.xib */,
+				63E8F1E620A34D3700DA4F0A /* WelcomePopupViewController.swift */,
+				63E8F1E720A34D3700DA4F0A /* WelcomePopupViewController.xib */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -697,8 +711,8 @@
 			projectRoot = "";
 			targets = (
 				6370A8C11F807DAC002641D3 /* DailyZap */,
-				6370A8D51F807DAD002641D3 /* DailyZapTests */,
 				63DBF2CE20892AF800C0A9DF /* Beta-DailyZap */,
+				6370A8D51F807DAD002641D3 /* DailyZapTests */,
 			);
 		};
 /* End PBXProject section */
@@ -714,6 +728,7 @@
 				633C43E81F85C85500DAEA46 /* SmallContactTableViewCell.xib in Resources */,
 				633C43F21F85DE7F00DAEA46 /* TwoLabelHeader.xib in Resources */,
 				63D27202207926F5007AD36F /* success.mp3 in Resources */,
+				63E8F1E920A34D3700DA4F0A /* WelcomePopupViewController.xib in Resources */,
 				638086CB1F81EA6A0096CEF5 /* AuthorizeContactsViewController.xib in Resources */,
 				636FB2581FD469BC00AC467C /* todo.txt in Resources */,
 				63CDE8551FDDB9720004296F /* ZappedPlaceholderTableViewCell.xib in Resources */,
@@ -756,6 +771,7 @@
 				63DBF31020892AF800C0A9DF /* SmallContactTableViewCell.xib in Resources */,
 				63DBF31120892AF800C0A9DF /* TwoLabelHeader.xib in Resources */,
 				63DBF31220892AF800C0A9DF /* success.mp3 in Resources */,
+				63E8F1EB20A357BD00DA4F0A /* WelcomePopupViewController.xib in Resources */,
 				63DBF31320892AF800C0A9DF /* AuthorizeContactsViewController.xib in Resources */,
 				63DBF31420892AF800C0A9DF /* todo.txt in Resources */,
 				63DBF31520892AF800C0A9DF /* ZappedPlaceholderTableViewCell.xib in Resources */,
@@ -847,9 +863,18 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Beta-DailyZap/Pods-Beta-DailyZap-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/DynamicBlurView/DynamicBlurView.framework",
+				"${BUILT_PRODUCTS_DIR}/Flurry-iOS-SDK/Flurry_iOS_SDK.framework",
+				"${BUILT_PRODUCTS_DIR}/InitialsImageView/InitialsImageView.framework",
+				"${BUILT_PRODUCTS_DIR}/PopupDialog/PopupDialog.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DynamicBlurView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Flurry_iOS_SDK.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/InitialsImageView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PopupDialog.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -979,6 +1004,7 @@
 				636FB25C1FD48A9200AC467C /* CircleImageView.swift in Sources */,
 				636FB2621FD4ADB300AC467C /* PointFooter.swift in Sources */,
 				63D27207207ACC48007AD36F /* PointInjector.swift in Sources */,
+				63E8F1E820A34D3700DA4F0A /* WelcomePopupViewController.swift in Sources */,
 				63A313031F943EB500BA5CE1 /* FeedInjector.swift in Sources */,
 				63995DA620810A7100955412 /* SettingsPresentationController.swift in Sources */,
 				633C43EC1F85CB5A00DAEA46 /* AnalyticsInjector.swift in Sources */,
@@ -1048,6 +1074,7 @@
 				63DBF2F120892AF800C0A9DF /* CircleImageView.swift in Sources */,
 				63DBF2F220892AF800C0A9DF /* PointFooter.swift in Sources */,
 				63DBF2F320892AF800C0A9DF /* PointInjector.swift in Sources */,
+				63E8F1EA20A357BD00DA4F0A /* WelcomePopupViewController.swift in Sources */,
 				63DBF2F420892AF800C0A9DF /* FeedInjector.swift in Sources */,
 				63DBF2F520892AF800C0A9DF /* SettingsPresentationController.swift in Sources */,
 				63DBF2F620892AF800C0A9DF /* AnalyticsInjector.swift in Sources */,
@@ -1203,19 +1230,21 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 48E64233E0904B26438F348C /* Pods-DailyZap.debug.xcconfig */;
 			buildSettings = {
+				AD_MOB_IDENTIFIER = "ca-app-pub-1197795770484872/9511866706";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 88J4VM6686;
+				FLURRY_KEY = BFDGBYZQG7Q6CVRF4SC5;
 				INFOPLIST_FILE = DailyZap/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dqlobo.DailyZap;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dqlobo.Zap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1223,19 +1252,21 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7D069071848542B453913E70 /* Pods-DailyZap.release.xcconfig */;
 			buildSettings = {
+				AD_MOB_IDENTIFIER = "ca-app-pub-1197795770484872/9511866706";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 88J4VM6686;
+				FLURRY_KEY = BFDGBYZQG7Q6CVRF4SC5;
 				INFOPLIST_FILE = DailyZap/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dqlobo.DailyZap;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dqlobo.Zap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -1279,19 +1310,21 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 05690D360BEB48BE5E773471 /* Pods-Beta-DailyZap.debug.xcconfig */;
 			buildSettings = {
+				AD_MOB_IDENTIFIER = "ca-app-pub-3940256099942544/2934735716";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 88J4VM6686;
+				FLURRY_KEY = 89TXPFVHYG8F95YRHQQM;
 				INFOPLIST_FILE = "DailyZap copy-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dqlobo.DailyZap;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dqlobo.DailyZap-Beta";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1299,19 +1332,21 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C2FE7E90F39E53EC80CD560F /* Pods-Beta-DailyZap.release.xcconfig */;
 			buildSettings = {
+				AD_MOB_IDENTIFIER = "ca-app-pub-3940256099942544/2934735716";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 88J4VM6686;
+				FLURRY_KEY = 89TXPFVHYG8F95YRHQQM;
 				INFOPLIST_FILE = "DailyZap copy-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dqlobo.DailyZap;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dqlobo.DailyZap-Beta";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

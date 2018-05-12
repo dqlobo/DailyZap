@@ -31,6 +31,7 @@ class UserDefaultsManager {
     let notificationFrequencyKey = "NotificationFrequencyDefaultsKey"
     let notificationTimingKey = "NotificationTimingDefaultsKey"
     
+    let feedTutorialKey = "FeedTutorialDefaultsKey"
     
     init() {
         setupDefaults()
@@ -175,5 +176,16 @@ extension UserDefaultsManager { // private defaults integrations
             return []
         }
         return list
+    }
+}
+
+// MARK: - Tutorial flag
+
+extension UserDefaultsManager {
+    func tutorialCompleted() -> Bool {
+        return  defaults.bool(forKey: feedTutorialKey)
+    }
+    func setTutorialComplete() {
+        defaults.set(true, forKey: feedTutorialKey)
     }
 }

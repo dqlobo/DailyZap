@@ -99,9 +99,10 @@ class AppleContactsManager {
                     set.insert(c)
                 }
             }
+            let sortedContacts = set.sorted { $0.lastName < $1.lastName }
             DispatchQueue.main.sync { [weak self] in
                 self?.isLoading = false
-                self?.contactList = set.sorted { $0.lastName < $1.lastName }
+                self?.contactList = sortedContacts
                 NotificationCenter.default.post(name: AppleContactsManager.loadedContactsNotification, object: nil)
             }
         }

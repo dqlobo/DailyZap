@@ -21,7 +21,6 @@ class ContactPickerDataController: BaseDataController, AppleContactsInjector {
         }
     }
     
-    
     lazy var refresh: UIRefreshControl = {
         let r = UIRefreshControl()
         r.addTarget(self,
@@ -37,7 +36,7 @@ class ContactPickerDataController: BaseDataController, AppleContactsInjector {
         tableView.addSubview(refresh)
         tableView.estimatedRowHeight = 100
         tableView.register(UINib(nibName:"SmallContactTableViewCell", bundle: Bundle.main), forCellReuseIdentifier: self.cellReuseID)
-        // TODO check if contact is already added or if max contacts are queued
+
         // register reload notification
         NotificationCenter.default.addObserver(self, selector: #selector(didRefreshContactList), name: AppleContactsManager.loadedContactsNotification, object: nil)
     }
@@ -71,10 +70,16 @@ class ContactPickerDataController: BaseDataController, AppleContactsInjector {
 
 extension ContactPickerDataController {
     @objc func didRefreshContactList() {
-        refresh.endRefreshing()
-        contactList = feedManager.inflate(contacts: appleContactManager.contactList)
-        recalculateFilter()
-        tableView.reloadData()
+        let cList = appleContactManager.contactList
+        DispatchQueue.global().async { [weak self] in
+            guard let strong = self else { return }
+            let inflated = strong.feedManager.inflate(contacts: cList)
+            DispatchQueue.main.sync {
+                strong.contactList = inflated
+                strong.refresh.endRefreshing()
+                strong.recalculateFilter()
+            }
+        }
     }
     
     @objc func add(sender: Button) {

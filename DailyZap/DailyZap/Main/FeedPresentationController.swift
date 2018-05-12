@@ -159,7 +159,7 @@ extension FeedPresentationController {
 }
 
 // MARK: - Custom Popups
-extension FeedPresentationController {
+extension FeedPresentationController: UserDefaultsInjector {
    
     func decorateZapDefault(for contact: Contact, in popup: PopupDialog) {
         let call = DefaultButton(title: "☎️  Call") { [weak self] in
@@ -177,7 +177,6 @@ extension FeedPresentationController {
     
     func reloadFeed(sections: [Int] = [0,1]) {
         vc.tableView.reloadSections(IndexSet(sections), with: .fade)
-
     }
     func decorateZapRemove(for contact: Contact, in popup: PopupDialog, recommendsRemoval: Bool = true) {
         let blacklist = DestructiveButton(title: "🏴  Never suggest this contact again") { [weak self] in
@@ -192,21 +191,21 @@ extension FeedPresentationController {
         let rmAction: PopupDialogButton.PopupDialogButtonAction = { [weak self] in
             self?.analytics.log(.feed(.remove(.once)))
             self?.vc.dataController?.feedManager.removeFromFeed(contact: contact)
+            let basePenalty = contact.isDue ? 10 : 3
             if contact.isDue {
-                self?.vc.footer.addPoints(-(5 + Int.random(upTo: 5)), animated: true)
-                self?.soundManager.playNegativeSound()
                 self?.reloadFeed(sections: [0])
             } else {
                 self?.reloadFeed(sections: [1])
             }
-           
+            self?.vc.footer.addPoints(-(basePenalty + Int.random(upTo: 5)), animated: true)
+            self?.soundManager.playNegativeSound()           
         }
         let rm = recommendsRemoval ?
             DefaultButton(title: rmTitle, action: rmAction) :
             DestructiveButton(title: rmTitle, action: rmAction)
         
         let compTitle = "☑️  Mark as completed"
-        let compAction: PopupDialogButton.PopupDialogButtonAction = {  [weak self] in self?.rewardForZapping(contact: contact, pts: 0, extraWait: -0.5)
+        let compAction: PopupDialogButton.PopupDialogButtonAction = {  [weak self] in self?.rewardForZapping(contact: contact, pts: 3, extraWait: -0.5)
             self?.analytics.log(.feed(.remove(.markDone)))
         }
         let comp = recommendsRemoval ?
@@ -225,6 +224,20 @@ extension FeedPresentationController {
         let popup = PopupDialog(title: title, message: message)
         popup.addButton(DefaultButton(title: "Okay") {})
         showPopup(popup, showsCancel: false)
+    }
+    
+    func showTutorialPopupIfNeeded() {
+        if !userDefaultsManager.tutorialCompleted() {
+            let tut = WelcomePopupViewController()
+            tut.contact = vc.dataController?.feedManager.feed.due.first
+            tut.tappedOkay = { [weak self] in
+                self?.vc.dismiss(animated: true, completion: nil)
+            }
+            let popup = PopupDialog(viewController: tut, completion: { [weak self] in
+                self?.userDefaultsManager.setTutorialComplete()
+            })
+            showPopup(popup, showsCancel: false)
+        }
     }
     
     func showFailPopup(action: String) {

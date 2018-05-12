@@ -1,21 +1,25 @@
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
 
-target 'DailyZap' do
-  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+def dz_pods  
   use_frameworks!
 
   # Pods for DailyZap
   pod "InitialsImageView"
   pod 'PopupDialog', '~> 0.6'
-#  pod 'SACountingLabel'
   pod 'Flurry-iOS-SDK/FlurrySDK'
-  target 'Beta-DailyZap' do
-    inherit! :search_paths
-  end
+#  pod 'Flurry-iOS-SDK/FlurryAds'
+  pod 'Google-Mobile-Ads-SDK'
+end
+
+target 'DailyZap' do
+  dz_pods
+  # Copy to Beta and Test Target
   target 'DailyZapTests' do
     inherit! :search_paths
     # Pods for testing
   end
-
+end
+target 'Beta-DailyZap' do
+  dz_pods
 end

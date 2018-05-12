@@ -12,12 +12,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="iN0-l3-epB" customClass="ButtonFooter" customModule="DailyZap" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+        <view opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="iN0-l3-epB" customClass="ButtonFooter" customModule="Beta_DailyZap" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dlf-E9-LjG" userLabel="Btn" customClass="Button" customModule="DailyZap" customModuleProvider="target">
-                    <rect key="frame" x="163" y="82.5" width="50" height="35"/>
+                <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dlf-E9-LjG" userLabel="Btn" customClass="Button" customModule="Beta_DailyZap" customModuleProvider="target">
+                    <rect key="frame" x="162" y="57" width="50" height="35"/>
                     <fontDescription key="fontDescription" type="system" pointSize="19"/>
                     <state key="normal" title="+ add"/>
                     <userDefinedRuntimeAttributes>
@@ -28,8 +28,8 @@
                 </button>
             </subviews>
             <constraints>
-                <constraint firstItem="Dlf-E9-LjG" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="MT0-EF-xgG"/>
-                <constraint firstItem="Dlf-E9-LjG" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="kKe-Dv-dC0"/>
+                <constraint firstItem="Dlf-E9-LjG" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="EpX-a6-dwg"/>
+                <constraint firstItem="Dlf-E9-LjG" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="v7Z-xD-KOa"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>

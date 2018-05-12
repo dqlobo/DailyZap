@@ -7,14 +7,26 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
 class FeedViewController: BaseViewController, PointInjector {
     
+    @IBOutlet weak var footerBottom: NSLayoutConstraint!
     @IBOutlet weak var footer: PointFooter!
     @IBOutlet weak var tableView: UITableView!
     var dataController: FeedDataController?
     lazy var feedPresenter: FeedPresentationController = FeedPresentationController(viewController: self)
     
+    @IBOutlet weak var adContainer: GADBannerView!
+    var adIsVisible: Bool = false {
+        didSet {
+            footerBottom.constant = adIsVisible ? 50 : 0
+            UIView.animate(withDuration: 0.3, animations: { [weak self] in
+                self?.view.layoutIfNeeded()
+                self?.tableView.reloadData()
+            }) 
+        }
+    }
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: "FeedViewController", bundle: Bundle.main)
         NotificationCenter.default.addObserver(self, selector: #selector(updateAfterTimeChange), name: NSNotification.Name.UIApplicationSignificantTimeChange, object: nil)
@@ -28,13 +40,28 @@ class FeedViewController: BaseViewController, PointInjector {
         super.viewDidLoad()
         setupNavigationItems()
         setupTableView()
+        adContainer.adUnitID = Constants.adMobIdentifier
+        adContainer.rootViewController = self
+        adContainer.delegate = self
+        adContainer.load(GADRequest())
         view.backgroundColor = UIColor.zapNearWhite
-        
     }
-   
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        let frm = tableView.tableFooterView?.bounds ?? .zero
+        tableView.tableFooterView?.bounds =  CGRect(origin: frm.origin, size: CGSize(width: frm.width, height: 100))
+        tableView.tableFooterView?.layoutIfNeeded()
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(false, animated: false)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        feedPresenter.showTutorialPopupIfNeeded()
     }
     
     @objc func updateAfterTimeChange() {
@@ -45,6 +72,17 @@ class FeedViewController: BaseViewController, PointInjector {
         fatalError("Not yet implemented")
     }
 }
+
+extension FeedViewController: GADBannerViewDelegate {        
+    func adView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: GADRequestError) {
+        adIsVisible = false
+    }
+    
+    func adViewDidReceiveAd(_ bannerView: GADBannerView) {
+        adIsVisible = true
+    }
+}
+
 
 extension FeedViewController {
     func setupTableView() {

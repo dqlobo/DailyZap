@@ -13,7 +13,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FeedViewController">
             <connections>
+                <outlet property="adContainer" destination="yu8-Go-hNF" id="47y-uJ-xQ9"/>
                 <outlet property="footer" destination="WUl-0S-oG2" id="uEE-gO-xt7"/>
+                <outlet property="footerBottom" destination="v3r-Hg-CB4" id="d5E-UZ-8KQ"/>
                 <outlet property="tableView" destination="7U7-8o-2XE" id="EoF-T9-HSB"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -27,13 +29,19 @@
                     <rect key="frame" x="19" y="20" width="337.5" height="572"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 </tableView>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WUl-0S-oG2" customClass="PointFooter" customModule="DailyZap" customModuleProvider="target">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yu8-Go-hNF" customClass="GADBannerView">
+                    <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="1xV-k3-Gyb"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WUl-0S-oG2" customClass="PointFooter" customModule="Beta_DailyZap" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="589" width="375" height="78"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lsS-J1-HO8">
                             <rect key="frame" x="0.0" y="15.5" width="375" height="48"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zap someone now to improve your score!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vdq-gL-GDv" customClass="Label" customModule="DailyZap" customModuleProvider="target">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zap someone now to improve your score!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vdq-gL-GDv" customClass="Label" customModule="Beta_DailyZap" customModuleProvider="target">
                                     <rect key="frame" x="71" y="0.0" width="233.5" height="14.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                     <nil key="textColor"/>
@@ -44,7 +52,7 @@
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 Zap Points" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oIr-h5-T2O" customClass="BigCountingLabel" customModule="DailyZap" customModuleProvider="target">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 Zap Points" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oIr-h5-T2O" customClass="BigCountingLabel" customModule="Beta_DailyZap" customModuleProvider="target">
                                     <rect key="frame" x="132.5" y="24.5" width="110" height="24"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                     <nil key="textColor"/>
@@ -88,6 +96,9 @@
                 <constraint firstItem="7U7-8o-2XE" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="SNS-gm-eyS"/>
                 <constraint firstItem="WUl-0S-oG2" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="bgM-VW-6UV"/>
                 <constraint firstItem="WUl-0S-oG2" firstAttribute="top" secondItem="7U7-8o-2XE" secondAttribute="bottom" constant="-3" id="mJz-0M-8ta"/>
+                <constraint firstItem="yu8-Go-hNF" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="pa0-Fh-mLd"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="yu8-Go-hNF" secondAttribute="trailing" id="ptx-3L-3oQ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="yu8-Go-hNF" secondAttribute="bottom" id="v0a-5Y-zXC"/>
                 <constraint firstAttribute="bottom" secondItem="WUl-0S-oG2" secondAttribute="bottom" id="v3r-Hg-CB4"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

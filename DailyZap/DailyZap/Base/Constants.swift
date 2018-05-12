@@ -9,6 +9,8 @@
 import UIKit
 
 struct Constants {
-    static let flurryKey = "89TXPFVHYG8F95YRHQQM"
+    static let flurryKey = Bundle.main.object(forInfoDictionaryKey: "FlurryKey") as? String ?? "INVALID"
+    static let adMobIdentifier = Bundle.main.object(forInfoDictionaryKey: "AdMobIdentifier") as? String ?? "INVALID"
     static let appVersion: String = Bundle.main.object(forInfoDictionaryKey: String(kCFBundleVersionKey)) as? String ?? "1"
+    
 }

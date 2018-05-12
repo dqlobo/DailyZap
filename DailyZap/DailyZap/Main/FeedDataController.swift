@@ -25,11 +25,17 @@ class FeedDataController: NSObject, FeedInjector {
     let bigCellReuseID = "FeedBigCellReuseID"
     let emptyCellReuseID = "FeedEmptyCellReuseID"
     let dueEmptyReuseID = "FeedDueEmptyReuseID"
+    
     let maxUpcoming = 5
 
     var presenter: FeedPresentationController?   
 
-    fileprivate var footer: ButtonFooter?
+    lazy var footer: ButtonFooter? = {
+        let footer: ButtonFooter? = ButtonFooter.loadFromXib(withOwner: self)
+        footer?.frame = CGRect(origin: .zero, size: CGSize(width: tableView.bounds.width, height: 100))
+        footer?.btn.addTarget(self, action: #selector(queueZap), for:.touchUpInside)
+        return footer
+    }()
     
     fileprivate var tableView: UITableView! {
         didSet {
@@ -54,11 +60,7 @@ class FeedDataController: NSObject, FeedInjector {
         tableView.register(UINib(nibName: "DueEmptyTableViewCell", bundle: .main),
                            forCellReuseIdentifier: dueEmptyReuseID)
         tableView.register(UINib(nibName: "ZappedPlaceholderTableViewCell", bundle: Bundle.main), forCellReuseIdentifier: self.emptyCellReuseID)
-
         tableView.sectionHeaderHeight = 100
-        footer = ButtonFooter.loadFromXib(withOwner: self)
-        footer?.frame = CGRect(x: 0, y: 0, width: self.tableView.bounds.width, height: 125)
-        footer?.btn.addTarget(self, action: #selector(queueZap), for:.touchUpInside)
         tableView.tableFooterView = footer
     }
     
@@ -130,6 +132,8 @@ extension FeedDataController: UITableViewDataSource {
             setDueLabelForContact(contact, in: cell)
             if dayCount < 0 {
                 styleAsOverdue(cell: cell)
+            } else {
+                cell.layer.borderWidth = 0
             }
             if let data = contact.imageData {
                 cell.userImage = UIImage(data: data)
@@ -192,7 +196,7 @@ extension FeedDataController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return indexPath.section </*==*/ 0 ? 250 : 100
     }
-    
+
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         if let view = tableView.dequeueReusableHeaderFooterView(withIdentifier: headerReuseID) {
             if let header = view as? TwoLabelHeader {
@@ -208,6 +212,7 @@ extension FeedDataController: UITableViewDelegate {
                             formatter.dateStyle = .medium
                             subtitle = String(format: "✓ Completed everything for %@", formatter.string(from: Date()))
                         }
+                        header.highlightsCounter = true
                         header.titleLabel!.text = "Today"
                         header.subtitleLabel!.text = subtitle
                         header.count = feedManager.feed.due.count

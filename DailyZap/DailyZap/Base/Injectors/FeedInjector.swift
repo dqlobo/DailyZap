@@ -96,6 +96,8 @@ extension FeedManager { // contact generation
         var tries = 0
         repeat {
            if let cn = getRandom(due: Date()),
+                let inflated = inflate(contacts: [cn]).first,
+                inflated.hasName,
                 !userDefaultsManager.isOnBlackList(contactID: cn.contactID) {
                 success = addToFeed(contact: cn)
             }

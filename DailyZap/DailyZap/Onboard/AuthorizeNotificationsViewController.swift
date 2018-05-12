@@ -58,9 +58,8 @@ class AuthorizeNotificationsViewController: BaseViewController, NotificationInje
     }
     @IBAction func tappedSkip(_ sender: Any) {
         analytics.log(.onboard(.notification(.deny)))
-        notificationManager.setEnabled(false) { [weak self] _ in
-            self?.popAndFlip()
-        }
+        popAndFlip()
+
     }
     
     func popAndFlip() {
