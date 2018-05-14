@@ -11,6 +11,7 @@ body {
 
 section {
     margin: 0 auto;
+    margin-top: 30px;
     text-align: center;
     width: 50%;
 }
@@ -35,12 +36,14 @@ section img {
 
 .text-carousel {
     margin-top: 15px;
+    margin-bottom: 50px;
 }
 
 h1 {
     color: white;
-    font-family: Norwester;
-    text-transform: lowercase;
+    font-family: 'Muli', sans-sarif;
+    font-size: 2rem;
+    /* text-transform: lowercase; */
 }
 
 #app-store-badge {
