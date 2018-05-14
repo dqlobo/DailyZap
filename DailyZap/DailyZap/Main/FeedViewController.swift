@@ -40,7 +40,7 @@ class FeedViewController: BaseViewController, PointInjector {
         super.viewDidLoad()
         setupNavigationItems()
         setupTableView()
-        adContainer.adUnitID = Constants.adMobIdentifier
+        adContainer.adUnitID = Constants.feedAdIdentifier
         adContainer.rootViewController = self
         adContainer.delegate = self
         adContainer.load(GADRequest())

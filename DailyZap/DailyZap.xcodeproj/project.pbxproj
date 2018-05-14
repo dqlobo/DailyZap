@@ -181,6 +181,8 @@
 		63E8F1E920A34D3700DA4F0A /* WelcomePopupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63E8F1E720A34D3700DA4F0A /* WelcomePopupViewController.xib */; };
 		63E8F1EA20A357BD00DA4F0A /* WelcomePopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E8F1E620A34D3700DA4F0A /* WelcomePopupViewController.swift */; };
 		63E8F1EB20A357BD00DA4F0A /* WelcomePopupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63E8F1E720A34D3700DA4F0A /* WelcomePopupViewController.xib */; };
+		63FACA9620AA06F700BFC96A /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 63FACA9520AA06F700BFC96A /* Settings.bundle */; };
+		63FACA9720AA06F700BFC96A /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 63FACA9520AA06F700BFC96A /* Settings.bundle */; };
 		63FDAA692081493B00E52F96 /* AuthorizeContactsPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FDAA682081493B00E52F96 /* AuthorizeContactsPresentationController.swift */; };
 		63FDAA6C20814D7300E52F96 /* DueEmptyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FDAA6A20814D7300E52F96 /* DueEmptyTableViewCell.swift */; };
 		63FDAA6D20814D7300E52F96 /* DueEmptyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63FDAA6B20814D7300E52F96 /* DueEmptyTableViewCell.xib */; };
@@ -299,6 +301,7 @@
 		63E6A9DD2098F32300FA6428 /* Pods_DailyZap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_DailyZap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		63E8F1E620A34D3700DA4F0A /* WelcomePopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePopupViewController.swift; sourceTree = "<group>"; };
 		63E8F1E720A34D3700DA4F0A /* WelcomePopupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WelcomePopupViewController.xib; sourceTree = "<group>"; };
+		63FACA9520AA06F700BFC96A /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		63FDAA682081493B00E52F96 /* AuthorizeContactsPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizeContactsPresentationController.swift; sourceTree = "<group>"; };
 		63FDAA6A20814D7300E52F96 /* DueEmptyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DueEmptyTableViewCell.swift; sourceTree = "<group>"; };
 		63FDAA6B20814D7300E52F96 /* DueEmptyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DueEmptyTableViewCell.xib; sourceTree = "<group>"; };
@@ -440,6 +443,7 @@
 				6370A8CE1F807DAC002641D3 /* LaunchScreen.storyboard */,
 				6370A8D11F807DAC002641D3 /* Info.plist */,
 				636FB2571FD469BC00AC467C /* todo.txt */,
+				63FACA9520AA06F700BFC96A /* Settings.bundle */,
 			);
 			path = DailyZap;
 			sourceTree = "<group>";
@@ -622,6 +626,7 @@
 				6370A8C01F807DAC002641D3 /* Resources */,
 				8179EB6E23CB1363179D4824 /* [CP] Embed Pods Frameworks */,
 				8A232457F1DEED0F6462E38F /* [CP] Copy Pods Resources */,
+				63FACA9820AA07FC00BFC96A /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -663,6 +668,7 @@
 				63DBF30C20892AF800C0A9DF /* Resources */,
 				85D3235CE5CDD4FAAFDC926C /* [CP] Embed Pods Frameworks */,
 				D091FC2525D1A869A64FB54D /* [CP] Copy Pods Resources */,
+				63FACA9920AA083E00BFC96A /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -744,6 +750,7 @@
 				636FB2691FD4B9AB00AC467C /* SettingsViewController.xib in Resources */,
 				633C43DD1F847FB600DAEA46 /* AuthorizeNotificationsViewController.xib in Resources */,
 				63DBF2CD2089086100C0A9DF /* TextFieldViewController.xib in Resources */,
+				63FACA9620AA06F700BFC96A /* Settings.bundle in Resources */,
 				636FB2601FD497DA00AC467C /* BigContactTableViewCell.xib in Resources */,
 				63DBF2C92088E40800C0A9DF /* negative.mp3 in Resources */,
 				636FB26D1FD4C8F700AC467C /* SettingsTableViewCell.xib in Resources */,
@@ -787,6 +794,7 @@
 				63DBF31F20892AF800C0A9DF /* SettingsViewController.xib in Resources */,
 				63DBF32020892AF800C0A9DF /* AuthorizeNotificationsViewController.xib in Resources */,
 				63DBF32120892AF800C0A9DF /* TextFieldViewController.xib in Resources */,
+				63FACA9720AA06F700BFC96A /* Settings.bundle in Resources */,
 				63DBF32220892AF800C0A9DF /* BigContactTableViewCell.xib in Resources */,
 				63DBF32320892AF800C0A9DF /* negative.mp3 in Resources */,
 				63DBF32420892AF800C0A9DF /* SettingsTableViewCell.xib in Resources */,
@@ -832,6 +840,32 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DailyZapTests/Pods-DailyZapTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		63FACA9820AA07FC00BFC96A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cp \"${SRCROOT}/Pods/Target Support Files/Pods-DailyZap/Pods-DailyZap-acknowledgements.markdown\" \"${SRCROOT}/DailyZap/Settings.bundle/Pods-acknowledgements.markdown\"";
+		};
+		63FACA9920AA083E00BFC96A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cp \"${SRCROOT}/Pods/Target Support Files/Pods-Beta-DailyZap/Pods-Beta-DailyZap-acknowledgements.plist\" \"${SRCROOT}/DailyZap/Settings.bundle/Pods-acknowledgements.plist\"";
 		};
 		8179EB6E23CB1363179D4824 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1230,12 +1264,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 48E64233E0904B26438F348C /* Pods-DailyZap.debug.xcconfig */;
 			buildSettings = {
-				AD_MOB_IDENTIFIER = "ca-app-pub-1197795770484872/9511866706";
+				AD_MOB_IDENTIFIER = "ca-app-pub-1197795770484872~9866132060";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 88J4VM6686;
+				FEED_AD_IDENTIFIER = "ca-app-pub-1197795770484872/9511866706";
 				FLURRY_KEY = BFDGBYZQG7Q6CVRF4SC5;
 				INFOPLIST_FILE = DailyZap/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -1252,12 +1287,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7D069071848542B453913E70 /* Pods-DailyZap.release.xcconfig */;
 			buildSettings = {
-				AD_MOB_IDENTIFIER = "ca-app-pub-1197795770484872/9511866706";
+				AD_MOB_IDENTIFIER = "ca-app-pub-1197795770484872~9866132060";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 88J4VM6686;
+				FEED_AD_IDENTIFIER = "ca-app-pub-1197795770484872/9511866706";
 				FLURRY_KEY = BFDGBYZQG7Q6CVRF4SC5;
 				INFOPLIST_FILE = DailyZap/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -1310,12 +1346,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 05690D360BEB48BE5E773471 /* Pods-Beta-DailyZap.debug.xcconfig */;
 			buildSettings = {
-				AD_MOB_IDENTIFIER = "ca-app-pub-3940256099942544/2934735716";
+				AD_MOB_IDENTIFIER = "ca-app-pub-3940256099942544~1458002511";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 88J4VM6686;
+				FEED_AD_IDENTIFIER = "ca-app-pub-3940256099942544/2934735716";
 				FLURRY_KEY = 89TXPFVHYG8F95YRHQQM;
 				INFOPLIST_FILE = "DailyZap copy-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -1332,12 +1369,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C2FE7E90F39E53EC80CD560F /* Pods-Beta-DailyZap.release.xcconfig */;
 			buildSettings = {
-				AD_MOB_IDENTIFIER = "ca-app-pub-3940256099942544/2934735716";
+				AD_MOB_IDENTIFIER = "ca-app-pub-3940256099942544~1458002511";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 88J4VM6686;
+				FEED_AD_IDENTIFIER = "ca-app-pub-3940256099942544/2934735716";
 				FLURRY_KEY = 89TXPFVHYG8F95YRHQQM;
 				INFOPLIST_FILE = "DailyZap copy-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;

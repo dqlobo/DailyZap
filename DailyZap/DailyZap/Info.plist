@@ -4,8 +4,6 @@
 <dict>
 	<key>AdMobIdentifier</key>
 	<string>$(AD_MOB_IDENTIFIER)</string>
-	<key>FlurryKey</key>
-	<string>$(FLURRY_KEY)</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
@@ -24,8 +22,21 @@
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>FeedAdIdentifier</key>
+	<string>$(FEED_AD_IDENTIFIER)</string>
+	<key>FlurryKey</key>
+	<string>$(FLURRY_KEY)</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+		<key>NSAllowsArbitraryLoadsForMedia</key>
+		<true/>
+		<key>NSAllowsArbitraryLoadsInWebContent</key>
+		<true/>
+	</dict>
 	<key>NSContactsUsageDescription</key>
 	<string>This allows you to set reminders to supercharge old connections.</string>
 	<key>UIAppFonts</key>
@@ -55,14 +66,5 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<true/>
-	<key>NSAppTransportSecurity</key>
-	<dict>
-		<key>NSAllowsArbitraryLoads</key>
-		<true/>
-		<key>NSAllowsArbitraryLoadsForMedia</key>
-		<true/>
-		<key>NSAllowsArbitraryLoadsInWebContent</key>
-		<true/>
-	</dict>
 </dict>
 </plist>

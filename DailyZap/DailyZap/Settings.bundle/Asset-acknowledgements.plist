@@ -1,14 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<!--
-   Asset-acknowledgements.plist
-   DailyZap
-
-   Created by David LoBosco on 5/14/18.
-   Copyright (c) 2018 dqlobo. All rights reserved.
--->
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-    <dict>
-    
-    </dict>
+<dict>
+	<key>Title</key>
+	<string>Other Acknowledgements</string>
+	<key>PreferenceSpecifiers</key>
+	<array>
+		<dict>
+			<key>FooterText</key>
+			<array>
+				<string>Grenade by ljudman (https://freesound.org/people/ljudman/sounds/33245/)</string>
+			</array>
+			<key>Title</key>
+			<string>Sound FX</string>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+		</dict>
+	</array>
+	<key>StringsTable</key>
+	<string>Other Acknowledgements</string>
+</dict>
 </plist>

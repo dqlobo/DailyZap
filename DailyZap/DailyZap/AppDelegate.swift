@@ -22,13 +22,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AnalyticsInjector, Notifi
         window = UIWindow(frame: UIScreen.main.bounds)
         window!.makeKeyAndVisible()
         window!.rootViewController = RootViewController.createRootViewController()
-//        print("UUID is \(ASIdentifierManager.shared().advertisingIdentifier.uuidString)")
 
         // addl configuration
         analytics.beginSession()
         notificationManager.configureDelegate()
         setAppearances()
-        GADMobileAds.configure(withApplicationID: "ca-app-pub-1197795770484872~9866132060") //todo replace test ad
+        GADMobileAds.configure(withApplicationID: Constants.adMobIdentifier)
 
         return true
     }
