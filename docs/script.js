@@ -9,6 +9,7 @@ $(document).ready(function(){
     $('.text-carousel').slick({
     	arrows: false,
     	fade: false,
+	adaptiveHeight: true,
     	asNavFor: '.carousel'
     });
 });

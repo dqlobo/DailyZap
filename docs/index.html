@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
 
-    <title>The HTML5 Herald</title>
+    <title>Daily Zap - Get the app now!</title>
     <meta name="description" content="The HTML5 Herald">
     <meta name="author" content="SitePoint">
 
@@ -12,7 +12,7 @@
     <link rel="stylesheet" type="text/css" href="./slick/slick-theme.css"/>
     <link rel="stylesheet" href="style.css">
 
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
     <!-- TODO make Favicon -->
     
       <!--[if lt IE 9]>
@@ -21,24 +21,40 @@
   </head>
 
   <body>
-    <div class="container">
+    <section>
 
-      <img class="logo"  src="img/tagline_logo.svg" onerror="this.onerror=null; this.src='img/tagline_logo.png'"/>
-    <div class="carousel">
-      <div><div class="card">A</div></div>
-      <div><div class="card">B</div></div>
-      <div><div class="card">C</div></div>
-    </div>
+      <img class="logo" src="img/tagline_logo.svg"
+	   onerror="this.onerror=null; this.src='img/tagline_logo.png'"/>
+      <div class="carousel">
+	<div>
+	  <img src="img/reminder_screenshot.svg"
+	       onerror="this.onerror=null; this.src='img/reminder_screenshot.png'" />
+	</div>
+	<div>
+	    <img src="img/plan_screenshot.svg"
+	       onerror="this.onerror=null; this.src='img/plan_screenshot.png'" />
+	</div>
+	<div>
+	    <img src="img/never_forget_screenshot.svg"
+	       onerror="this.onerror=null; this.src='img/never_forget_screenshot.png'" />	
+	</div>
+      </div>
 
-    <div class="text-carousel">
-      <h2>Turn your contact list into a powerful reminder tool</h2>
-      <h2>Customize a plan to supercharge your network</h2>
-      <h2>Never forget to keep in touch again</h2>      
-    </div>
+      <div class="text-carousel">
+	<h1>Turn your contact list into a powerful reminder tool</h1>
+	<h1>Customize a plan to supercharge your network</h1>
+	<h1>Never forget to keep in touch again</h1>      
+      </div>
+      <a href="https://appstore.com/dailyzap"><img id="app-store-badge"  src="img/download.svg" /></a>
+      
+    </section>
 
-    </div>
-    <!-- MARK: - SCRIPTS -->
+
+    <footer>
+      
+    </footer>
     
+    <!-- MARK: - SCRIPTS -->    
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="./slick/slick.min.js"></script>    
