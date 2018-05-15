@@ -67,7 +67,10 @@ footer {
 
 @media (max-width: 800px) {
     section {
-	width: 90%;
+	width: 95%;
+    }
+    .logo {
+	width: 100%;
     }
 }
 
